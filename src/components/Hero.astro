@@ -4,6 +4,14 @@ const { messages } = getI18n(Astro.url);
 const h = messages.hero;
 const facts = h.quickFacts ?? [];
 const live = h.liveInfo ?? {};
+const liveItems = [
+  live.weather && live.weatherValue
+    ? { icon: '🌤️', label: live.weather, value: live.weatherValue }
+    : null,
+  live.sunset && live.sunsetValue
+    ? { icon: '🌅', label: live.sunset, value: live.sunsetValue }
+    : null,
+].filter(Boolean);
 ---
 
 <section id="overview" class="relative min-h-[84vh] sm:min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
@@ -32,11 +40,13 @@ const live = h.liveInfo ?? {};
       ))}
     </div>
 
-    <!-- Live data placeholders -->
-    <div class="flex flex-wrap items-center justify-center gap-2 mb-7">
-      <span class="live-pill">🌤️ {live.weather}：<span class="live-placeholder">—</span></span>
-      <span class="live-pill">🌅 {live.sunset}：<span class="live-placeholder">—</span></span>
-    </div>
+    {liveItems.length > 0 && (
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-7">
+        {liveItems.map((item) => (
+          <span class="live-pill">{item.icon} {item.label}：<span class="live-placeholder">{item.value}</span></span>
+        ))}
+      </div>
+    )}
 
     <!-- Strong contrasting CTAs -->
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
