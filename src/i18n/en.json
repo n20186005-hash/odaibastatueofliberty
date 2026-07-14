@@ -1,0 +1,644 @@
+{
+  "meta": {
+    "title": "Statue of Liberty Odaiba | Minato City, Tokyo, Japan",
+    "description": "The complete guide to the Statue of Liberty in Odaiba, Tokyo: the history of this 1/7-scale replica of New York's Lady Liberty, its symbol of Franco-Japanese friendship, how to get there, visitor reviews and the best photo spots."
+  },
+  "header": {
+    "siteName": "Statue of Liberty Odaiba",
+    "home": "Home",
+    "visit": "Visit",
+    "transport": "Getting Here",
+    "history": "About",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "map": "Map",
+    "backToHome": "Back to Home"
+  },
+  "common": {
+    "changeLanguage": "Switch language",
+    "toggleTheme": "Toggle theme"
+  },
+  "hero": {
+    "title": "Statue of Liberty Odaiba",
+    "subtitle": "A 1/7-scale replica of New York's Statue of Liberty, standing quietly on the Odaiba waterfront along Tokyo Bay. It was erected in 1998 during the 'Year of France in Japan' and presented by France as a symbol of friendship between the two nations. With its verdigris-green figure framed by the Rainbow Bridge and Tokyo Bay, it is Odaiba's most recognisable landmark — and a free, always-open civic icon.",
+    "rating": "4.5 (4,894)",
+    "reviewCount": "4,894 reviews",
+    "hours": "Open 24 hours",
+    "openMaps": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8",
+    "tags": ["1/7-scale replica", "Free to visit", "Odaiba · Tokyo Bay"],
+    "routeCta": {
+      "label": "Plan Your Route",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Statue's History",
+      "href": "#history"
+    }
+  },
+  "intro": {
+    "title": "Discover the Statue of Liberty Odaiba",
+    "description": "The Statue of Liberty Odaiba stands on the Odaiba waterfront along Tokyo Bay as a 1/7-scale replica of the original in New York. It was installed in 1998 during the 'Year of France in Japan' as a temporary exhibit marking the 150th anniversary of Franco-Japanese relations, and proved so popular that it was made permanent in 2000. About 12 metres tall and finished in the same verdigris green as the New York original, it faces Tokyo Bay and the Rainbow Bridge — one of Odaiba's signature landmarks and the first sight many visitors see from the water bus or the Yurikamome train.",
+    "visitGuide": {
+      "title": "Visitor Guide",
+      "eyebrow": "Practical Planning",
+      "description": "As an open-air statue in a public waterfront park, the Statue of Liberty Odaiba can be visited free of charge at any hour, with no ticket and no crowd control.",
+      "items": [
+        "Allow 30 minutes to an hour: stroll Odaiba Kaihin Park, photograph the statue with the Rainbow Bridge, or catch the backlit silhouette at dusk.",
+        "The statue sits inside the open Odaiba Seaside Park, within walking distance of the shopping districts (Aqua City, DECKS, DiverCity) — easy to combine in one trip.",
+        "It is windy and lightly shaded by the bay: bring water, a hat and sunscreen; winter feels noticeably colder.",
+        "From Shimbashi Station, take the Yurikamome Line about 15 minutes to Daiba Station, then walk roughly 5 minutes."
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "Highlights",
+      "items": [
+        "An official 1/7-scale replica of New York's Statue of Liberty",
+        "A gift from France marking the 150th anniversary of Franco-Japanese relations in 1998",
+        "About 12 m tall, verdigris green, framed perfectly by the Rainbow Bridge",
+        "In free, 24-hour Odaiba Seaside Park"
+      ]
+    }
+  },
+  "transportSection": {
+    "title": "Driver & Guide · How to Reach the Statue of Liberty Odaiba",
+    "subtitle": "Whether by air, train, public transit, car, taxi, bike or water bus, each option is detailed below, with parking and driver FAQs.",
+    "overviewTitle": "Once you're in Tokyo",
+    "overviewText": "Tokyo is reached via Narita or Haneda airports, the Tokaido Shinkansen or highway buses. Once in the city, Odaiba lies on reclaimed land in Tokyo Bay, Minato Ward. The most convenient rail lines are the Yurikamome (from Shimbashi) and the Rinkai Line (Tokyo Teleport Station); from either, a short walk brings you to the statue.",
+    "overviewText2": "The statue is free and open 24 hours, at the end of the Odaiba Kaihin Park seaside promenade, framed with the Rainbow Bridge and the Tokyo Bay skyline. Plan your transport, parking and walking route together to avoid on-site confusion and congestion.",
+    "arrivalTitle": "Know this before you set out",
+    "arrivalItems": [
+      "The statue is on the flat seaside promenade of Odaiba Kaihin Park, a 5–10 minute walk from Daiba or Tokyo Teleport stations.",
+      "There is no dedicated statue parking; use paid lots at nearby commercial facilities such as Aqua City, DECKS or DiverCity.",
+      "Weekends and holidays get crowded, especially at dusk and for night views — consider off-peak times."
+    ],
+    "modes": [
+      {
+        "label": "By Air (Haneda / Narita)",
+        "icon": "✈️",
+        "title": "From the two airports",
+        "description": "Best for overseas and long-distance domestic travellers; Haneda is closer, Narita has more flights.",
+        "details": [
+          "Haneda: Tokyo Monorail to Hamamatsucho, transfer to the Yurikamome to Daiba Station — about 40 minutes, roughly ¥700.",
+          "Narita: Narita Express (N'EX) to Tokyo Station then transfer to the Yurikamome; or Keisei Skyliner to central Tokyo then transfer — about 1.5 hours, roughly ¥2,500–3,000.",
+          "Both airports have taxis and limousine buses, but crossing the bay to Odaiba is costly and prone to Rainbow Bridge congestion — not recommended unless necessary."
+        ],
+        "steps": [
+          { "n": "1", "t": "After leaving the airport, follow signs to central-Tokyo rail lines." },
+          { "n": "2", "t": "Haneda→Monorail→Hamamatsucho→Yurikamome; Narita→N'EX/Keisei→central Tokyo→Yurikamome." },
+          { "n": "3", "t": "Alight at Daiba Station (Exit A) or Odaiba-Kaihinkoen, then walk 5–10 minutes." }
+        ]
+      },
+      {
+        "label": "Train / Private Rail",
+        "icon": "🚆",
+        "title": "Yurikamome · Daiba Station",
+        "description": "The most convenient and recommended way to the statue.",
+        "details": [
+          "From Shimbashi, take the Yurikamome (fully driverless) about 15 minutes to Daiba Station, Exit A, then walk about 5 minutes.",
+          "Alternatively, alight at Odaiba-Kaihinkoen Station and follow the waterfront promenade about 5 minutes, with the statue and Rainbow Bridge already in view.",
+          "The Yurikamome accepts Suica / PASMO IC cards directly — no ticket queues."
+        ],
+        "steps": [
+          { "n": "1", "t": "At Shimbashi, find the dedicated Yurikamome gates (a different level from JR)." },
+          { "n": "2", "t": "Take a Toyosu-bound train, about 6 stops to Daiba Station." },
+          { "n": "3", "t": "Exit A and follow the seaside-park signs on foot." }
+        ]
+      },
+      {
+        "label": "Public Transit (Rinkai Line)",
+        "icon": "🚇",
+        "title": "Rinkai Line · Tokyo Teleport Stn",
+        "description": "Most direct from Shinjuku, Shibuya and Ikebukuro.",
+        "details": [
+          "Take the Rinkai Line (りんかい線) to Tokyo Teleport Station, then walk about 10 minutes.",
+          "The Rinkai Line runs through to JR Saikyo Line, so no transfer from Shinjuku or Ikebukuro; from Shibuya, change once at Shinjuku or Osaki.",
+          "Tokyo Teleport Station has elevators — easier than the sloping Daiba Station if you have large luggage or children/seniors."
+        ],
+        "steps": [
+          { "n": "1", "t": "From Shinjuku/Ikebukuro, take a Saikyo Line train (through-serviced to the Rinkai Line)." },
+          { "n": "2", "t": "Alight at Tokyo Teleport Station and follow the 'Kaihin Koen' exit." },
+          { "n": "3", "t": "Walk along the flat promenade about 10 minutes." }
+        ]
+      },
+      {
+        "label": "By Car (Parking)",
+        "icon": "🅿️",
+        "title": "Via the Rainbow Bridge · Nearby Parking",
+        "description": "Good with luggage, children/seniors, or for a bay-circling drive. No statue-only lot — use nearby commercial facilities.",
+        "details": [
+          "Navigate to 'Odaiba Kaihin Park' or 'Aqua City Odaiba' and cross the toll Rainbow Bridge (about ¥700 one-way for a standard car) into Odaiba.",
+          "Daiba shopping mall / Kaihin Park paid lots, Aqua City, DECKS and DiverCity all offer paid parking; weekends and holidays fill up fast — arrive early or reserve.",
+          "The Rainbow Bridge upper deck is for cars, the lower deck for pedestrians and cyclists; drivers use the upper car deck and pay on crossing."
+        ],
+        "steps": [
+          { "n": "1", "t": "Set your nav destination to the Aqua City Odaiba or DECKS Tokyo Beach parking." },
+          { "n": "2", "t": "Cross the Rainbow Bridge upper deck into Odaiba, following signs to the mall parking." },
+          { "n": "3", "t": "Park, then walk 5–10 minutes to the statue; avoid the dusk peak to save time hunting for a space." }
+        ]
+      },
+      {
+        "label": "Taxi / Rideshare",
+        "icon": "🚕",
+        "title": "Door-to-door",
+        "description": "Easiest with luggage, children/seniors, or late-night arrival.",
+        "details": [
+          "From central Tokyo (Ginza, Shimbashi) a taxi to Odaiba takes about 20–30 minutes, roughly ¥3,000–5,000 plus the Rainbow Bridge toll.",
+          "Ask the driver to drop you at the transfer drop-off point by Daiba Station (Yurikamome) — about a 5-minute walk, avoiding parking hassle.",
+          "In rain/snow or weekend evenings, wait times are longer; leave a buffer and book via a local taxi app."
+        ]
+      },
+      {
+        "label": "Cycling / Water Bus",
+        "icon": "🚲",
+        "title": "Waterfront rides & sea routes",
+        "description": "The most relaxing, photo-friendly way to enjoy the city.",
+        "details": [
+          "Ride the Tokyo Bay waterfront cycle path to link Odaiba's sights; shared bikes (e.g. Docomo Bike Share) are available at some piers.",
+          "Take a Tokyo Cruise water bus (Hotaluna / Emeraldas) from Asakusa or Hinode Pier to Odaiba, viewing the statue and Rainbow Bridge from the bay.",
+          "The Rainbow Bridge lower deck has dedicated pedestrian and cycle lanes — walking or cycling across is an experience in itself."
+        ]
+      },
+      {
+        "label": "On Foot",
+        "icon": "🚶",
+        "title": "Arrive by the waterfront walk",
+        "description": "If you're already in Odaiba, walking is the most natural way to arrive.",
+        "details": [
+          "From Daiba Station, about 5 minutes toward Kaihin Park; from Tokyo Teleport, about 10 minutes — all flat and accessible.",
+          "From DECKS, Aqua City or DiverCity, follow the seaside promenade; benches and viewing decks line the way.",
+          "The promenade gets busy at dusk — keep an eye on children and belongings."
+        ]
+      }
+    ],
+    "parking": {
+      "title": "Parking Overview (for drivers)",
+      "note": "The statue has no own parking lot. The options below are the nearest major paid lots; rates and availability vary by season and time — please follow on-site signs.",
+      "colOption": "Option",
+      "colDistance": "Distance",
+      "colPrice": "Price",
+      "options": [
+        { "name": "Odaiba Kaihin Park / mall lots", "distance": "~200 m", "price": "Paid — see posted rates" },
+        { "name": "Aqua City Odaiba parking", "distance": "~300 m", "price": "Paid mall lot (spending deducts)" },
+        { "name": "DECKS Tokyo Beach parking", "distance": "~350 m", "price": "Paid mall lot" },
+        { "name": "DiverCity Tokyo Plaza parking", "distance": "~500 m", "price": "Paid mall lot" },
+        { "name": "Drop-off (Daiba Station)", "distance": "~400 m", "price": "Train only — brief drop-off" }
+      ],
+      "disclaimer": "Street parking is restricted along the waterfront — use paid lots and public transit. Rates and restrictions may change — please check posted notices."
+    },
+    "driverFaqTitle": "Driver FAQs",
+    "driverFaq": [
+      { "q": "Is there parking near the Statue of Liberty Odaiba?", "a": "Odaiba Kaihin Park and shopping malls (Aqua City, DECKS Tokyo Beach) offer paid parking. We suggest parking near the Yurikamome Daiba Station or the Rinkai Tokyo Teleport Station, then walking." },
+      { "q": "What is the nearest parking option?", "a": "The Daiba shopping mall / Kaihin Park paid lots, about a 200 m walk to the statue." },
+      { "q": "Is there street parking nearby?", "a": "Limited — the waterfront mainly uses paid lots and public transit; avoid long street parking." },
+      { "q": "Is the Statue of Liberty Odaiba good to drive to?", "a": "Driving is possible, but weekends and holidays bring Rainbow Bridge and Odaiba congestion — the Yurikamome is usually faster. Unless you need parking, public transit is advised." },
+      { "q": "Do you recommend public transport?", "a": "Strongly. Daiba Station (Yurikamome) is about a 5-minute walk; Tokyo Big Sight (Rinkai Line) is also walkable. Address: 1 Chome-4-2 Daiba, Minato City, Tokyo." },
+      { "q": "What is the best route to get there?", "a": "Public transit is best: Daiba Station (Yurikamome) ~5 min walk, or Tokyo Teleport Station (Rinkai Line) ~10 min walk. By car, cross the Rainbow Bridge and park at a nearby mall, then walk." }
+    ],
+    "localTipsTitle": "Tips for your visit",
+    "localTips": [
+      "Light is softest at dusk, when Lady Liberty and the Rainbow Bridge glow against a golden sky.",
+      "The statue is open 24 hours; the illuminated Odaiba at night is equally charming for an evening stroll.",
+      "Combine with nearby Aqua City and DiverCity (Unicorn Gundam); malls offer restrooms and food."
+    ],
+    "mapsCta": "View Map & Route",
+    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8"
+  },
+  "officialManagement": {
+    "title": "About the Statue",
+    "text": "The Statue of Liberty Odaiba is a public open-air monument within Odaiba Kaihin Park, maintained under the 'Umi-no-Koen' (sea park) system operated by Tokyo Port Authority (Tokyo Port & Harbor Corporation) under the Tokyo Metropolitan Government. As a free, publicly accessible waterfront space, it offers residents and visitors a place to enjoy Tokyo Bay, take photos and relax, and ranks among the most representative landscapes of the Odaiba waterfront subcentre."
+  },
+  "knowledge": {
+    "title": "History & Symbolism of the Statue",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Origins: the Year of France, 1998",
+        "content": "The Statue of Liberty Odaiba was erected in 1998 (Heisei 10) during the 'Année de la France au Japon' (Year of France in Japan) as a temporary exhibit marking the 150th anniversary of Franco-Japanese relations. So beloved by the public and visitors, it was made a permanent fixture in 2000, becoming an inseparable part of the Odaiba waterfront."
+      },
+      {
+        "id": "meaning",
+        "title": "Why Japan? A symbol of Franco-Japanese friendship",
+        "content": "New York's Statue of Liberty was itself a gift from France to the United States, symbolising liberty and the bond between the two nations. Odaiba's replica continues that thread — it, too, is a cross-border emblem of friendship, carrying the long artistic, cultural and diplomatic ties between Japan and France, and lending the shores of Tokyo Bay a touch of French romance."
+      },
+      {
+        "id": "original",
+        "title": "The bloodline of the New York original",
+        "content": "The prototype of Odaiba's statue is the Liberty Enlightening the World erected in New York Harbor in 1886, sculpted by the French artist Frédéric Auguste Bartholdi. Its internal steel framework was designed by Gustave Eiffel — of Eiffel Tower fame — a masterpiece joining engineering and art."
+      },
+      {
+        "id": "design",
+        "title": "Form & Symbolism",
+        "content": "Every detail carries meaning: the crown's seven spikes stand for the seven continents and seven seas; the raised torch represents liberty lighting the world; the tablet bears the date of American independence, 'JULY IV MDCCLXXVI' (July 4, 1776); and the broken chains at the feet symbolise freedom from oppression."
+      },
+      {
+        "id": "scale",
+        "title": "A 1/7-scale replica",
+        "content": "The Odaiba version stands about 12 metres tall — roughly 1/7 of the New York original (about 93 m including pedestal). Though smaller, its crown, torch and tablet are proportionally faithful, and it is painted the same verdigris green as New York, so from afar it is almost indistinguishable."
+      },
+      {
+        "id": "odaiba",
+        "title": "A landmark of the Odaiba waterfront",
+        "content": "Odaiba began as a battery island at the end of the Edo period and later became a waterfront subcentre through Tokyo Bay land reclamation. Today it gathers seaside parks, commercial facilities and the Rainbow Bridge; the Statue of Liberty stands at the end of the promenade, forming a classic tableau with the skyline and the bridge across Tokyo Bay."
+      },
+      {
+        "id": "significance",
+        "title": "Odaiba's green landmark",
+        "content": "As free, open public art, the Statue of Liberty Odaiba is now the go-to spot for photos, sunsets and night views. It is both Odaiba's visual signature and a unique thread connecting the cultures and emotions of New York, Paris and Tokyo."
+      }
+    ],
+    "didYouKnow": {
+      "title": "Did you know?",
+      "text": "Odaiba's Statue of Liberty is a 1/7-scale replica of the New York original, even reproducing its verdigris patina — and the original's internal steel frame was designed by Gustave Eiffel, of Eiffel Tower fame."
+    }
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "From the front view and the Rainbow Bridge framing to the Tokyo Bay reflection and dusk lights — explore the visual beauty of the Statue of Liberty Odaiba.",
+    "photoAlt": "Statue of Liberty Odaiba, Tokyo",
+    "photoAlts": [
+      "Full front view of the Statue of Liberty Odaiba",
+      "The classic framing with the Rainbow Bridge",
+      "The statue against the Tokyo Bay backdrop",
+      "Close-up of the crown's seven spikes",
+      "Detail of the raised torch",
+      "The tablet and its Roman-numeral date",
+      "The broken chains at the statue's feet",
+      "The verdigris-green oxidised surface",
+      "Backlit silhouette at dusk",
+      "The illuminated statue and city at night",
+      "A view of the statue from the bay",
+      "The waterfront promenade of Odaiba Kaihin Park",
+      "Spring cherry blossoms with the statue",
+      "Visitors posing in front of the statue",
+      "The Yurikamome train passing the waterfront",
+      "Aqua City district and the statue in the distance",
+      "A sightseeing cruise on Tokyo Bay",
+      "The full statue under a clear blue sky",
+      "The quiet, empty seaside in the early morning",
+      "Light trails of the Rainbow Bridge and statue at night"
+    ],
+    "viewAll": "View Location on Google Maps",
+    "showMore": "Show More Photos",
+    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8"
+  },
+  "reviews": {
+    "title": "Visitor Reviews",
+    "declaration": "Visitor feedback is available on Google Maps (external link).",
+    "featuredTitle": "Visitor Quotes",
+    "featuredSubtitle": "A few short lines that capture the spirit of the Statue of Liberty Odaiba.",
+    "moreReviews": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8",
+    "featured": [
+      {
+        "text": "I thought only New York had one — didn't expect to pose with 'Lady Liberty' on Tokyo Bay.",
+        "source": "Independent traveller · Shanghai"
+      },
+      {
+        "text": "At dusk the statue and Rainbow Bridge light up together — Odaiba's most romantic moment.",
+        "source": "Photography lover · Tokyo"
+      },
+      {
+        "text": "A free open-air landmark you pass on a stroll; the kids were thrilled.",
+        "source": "Family travellers · Osaka"
+      }
+    ],
+    "items": [
+      {
+        "name": "Kenji T.",
+        "date": "April 2026",
+        "rating": 5,
+        "text": "A pleasant surprise while walking Odaiba Kaihin Park. Smaller than New York but the verdigris green with the Rainbow Bridge is very photogenic — strongly recommend coming at dusk."
+      },
+      {
+        "name": "Aiko M.",
+        "date": "March 2026",
+        "rating": 5,
+        "text": "Spotted it from the Yurikamome train. Free and open 24 hours, beautifully lit at night — perfect for an after-dinner walk."
+      },
+      {
+        "name": "Hiroshi K.",
+        "date": "February 2026",
+        "rating": 4,
+        "text": "Meaningful as a symbol of Franco-Japanese friendship, with many photo angles. Busy on weekends; weekdays are calmer."
+      },
+      {
+        "name": "Yuki S.",
+        "date": "January 2026",
+        "rating": 5,
+        "text": "Easy to combine with nearby Aqua City and DiverCity; malls have restrooms and food, so it's relaxed even with kids."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "How to Get Here",
+    "subtitle": "1 Chome-4-2 Daiba, Minato City, Tokyo 135-0091, Japan",
+    "openMaps": "Open in Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8"
+  },
+  "footer": {
+    "siteName": "Statue of Liberty Odaiba",
+    "rights": "© 2026 Statue of Liberty Odaiba — Independent non-profit visitor guide. All rights reserved.",
+    "legalLinksTitle": "Privacy & Terms",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings",
+    "officialResourcesTitle": "Official & Reference Resources",
+    "mapsLabel": "Google Maps →",
+    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8",
+    "officialLinksList": [
+      { "name": "Umi-no-Koen Navi (Odaiba Kaihin Park)", "url": "https://www.tptc.co.jp/park/01_02" },
+      { "name": "GO TOKYO (Tokyo Convention & Visitors Bureau)", "url": "https://www.gotokyo.org/spot/363/" },
+      { "name": "Minato City Hall (Minato Ward Gov.)", "url": "https://www.city.minato.tokyo.jp/" },
+      { "name": "Tokyo Odaiba.net (Waterfront Subcentre)", "url": "https://www.tokyo-odaiba.net/" },
+      { "name": "JAPAN TRAVEL (JNTO)", "url": "https://www.japan.travel/" }
+    ],
+    "disclaimer": "This is an independent, non-profit visitor information project. We are not affiliated with any government body or official institution."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Information Collection",
+        "content": "We generally do not actively collect personally identifiable information from users. Any information provided by you through contact forms or emails will be kept strictly confidential."
+      },
+      {
+        "heading": "2. Use of Information",
+        "content": "The information we collect is used solely to provide, maintain, and improve our services, and to communicate with you. We do not sell or share your personal information with third parties for marketing purposes."
+      },
+      {
+        "heading": "3. Cookies and Tracking",
+        "content": "We use cookies and similar tracking technologies to track the activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent."
+      },
+      {
+        "heading": "4. Data Security",
+        "content": "The security of your data is important to us. We use commercially acceptable means to protect your Personal Data, though no method of transmission over the Internet is 100% secure."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Acceptance of Terms",
+        "content": "By accessing and using this website, you agree to be bound by these terms of service. If you disagree with any part of the terms, you may not access the service."
+      },
+      {
+        "heading": "2. Use of Service",
+        "content": "This website is an independent, non-profit visitor information project. The information provided is for general informational purposes only. You agree to use the site responsibly and lawfully."
+      },
+      {
+        "heading": "3. Intellectual Property",
+        "content": "All content on this website, including texts, images, and logos, is the property of the website owner unless otherwise stated. Unauthorized use, reproduction, or distribution is strictly prohibited."
+      },
+      {
+        "heading": "4. Limitation of Liability",
+        "content": "We shall not be held liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use this website or the information contained herein."
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie Settings",
+    "description": "Manage your cookie preferences.",
+    "essential": {
+      "title": "Strictly Necessary Cookies",
+      "description": "Required for basic website functionality.",
+      "badge": "Always active"
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "Help us understand how visitors interact with the site."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "Used to track visitors across websites."
+    },
+    "save": "Save Preferences",
+    "saved": "Preferences saved!"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Practical information on facilities, the statue's history and planning your visit to the Statue of Liberty Odaiba.",
+    "amenities": {
+      "title": "Facilities nearby",
+      "items": [
+        { "icon": "🅿️", "label": "Parking", "value": "Paid lots at nearby malls" },
+        { "icon": "🚻", "label": "Restrooms", "value": "In Aqua City, DECKS & malls" },
+        { "icon": "🔌", "label": "Fuel / EV", "value": "EV chargers at area parking" },
+        { "icon": "♿", "label": "Accessibility", "value": "Flat, step-free promenade" }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Transport & Facilities",
+        "items": [
+          {
+            "q": "Is there parking nearby? How much does it cost?",
+            "a": "The statue itself has no dedicated parking, but nearby commercial facilities — Aqua City, DECKS Tokyo Beach, DiverCity Tokyo Plaza — all have paid parking just a few minutes' walk away. Rates are typically hourly; they fill quickly on weekends, holidays and for night views, so arrive early or prefer public transit."
+          },
+          {
+            "q": "Can wheelchairs or strollers get close?",
+            "a": "Yes. The statue sits in Odaiba Kaihin Park on an open seaside promenade that is completely flat with no steps, so wheelchairs, strollers and mobility aids move easily; accessible ramps and restrooms are along the way."
+          },
+          {
+            "q": "Are there restrooms or food nearby?",
+            "a": "There are no standalone restrooms at the statue, but Aqua City, DECKS and DiverCity are a few minutes' walk away, with public restrooms, cafés, restaurants and convenience stores — so grabbing food and facilities is very convenient."
+          }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "History & Nature",
+        "items": [
+          {
+            "q": "What is this statue for, and why is it in Tokyo?",
+            "a": "It is a 1/7-scale replica of New York's Statue of Liberty, erected in 1998 during the 'Year of France in Japan' to mark the 150th anniversary of Franco-Japanese relations, symbolising friendship between France and Japan. It was a temporary exhibit at first, then made permanent in 2000."
+          },
+          {
+            "q": "How is it related to the one in New York?",
+            "a": "Odaiba's version faithfully reproduces the proportions and form of the New York original, even recreating its verdigris patina. The New York statue was created by Bartholdi with an internal steel frame by Gustave Eiffel, dedicated in 1886 as a French gift to the United States — Odaiba's replica continues that cross-border bond."
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Planning & Tickets",
+        "items": [
+          {
+            "q": "Is there an entrance fee?",
+            "a": "No. The Statue of Liberty Odaiba is an open-air monument in a public seaside park — free and open around the clock, with no ticket office or gate (nearby mall facilities are separate)."
+          },
+          {
+            "q": "How long does a visit take?",
+            "a": "A typical visit lasts 30 minutes to an hour: arrive, take photos, stroll the promenade, perhaps rest on a bench. Allow extra time if you also explore Aqua City or DiverCity (Unicorn Gundam)."
+          },
+          {
+            "q": "Can I go in bad weather?",
+            "a": "Yes — it is an outdoor public space, visitable in any weather. But it is windy by the bay and lightly shaded in summer, so bring water and sun protection; winter and after rain feel colder and paths may be slippery — dress for wind and warmth."
+          }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "What to see nearby",
+        "items": [
+          {
+            "q": "After visiting, what else do you recommend nearby?",
+            "a": "The statue is right by the Rainbow Bridge and Tokyo Bay waterfront, within walking distance of Aqua City, DECKS Tokyo Beach, DiverCity Tokyo Plaza (Unicorn Gundam) and the Fuji Television building. A little further are Odaiba Kaihin Park, Tokyo Big Sight, and the water-bus route to Asakusa."
+          }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Discover More in Odaiba",
+    "attractionsTitle": "Nearby Attractions",
+    "toursTitle": "Recommended Experiences",
+    "attractions": [
+      { "name": "Rainbow Bridge", "url": "https://www.tokyo-odaiba.net/" },
+      { "name": "Aqua City Odaiba", "url": "https://www.tptc.co.jp/park/01_02" },
+      { "name": "DiverCity Tokyo Plaza (Unicorn Gundam)", "url": "https://www.gotokyo.org/spot/363/" },
+      { "name": "Fuji Television Building", "url": "https://www.city.minato.tokyo.jp/" },
+      { "name": "Odaiba Kaihin Park", "url": "https://www.tptc.co.jp/park/01_02" }
+    ],
+    "tours": [
+      { "name": "Odaiba waterfront walking tour", "url": "https://www.tokyo-odaiba.net/" },
+      { "name": "Tokyo Cruise water bus", "url": "https://www.gotokyo.org/spot/363/" },
+      { "name": "Minato City official tourism", "url": "https://www.city.minato.tokyo.jp/" }
+    ]
+  },
+  "scienceArt": {
+    "title": "Design & Symbolism: Liberty, Enlightenment & French Aesthetics",
+    "subtitle": "The Statue of Liberty Odaiba is more than a replica — it is a public symbol packed with political meaning, engineering wisdom and artistic language. Two dimensions help you read it.",
+    "scienceMuseum": {
+      "name": "Form & Symbolism",
+      "role": "Liberty, enlightenment and French aesthetics combined",
+      "highlight": "The crown's seven spikes stand for the seven continents and seven seas, proclaiming liberty for all the world; the raised torch is the light of liberty illuminating the world; the tablet bears the date of American independence, 'July 4, 1776'; the broken chains at the feet symbolise freedom from oppression. The verdigris green comes from oxidised copper — 'the colour of liberty' bestowed by time.",
+      "points": [
+        "Crown's seven rays: universal liberty across every continent and ocean.",
+        "Torch & tablet: 'independence' and 'enlightenment' frozen in light and date.",
+        "Broken chains & patina: a metaphor of emancipation, and a classic hue aged over a century."
+      ],
+      "ctaLabel": "Tokyo tourism info ↗",
+      "ctaUrl": "https://www.gotokyo.org/spot/363/"
+    },
+    "artMuseum": {
+      "name": "The Original & Its Lineage",
+      "role": "A gift of friendship across the seas",
+      "highlight": "The New York original was sculpted by French artist Bartholdi, with an internal steel frame by Gustave Eiffel of Eiffel Tower fame, dedicated in 1886 as France's gift to the United States. Odaiba's replica continues the bond between France–Japan and France–America.",
+      "points": [
+        "Bartholdi: personifying 'Liberty' in the language of classical sculpture.",
+        "Eiffel: solving the structural challenge of a giant statue with a steel skeleton — an engineering marvel.",
+        "Dedicated 1886: the Statue of Liberty becomes a global emblem of liberty from New York Harbor onward."
+      ],
+      "ctaLabel": "Minato City info ↗",
+      "ctaUrl": "https://www.city.minato.tokyo.jp/"
+    }
+  },
+  "outdoorMuseum": {
+    "title": "Photo & Viewing Guide: Best Shots of the Statue of Liberty Odaiba",
+    "subtitle": "As a highly photogenic landmark, a few structured vantage points and timing tips greatly boost both the utility and the beauty of your photos.",
+    "items": [
+      {
+        "id": "front",
+        "icon": "📸",
+        "name": "The Classic Front Shot",
+        "location": "Odaiba Kaihin Park waterfront",
+        "background": "A level, head-on view from the promenade is the safest angle to recreate the 'New York' composition. With Tokyo Bay and sky as background, you get a clean, symmetrical full-body portrait.",
+        "points": [
+          "Centre the statue and use the open water as negative space to highlight the verdigris subject.",
+          "Crouch low and shoot upward to lengthen the figure and emphasise the crown and torch."
+        ],
+        "badge": { "value": "All day", "label": "Most versatile" }
+      },
+      {
+        "id": "bridge",
+        "icon": "🌉",
+        "name": "Framed with the Rainbow Bridge",
+        "location": "Waterfront platform to the statue's right",
+        "background": "Move to the right of the statue to bring the Rainbow Bridge into frame. The red-and-white suspension bridge against the green statue creates a striking colour contrast — Odaiba's most recognisable postcard view.",
+        "points": [
+          "Use the Rainbow Bridge as a diagonal lead-in line to add depth and tension.",
+          "A telephoto lens compresses the scene so the statue and bridge feel 'closer'."
+        ],
+        "badge": { "value": "Dusk", "label": "Best colours" }
+      },
+      {
+        "id": "night",
+        "icon": "🌇",
+        "name": "Dusk & Night Views",
+        "location": "West-facing promenade toward Tokyo Bay",
+        "background": "Around sunset the backlight gilds the statue; after dark the Rainbow Bridge lights up and the statue glows in the blue hour against the city — the most atmospheric moment.",
+        "points": [
+          "Shoot in the blue hour (20–30 min after sunset) when sky and lights are balanced.",
+          "A tripod with long exposure captures light trails of traffic on the bridge."
+        ],
+        "badge": { "value": "Night", "label": "Most atmospheric" }
+      },
+      {
+        "id": "bay",
+        "icon": "⛴️",
+        "name": "Tokyo Bay Reflection",
+        "location": "Water bus / opposite-shore view",
+        "background": "Approaching Odaiba by water bus from Asakusa or Hinode, you see the statue at eye level from the bay; on calm days the statue and Rainbow Bridge reflect on Tokyo Bay — a unique sea-level perspective.",
+        "points": [
+          "Ride the upper deck and shoot past the railings to avoid crowds.",
+          "Mornings bring calmer water and more complete reflections."
+        ],
+        "badge": { "value": "Morning", "label": "Best reflection" }
+      }
+    ]
+  },
+  "education": {
+    "title": "Why a Statue of Liberty in Odaiba? (The Social Meaning of Public Art)",
+    "subtitle": "A statue from New York, born in Paris, rooted on Tokyo Bay — behind it lie multiple narratives of city, culture and diplomacy.",
+    "points": [
+      {
+        "title": "Making Franco-Japanese friendship tangible",
+        "text": "In 1998, the 'Year of France in Japan' marked 150 years of Franco-Japanese relations, and the Statue of Liberty arrived as a symbol of friendship. It turns abstract diplomatic goodwill into a touchable, photo-friendly public landscape, continuing the tradition of 'France giving statues'."
+      },
+      {
+        "title": "Public art & urban renewal",
+        "text": "Odaiba — once industrial reclaimed land — was transformed into a citizens' and visitors' waterfront leisure zone through seaside parks, commercial facilities and iconic public art. The Statue of Liberty is a microcosm of this 'culture activates urban space' strategy."
+      },
+      {
+        "title": "Connecting cross-cultural symbols",
+        "text": "The same statue links New York (liberty), Paris (creation and gift) and Tokyo (friendship and localisation). It reminds us that great civic symbols often belong to all humanity, not just one city."
+      }
+    ]
+  },
+  "audience": {
+    "title": "Who Finds Their Resonance Here? (A Guide for Every Visitor)",
+    "subtitle": "Every visitor can find the way in that suits them best.",
+    "items": [
+      {
+        "icon": "👨‍👩‍👧",
+        "group": "Families",
+        "resonance": "Free, open and safe seaside promenade where children can run, take photos and meet this world-famous statue up close.",
+        "tip": "Pair with Aqua City and DiverCity family facilities — mall first, then a relaxed waterfront walk."
+      },
+      {
+        "icon": "📷",
+        "group": "Photographers & Couples",
+        "resonance": "At dusk and night, Lady Liberty with the Rainbow Bridge is Odaiba's most romantic scene and highly photogenic.",
+        "tip": "Claim the right-side waterfront platform 30 minutes before dusk; shoot in the blue hour to capture both lights and sky."
+      },
+      {
+        "icon": "🤖",
+        "group": "Anime & Pop-culture Fans",
+        "resonance": "Odaiba is a classic filming location for works like Digimon and 20th Century Boys, and next door stands DiverCity's Unicorn Gundam.",
+        "tip": "Route the Statue of Liberty, Unicorn Gundam and Fuji TV together for a 'Odaiba otaku pilgrimage'."
+      },
+      {
+        "icon": "🗺️",
+        "group": "First-time Visitors to Japan",
+        "resonance": "Pose with Lady Liberty without flying to New York; right by Tokyo Bay and the Rainbow Bridge, it is a perfect starting point to discover Tokyo's waterfront.",
+        "tip": "Take the Yurikamome from Shimbashi — the moment it crosses the Rainbow Bridge is a great preview; then walk from the station."
+      }
+    ]
+  }
+}

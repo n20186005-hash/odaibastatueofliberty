@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Intro from '../../components/Intro.astro';
+import Transport from '../../components/Transport.astro';
+import InfoSection from '../../components/InfoSection.astro';
+import ScienceArt from '../../components/ScienceArt.astro';
+import OutdoorMuseum from '../../components/OutdoorMuseum.astro';
+import Gallery from '../../components/Gallery.astro';
+import FeaturedQuotes from '../../components/FeaturedQuotes.astro';
+import VisitGuide from '../../components/VisitGuide.astro';
+import Reviews from '../../components/Reviews.astro';
+import MapEmbed from '../../components/MapEmbed.astro';
+import DeepDive from '../../components/DeepDive.astro';
+import FAQ from '../../components/FAQ.astro';
+import { getI18n, languagesList } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return languagesList.map((lang) => ({ params: { lang } }));
+}
+
+const { messages } = getI18n(Astro.url);
+---
+
+<BaseLayout title={messages.meta.title} description={messages.meta.description} path="">
+  <Hero />
+  <Intro />
+  <InfoSection />
+  <ScienceArt />
+  <OutdoorMuseum />
+  <Transport />
+  <FeaturedQuotes />
+  <VisitGuide />
+  <Gallery />
+  <Reviews />
+  <MapEmbed />
+  <DeepDive />
+  <FAQ />
+</BaseLayout>

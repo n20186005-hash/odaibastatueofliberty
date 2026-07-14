@@ -1,0 +1,35 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const g = messages.gallery;
+const totalImages = 20;
+const images = Array.from({ length: totalImages }, (_, i) => {
+  const n = String(i + 1);
+  return `/gallery/statue-of-liberty-${n}.jpg`;
+});
+const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
+---
+
+<section id="gallery" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{g.title}</h2>
+    <p class="text-center text-lg mb-10" style="color: var(--text-secondary);">{g.subtitle}</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="gallery-grid">
+      {images.map((src, index) => (
+        <figure class="gallery-item rounded-2xl border overflow-hidden" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <img src={src} alt={photoAlts[index] ?? g.photoAlt} loading="lazy" class="w-full h-56 object-cover" />
+          <figcaption class="px-4 py-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+            {photoAlts[index] ?? g.photoAlt}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href={g.mapsUrl} target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full font-semibold text-white" style="background: var(--accent);">
+        📍 {g.viewAll}
+      </a>
+    </div>
+  </div>
+</section>
