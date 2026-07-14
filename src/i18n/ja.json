@@ -19,6 +19,26 @@
     "changeLanguage": "言語を切り替え",
     "toggleTheme": "テーマを切り替え"
   },
+  "nonprofitBanner": {
+    "text": "これは熱心な旅行者がまとめた非営利の独立ガイドで、お台場の自由の女神像に関する最も客観的な見学アドバイスを提供することを目的としています。"
+  },
+  "mission": {
+    "title": "私たちの使命",
+    "text": "すべての訪日旅行者がお台場で後悔なく過ごせるよう、散在する公式情報をまとめ、最も純粋な見学体験をお届けします。"
+  },
+  "breadcrumb": {
+    "home": "ホーム",
+    "tokyoAttractions": "東京の観光地",
+    "minato": "港区",
+    "odaibaPark": "お台場海浜公園",
+    "current": "自由の女神像（お台場）"
+  },
+  "stickyNav": {
+    "overview": "概要",
+    "transport": "アクセス",
+    "history": "歴史",
+    "guide": "見どころ"
+  },
   "hero": {
     "title": "自由の女神像（お台場）",
     "subtitle": "ニューヨークの自由の女神像を1/7スケールで再現した像が、東京湾沿いのお台場海浜に静かに立っています。1998年の「フランス年」に、日仏交流150周年を記念してフランスから贈られ、両国の友情の象徴となりました。緑青（せいしょう）色の姿はレインボーブリッジや東京湾とひとつの構図になり、お台場で最も象徴的な景観であり、無料で24時間見学できる都市のランドマークです。",
@@ -35,7 +55,15 @@
     "historyCta": {
       "label": "像の歴史を知る",
       "href": "#history"
-    }
+    },
+    "quickFacts": [
+      { "icon": "🎟️", "label": "入場無料", "value": "チケット不要" },
+      { "icon": "🕒", "label": "24時間見学可", "value": "昼夜を問わず" },
+      { "icon": "📍", "label": "お台場海浜公園", "value": "プロムナードの突端" }
+    ],
+    "navCta": { "label": "📍 ナビで向かう", "href": "#transport" },
+    "photoCta": { "label": "📸 ベスト撮影枠", "href": "#gallery" },
+    "liveInfo": { "weather": "現在の天気", "sunset": "本日の日没" }
   },
   "intro": {
     "title": "お台場の自由の女神像を知る",
@@ -203,7 +231,11 @@
       "隣のアクアシティやダイバーシティ（ユニコーンガンダム）も併せて。商業施設内にトイレや飲食があります。"
     ],
     "mapsCta": "地図とルートを見る",
-    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8"
+    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8",
+    "bestTime": {
+      "title": "到着のベストタイミング",
+      "text": "24時間見学可ですが、日没の約1時間前に到着するのがおすすめ。昼・夕暮れ・夜景の3つの視点を一度に収められ、最もコスパの高い見学術です。"
+    }
   },
   "officialManagement": {
     "title": "像について",

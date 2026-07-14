@@ -19,6 +19,26 @@
     "changeLanguage": "언어 변경",
     "toggleTheme": "테마 전환"
   },
+  "nonprofitBanner": {
+    "text": "이것은 열정적인 여행자들이 모은 비영리 독립 가이드로, 오다이바 자유의 여신상에 관한 가장 객관적인 관람 조언을 제공하는 것을 목적으로 합니다."
+  },
+  "mission": {
+    "title": "우리의 사명",
+    "text": "모든 방문자가 오다이바에서 후회 없이 머무를 수 있도록, 흩어진 공식 정보를 모아 가장 순수한 관람 경험만을 드립니다."
+  },
+  "breadcrumb": {
+    "home": "홈",
+    "tokyoAttractions": "도쿄 명소",
+    "minato": "미나토구",
+    "odaibaPark": "오다이바 해변공원",
+    "current": "오다이바 자유의 여신상"
+  },
+  "stickyNav": {
+    "overview": "개요",
+    "transport": "교통",
+    "history": "역사",
+    "guide": "둘러보기"
+  },
   "hero": {
     "title": "오다이바 자유의 여신상",
     "subtitle": "뉴욕의 자유의 여신상을 1/7 스케일로 재현한 동상이 도쿄 만(灣) 연안의 오다이바 해변에 조용히 서 있습니다. 1998년 ‘프랑스의 해’에 일·불(日仏) 교류 150주년을 기념해 프랑스에서 선물로 보내며 두 나라 우정의 상징이 되었습니다. 청동빛 녹색의 모습이 무지개대교와 도쿄 만과 한 프레임을 이루며, 오다이바에서 가장 알아보기 쉬운 랜드마크이자 무료로 24시간 관람할 수 있는 도시의 상징입니다.",
@@ -35,7 +55,15 @@
     "historyCta": {
       "label": "동상의 역사",
       "href": "#history"
-    }
+    },
+    "quickFacts": [
+      { "icon": "🎟️", "label": "무료 관람", "value": "입장권 불필요" },
+      { "icon": "🕒", "label": "24시간 관람", "value": "주야 불문" },
+      { "icon": "📍", "label": "오다이바 해변공원", "value": "산책로 끝" }
+    ],
+    "navCta": { "label": "📍 길찾기", "href": "#transport" },
+    "photoCta": { "label": "📸 베스트 촬영지", "href": "#gallery" },
+    "liveInfo": { "weather": "현재 날씨", "sunset": "오늘 일몰" }
   },
   "intro": {
     "title": "오다이바 자유의 여신상 둘러보기",
@@ -203,7 +231,11 @@
       "곁의 아쿠아시티, 다이버시티(유니콘 건담)도 함께 둘러보세요. 상가에 화장실과 음식이 있습니다."
     ],
     "mapsCta": "지도와 경로 보기",
-    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8"
+    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8",
+    "bestTime": {
+      "title": "도착하기 좋은 시간",
+      "text": "24시간 개방이지만, 해 질 무렵 약 1시간 전에 도착하는 걸 권합니다. 낮·황혼·야경 세 가지 풍경을 한 번에 담을 수 있어 비용 대비 효과가 가장 높습니다."
+    }
   },
   "officialManagement": {
     "title": "동상에 대하여",

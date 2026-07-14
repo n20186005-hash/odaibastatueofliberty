@@ -19,6 +19,26 @@
     "changeLanguage": "Switch language",
     "toggleTheme": "Toggle theme"
   },
+  "nonprofitBanner": {
+    "text": "This is a non-profit, independent guide compiled by enthusiastic travellers, aiming to give you the most objective advice for visiting the Statue of Liberty Odaiba."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "text": "So that every visitor to Japan leaves Odaiba without regret, we have gathered these scattered official details — only to give you the purest possible visit."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "tokyoAttractions": "Tokyo Attractions",
+    "minato": "Minato City",
+    "odaibaPark": "Odaiba Kaihin Park",
+    "current": "Statue of Liberty Odaiba"
+  },
+  "stickyNav": {
+    "overview": "Overview",
+    "transport": "Getting Here",
+    "history": "History",
+    "guide": "Guide"
+  },
   "hero": {
     "title": "Statue of Liberty Odaiba",
     "subtitle": "A 1/7-scale replica of New York's Statue of Liberty, standing quietly on the Odaiba waterfront along Tokyo Bay. It was erected in 1998 during the 'Year of France in Japan' and presented by France as a symbol of friendship between the two nations. With its verdigris-green figure framed by the Rainbow Bridge and Tokyo Bay, it is Odaiba's most recognisable landmark — and a free, always-open civic icon.",
@@ -35,7 +55,15 @@
     "historyCta": {
       "label": "Statue's History",
       "href": "#history"
-    }
+    },
+    "quickFacts": [
+      { "icon": "🎟️", "label": "Free entry", "value": "No ticket needed" },
+      { "icon": "🕒", "label": "Open 24 hours", "value": "Day & night" },
+      { "icon": "📍", "label": "Odaiba Seaside Park", "value": "End of promenade" }
+    ],
+    "navCta": { "label": "📍 Get Directions", "href": "#transport" },
+    "photoCta": { "label": "📸 Best Photo Spots", "href": "#gallery" },
+    "liveInfo": { "weather": "Current weather", "sunset": "Today's sunset" }
   },
   "intro": {
     "title": "Discover the Statue of Liberty Odaiba",
@@ -203,7 +231,11 @@
       "Combine with nearby Aqua City and DiverCity (Unicorn Gundam); malls offer restrooms and food."
     ],
     "mapsCta": "View Map & Route",
-    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8"
+    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8",
+    "bestTime": {
+      "title": "Best Time to Arrive",
+      "text": "Although it is open 24 hours, we recommend arriving about an hour before sunset — you'll capture three views in one trip: daytime, golden hour and night lights. It is the lowest-cost, highest-return strategy."
+    }
   },
   "officialManagement": {
     "title": "About the Statue",

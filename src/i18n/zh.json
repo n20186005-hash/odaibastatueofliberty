@@ -19,6 +19,26 @@
     "changeLanguage": "切换语言",
     "toggleTheme": "切换主题"
   },
+  "nonprofitBanner": {
+    "text": "这是一份由热心旅行者整理的非营利独立指南，旨在提供最客观的台场自由女神像游览建议。"
+  },
+  "mission": {
+    "title": "我们的使命",
+    "text": "为了让每一位访日游客在台场不留遗憾，我们整理了这些碎片化的官方信息，只为给您最纯粹的参观体验。"
+  },
+  "breadcrumb": {
+    "home": "首页",
+    "tokyoAttractions": "东京景点",
+    "minato": "港区",
+    "odaibaPark": "台场海滨公园",
+    "current": "台场自由女神像"
+  },
+  "stickyNav": {
+    "overview": "概览",
+    "transport": "交通",
+    "history": "历史",
+    "guide": "指南"
+  },
   "hero": {
     "title": "东京台场自由女神像",
     "subtitle": "纽约自由女神像的 1/7 比例复刻，静静伫立在东京湾畔的台场海滨。它诞生于 1998 年「法日交流 150 周年」之际，由法方赠予日本，作为两国友谊的象征。铜绿色的身影与彩虹大桥、东京湾同框，是台场最具辨识度的风景，也是免费、全天可参观的城市地标。",
@@ -35,7 +55,15 @@
     "historyCta": {
       "label": "了解雕像历史",
       "href": "#history"
-    }
+    },
+    "quickFacts": [
+      { "icon": "🎟️", "label": "免费参观", "value": "无需门票" },
+      { "icon": "🕒", "label": "全天开放", "value": "24 小时" },
+      { "icon": "📍", "label": "台场海滨公园", "value": "临海步道尽头" }
+    ],
+    "navCta": { "label": "📍 导航前往", "href": "#transport" },
+    "photoCta": { "label": "📸 查看最佳机位", "href": "#gallery" },
+    "liveInfo": { "weather": "当前天气", "sunset": "今日日落" }
   },
   "intro": {
     "title": "走近东京台场自由女神像",
@@ -203,7 +231,11 @@
       "可与相邻的 Aqua City、DiverCity（独角兽高达）一并游览；商场内有洗手间与餐饮补给。"
     ],
     "mapsCta": "查看地图与路线",
-    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8"
+    "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8",
+    "bestTime": {
+      "title": "最佳到达时刻",
+      "text": "虽然全天 24 小时开放，但建议在日落前约 1 小时抵达，可一次性收获「日间、黄昏、夜景」三种视角，是成本最低、回报最高的游览策略。"
+    }
   },
   "officialManagement": {
     "title": "关于这座雕像",

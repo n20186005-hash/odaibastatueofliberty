@@ -2,45 +2,54 @@
 import { getI18n } from '../i18n/ui';
 const { messages } = getI18n(Astro.url);
 const h = messages.hero;
-const tags = h.tags ?? [];
+const facts = h.quickFacts ?? [];
+const live = h.liveInfo ?? {};
 ---
 
-<section class="relative min-h-[78vh] sm:min-h-[88vh] flex items-center justify-center text-center overflow-hidden">
-  <div class="absolute inset-0" style={`background-image: linear-gradient(rgba(15,32,21,0.55), rgba(15,32,21,0.55)), url('/gallery/statue-of-liberty-1.jpg'); background-size: cover; background-position: center;`}></div>
-  <div class="relative z-10 px-4 sm:px-6 py-16 sm:py-20 max-w-3xl animate-fade-in-up">
+<section id="overview" class="relative min-h-[84vh] sm:min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
+  <div class="absolute inset-0" style={`background-image: linear-gradient(rgba(15,32,21,0.55), rgba(15,32,21,0.62)), url('/gallery/statue-of-liberty-1.jpg'); background-size: cover; background-position: center;`}></div>
+  <div class="relative z-10 px-4 sm:px-6 py-16 sm:py-20 max-w-4xl w-full animate-fade-in-up">
     <span class="inline-flex max-w-full flex-wrap items-center justify-center gap-1 px-3 py-1 mb-5 rounded-full text-xs sm:text-sm font-medium" style="background: rgba(255,255,255,0.15); color: #fff; backdrop-filter: blur(4px);">
       ⭐ {h.rating} · {h.reviewCount}
     </span>
-    <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-5">
+
+    <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
       {h.title}
     </h1>
-    <p class="text-base sm:text-xl text-white/90 mb-4 max-w-2xl mx-auto leading-relaxed">
+
+    <p class="text-sm sm:text-lg text-white/90 mb-7 max-w-2xl mx-auto leading-relaxed">
       {h.subtitle}
     </p>
-    <p class="text-sm text-white/80 mb-4 inline-flex items-center justify-center gap-2 flex-wrap">
-      <span>🕒 {h.hours}</span>
-    </p>
-    <div class="flex flex-wrap items-center justify-center gap-2 mb-8">
-      {tags.map((tag) => (
-        <span class="inline-flex items-center rounded-full border px-3 py-1 text-xs sm:text-sm text-white/90" style="border-color: rgba(255,255,255,0.24); background: rgba(255,255,255,0.08);">
-          {tag}
-        </span>
+
+    <!-- Key facts as icon cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto mb-6">
+      {facts.map((f) => (
+        <div class="hero-fact">
+          <span class="hero-fact-icon" aria-hidden="true">{f.icon}</span>
+          <span class="hero-fact-label">{f.label}</span>
+          <span class="hero-fact-value">{f.value}</span>
+        </div>
       ))}
     </div>
+
+    <!-- Live data placeholders -->
+    <div class="flex flex-wrap items-center justify-center gap-2 mb-7">
+      <span class="live-pill">🌤️ {live.weather}：<span class="live-placeholder">—</span></span>
+      <span class="live-pill">🌅 {live.sunset}：<span class="live-placeholder">—</span></span>
+    </div>
+
+    <!-- Strong contrasting CTAs -->
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href={h.routeCta.href}
-         class="inline-flex w-full sm:w-auto justify-center px-8 py-3.5 rounded-full font-semibold text-white shadow-lg hover:opacity-90 transition"
-         style="background: var(--accent);">
-        {h.routeCta.label}
+      <a href={h.navCta.href} class="btn-cta btn-cta-primary">
+        {h.navCta.label}
       </a>
-      <a href={h.historyCta.href}
-         class="inline-flex w-full sm:w-auto justify-center px-8 py-3.5 rounded-full font-semibold border text-white hover:bg-white/10 transition"
-         style="border-color: rgba(255,255,255,0.28);">
-        {h.historyCta.label}
+      <a href={h.photoCta.href} class="btn-cta btn-cta-secondary">
+        {h.photoCta.label}
       </a>
     </div>
+
     <div class="mt-5">
-      <a href={h.mapsUrl} target="_blank" rel="noopener noreferrer" class="text-sm text-white/80 hover:text-white transition">
+      <a href={h.mapsUrl} target="_blank" rel="noopener noreferrer" class="hero-maps-link">
         {h.openMaps}
       </a>
     </div>

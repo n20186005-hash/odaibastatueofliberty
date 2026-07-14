@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import NoticeBanner from '../components/NoticeBanner.astro';
 import Footer from '../components/Footer.astro';
 import { getLangFromUrl, buildAlternates, htmlLangAttr, getI18n } from '../i18n/ui';
 import { ogLocale } from '../config';
@@ -38,14 +39,37 @@ const jsonLd = {
     latitude: 35.6196,
     longitude: 139.7756,
   },
-  openingHours: '24/7',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.5',
-    reviewCount: '4894',
+    openingHours: '24/7',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
+      },
+    ],
+    isAccessibleForFree: true,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.5',
+      reviewCount: '4894',
+    },
+    sameAs: ['https://maps.app.goo.gl/XypCJLEZwme5RSjc8'],
   },
-  sameAs: ['https://maps.app.goo.gl/XypCJLEZwme5RSjc8'],
-};
+  breadcrumbLd = (() => {
+    const bc = messages.breadcrumb;
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: bc.home, item: `https://odaibastatueofliberty.com/${lang}` },
+        { '@type': 'ListItem', position: 2, name: bc.tokyoAttractions },
+        { '@type': 'ListItem', position: 3, name: bc.minato },
+        { '@type': 'ListItem', position: 4, name: bc.odaibaPark },
+        { '@type': 'ListItem', position: 5, name: bc.current, item: canonical },
+      ],
+    };
+  })();
 ---
 
 <!doctype html>
@@ -73,6 +97,7 @@ const jsonLd = {
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
 
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)}></script>
 
     <script is:inline>
       (function () {
@@ -89,6 +114,7 @@ const jsonLd = {
   </head>
   <body class="min-h-screen">
     <Header />
+    <NoticeBanner />
     <main>
       <slot />
     </main>
