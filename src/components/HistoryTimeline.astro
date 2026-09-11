@@ -1,0 +1,32 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const t = messages.timeline;
+const items = t.items ?? [];
+---
+
+<!-- 历史年表：把散落的史实用时间轴呈现，强化科普专业度 -->
+<section id="timeline" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <p class="text-xs uppercase tracking-[0.2em] mb-3" style="color: var(--text-muted);">{t.eyebrow}</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{t.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{t.subtitle}</p>
+    </div>
+
+    <ol class="tl-list">
+      {items.map((item) => (
+        <li class="tl-item">
+          <div class="tl-node" aria-hidden="true"></div>
+          <div class="tl-card">
+            <p class="tl-year">{item.year}</p>
+            <h3 class="tl-title">{item.title}</h3>
+            <p class="tl-text">{item.text}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+
+    <p class="mt-8 text-xs leading-relaxed text-center" style="color: var(--text-muted);">{t.note}</p>
+  </div>
+</section>

@@ -1,0 +1,312 @@
+---
+/**
+ * 潮汐板块
+ * ------------------------------------------------------------------
+ * 面向游客：用一条潮位曲线 + 一张潮汐时刻表回答「现在在涨潮还是退潮、
+ * 下一次满潮/干潮是什么时候、哪天哪个时段最适合看潮与拍照」。
+ * 首屏由服务端按构建期数据静态渲染，加载后再刷新为最新潮位。
+ */
+import { getI18n } from '../i18n/ui';
+import { getWeather, intlLocale, timePart, weatherEndpoints } from '../lib/weather';
+import {
+  TIDE_CHART,
+  countdownText,
+  tideChartTag,
+  tideTableHtml,
+  trendInfo,
+  type TideLabels,
+} from '../lib/tide';
+
+const { lang, messages } = getI18n(Astro.url);
+const T = messages.tidePage;
+const locale = intlLocale(lang);
+
+const labels: TideLabels = {
+  high: T.high,
+  low: T.low,
+  today: T.today,
+  tomorrow: T.tomorrow,
+  trendRising: T.trendRising,
+  trendFalling: T.trendFalling,
+  trendSteady: T.trendSteady,
+  inHours: T.inHours,
+  inMinutes: T.inMinutes,
+  inNow: T.inNow,
+  noData: T.noData,
+};
+const ctx = { labels, locale };
+
+const weather = await getWeather();
+const marine = weather?.marine ?? null;
+const series = marine?.seaLevelSeries ?? [];
+const events = marine?.events ?? [];
+
+const nowMs = Date.now();
+const chartHtml = marine ? tideChartTag(series, events, ctx) : '';
+const tableHtml = marine ? tideTableHtml(events, ctx, 3) : '';
+const trend = marine ? trendInfo(marine.trend, labels) : null;
+
+const levelNow = marine
+  ? (marine.seaLevelNow ?? series[0]?.height ?? null)
+  : null;
+const fmtLevel = (v: number) => `${v >= 0 ? '+' : ''}${v.toFixed(2)}`;
+
+const tideConfig = {
+  locale,
+  labels,
+  chart: { W: TIDE_CHART.W, H: TIDE_CHART.H },
+  marineEndpoint: weatherEndpoints().marine,
+};
+---
+
+<section
+  id="tide"
+  class="section-padding"
+  style="background: linear-gradient(180deg, var(--bg-primary) 0%, color-mix(in srgb, var(--accent) 7%, var(--bg-primary)) 100%);"
+>
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <p class="tide-eyebrow">{T.eyebrow}</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">
+        {T.title}
+      </h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{T.subtitle}</p>
+    </div>
+
+    {marine ? (
+      <div class="tide-wrap" id="tide-root" data-tide-state="ready">
+        <div class="tide-top">
+          <!-- ① 当前潮位与下一次满潮／干潮 -->
+          <div class="tide-card tide-status">
+            <p class="tide-status-label">🌊 {T.nowTitle}</p>
+            <p class="tide-status-value">
+              <span id="tide-now">{levelNow === null ? '--' : fmtLevel(levelNow)}</span>
+              <span class="tide-unit">m</span>
+            </p>
+            <p class={`tide-trend ${trend?.cls ?? 'is-steady'}`} id="tide-trend">
+              <span aria-hidden="true">{trend?.icon ?? '→'}</span> {trend?.text ?? labels.trendSteady}
+            </p>
+
+            <div class="tide-next">
+              <div class="tide-next-item is-high">
+                <div class="tide-next-head">
+                  <span class="tide-next-icon" aria-hidden="true">▲</span>
+                  <span class="tide-next-name">{T.nextHigh}</span>
+                </div>
+                <div class="tide-next-body">
+                  <b id="tide-next-high-time">{marine.nextHigh ? timePart(marine.nextHigh.time) : '--:--'}</b>
+                  <span id="tide-next-high-h">
+                    {marine.nextHigh ? `${marine.nextHigh.height.toFixed(2)} m` : ''}
+                  </span>
+                </div>
+                <p
+                  class="tide-next-cd"
+                  id="tide-next-high-cd"
+                  data-tide-target={marine.nextHigh?.time ?? ''}
+                >
+                  {marine.nextHigh ? countdownText(marine.nextHigh.time, labels, nowMs) : ''}
+                </p>
+              </div>
+
+              <div class="tide-next-item is-low">
+                <div class="tide-next-head">
+                  <span class="tide-next-icon" aria-hidden="true">▼</span>
+                  <span class="tide-next-name">{T.nextLow}</span>
+                </div>
+                <div class="tide-next-body">
+                  <b id="tide-next-low-time">{marine.nextLow ? timePart(marine.nextLow.time) : '--:--'}</b>
+                  <span id="tide-next-low-h">
+                    {marine.nextLow ? `${marine.nextLow.height.toFixed(2)} m` : ''}
+                  </span>
+                </div>
+                <p
+                  class="tide-next-cd"
+                  id="tide-next-low-cd"
+                  data-tide-target={marine.nextLow?.time ?? ''}
+                >
+                  {marine.nextLow ? countdownText(marine.nextLow.time, labels, nowMs) : ''}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ② 潮位曲线 -->
+          <figure class="tide-card tide-chart">
+            <figcaption class="tide-chart-title">📈 {T.chartTitle}</figcaption>
+            <div class="tide-chart-scroll" id="tide-chart-wrap">
+              <div set:html={chartHtml} />
+            </div>
+            <p class="tide-chart-note">{T.chartNote}</p>
+          </figure>
+        </div>
+
+        <div class="tide-bottom">
+          <!-- ③ 潮汐时刻表 -->
+          <div class="tide-card tide-table-card">
+            <h3 class="tide-card-title">🗓️ {T.tableTitle}</h3>
+            <div id="tide-table" set:html={tableHtml} />
+          </div>
+
+          <!-- ④ 看潮实用提示 -->
+          <div class="tide-card tide-tips">
+            <h3 class="tide-card-title">🧭 {T.tipsTitle}</h3>
+            <ul class="tide-tip-list">
+              <li class="tide-tip">
+                <span class="tide-tip-icon" aria-hidden="true">🌅</span>
+                <div>
+                  <p class="tide-tip-title">{T.tips.bestTitle}</p>
+                  <p class="tide-tip-text">{T.tips.bestText}</p>
+                </div>
+              </li>
+              <li class="tide-tip">
+                <span class="tide-tip-icon" aria-hidden="true">📷</span>
+                <div>
+                  <p class="tide-tip-title">{T.tips.photoTitle}</p>
+                  <p class="tide-tip-text">{T.tips.photoText}</p>
+                </div>
+              </li>
+              <li class="tide-tip">
+                <span class="tide-tip-icon" aria-hidden="true">⚠️</span>
+                <div>
+                  <p class="tide-tip-title">{T.tips.safetyTitle}</p>
+                  <p class="tide-tip-text">{T.tips.safetyText}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="tide-note">{T.disclaimer}</p>
+      </div>
+    ) : (
+      <p class="tide-unavailable">{T.unavailable}</p>
+    )}
+  </div>
+</section>
+
+<script id="tide-config" type="application/json" is:inline set:html={JSON.stringify(tideConfig)}></script>
+
+<script>
+  /* 渐进增强：首屏为构建期静态渲染，页面加载后刷新为最新潮位与潮汐时刻表 */
+  import { normalizeMarine } from '../lib/weather';
+  import { tideChartTag, tideTableHtml, trendInfo, type TideLabels } from '../lib/tide';
+
+  type Cfg = {
+    locale: string;
+    labels: TideLabels;
+    chart: { W: number; H: number };
+    marineEndpoint: string;
+  };
+
+  const cfgEl = document.getElementById('tide-config');
+  const root = document.getElementById('tide-root');
+
+  if (cfgEl && root) {
+    let cfg: Cfg;
+    try {
+      cfg = JSON.parse(cfgEl.textContent || '{}');
+    } catch {
+      cfg = null as unknown as Cfg;
+    }
+
+    if (cfg) {
+      const labels = cfg.labels;
+      const ctx = { locale: cfg.locale, labels };
+
+      const setText = (id: string, value: string) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+      };
+
+      const fmtLevel = (v: number) => `${v >= 0 ? '+' : ''}${v.toFixed(2)}`;
+
+      const hhmm = (iso: string) => {
+        const m = String(iso || '').match(/T(\d{2}:\d{2})/);
+        return m ? m[1] : '--:--';
+      };
+
+      const countdown = (targetIso: string, now: number) => {
+        if (!targetIso) return '';
+        const t = Date.parse(
+          /[Zz]$|[+-]\d{2}:\d{2}$/.test(targetIso)
+            ? targetIso
+            : `${targetIso.length <= 16 ? `${targetIso}:00` : targetIso}+09:00`,
+        );
+        if (!Number.isFinite(t)) return '';
+        const diff = t - now;
+        if (diff <= 0) return labels.inNow;
+        const mins = Math.max(1, Math.round(diff / 60000));
+        if (mins < 60) return labels.inMinutes.replace('{n}', String(mins));
+        return labels.inHours.replace('{n}', String(Math.floor(mins / 60)));
+      };
+
+      const refreshCountdowns = () => {
+        const now = Date.now();
+        document.querySelectorAll<HTMLElement>('[data-tide-target]').forEach((el) => {
+          const target = el.getAttribute('data-tide-target') || '';
+          el.textContent = countdown(target, now);
+        });
+      };
+
+      const trendCls = (t: string) =>
+        t === 'rising' ? 'is-rising' : t === 'falling' ? 'is-falling' : 'is-steady';
+
+      const render = async () => {
+        let raw: any = null;
+        try {
+          const res = await fetch(cfg.marineEndpoint, { headers: { accept: 'application/json' } });
+          if (res.ok) raw = await res.json();
+        } catch {
+          raw = null;
+        }
+        if (!raw) return;
+
+        const marine = normalizeMarine(raw, new Date().toISOString());
+        if (!marine) return;
+
+        const series = marine.seaLevelSeries || [];
+        const events = marine.events || [];
+
+        const level = marine.seaLevelNow ?? series[0]?.height ?? null;
+        setText('tide-now', level === null ? '--' : fmtLevel(level));
+
+        const trend = trendInfo(marine.trend, labels);
+        const trendEl = document.getElementById('tide-trend');
+        if (trendEl) {
+          trendEl.className = `tide-trend ${trend.cls}`;
+          trendEl.innerHTML = `<span aria-hidden="true">${trend.icon}</span> ${trend.text}`;
+        }
+
+        const next = document.getElementById('tide-next-high-time');
+        const nextH = document.getElementById('tide-next-high-h');
+        const nextCd = document.getElementById('tide-next-high-cd');
+        if (marine.nextHigh) {
+          if (next) next.textContent = hhmm(marine.nextHigh.time);
+          if (nextH) nextH.textContent = `${marine.nextHigh.height.toFixed(2)} m`;
+          if (nextCd) nextCd.setAttribute('data-tide-target', marine.nextHigh.time);
+        }
+
+        const low = document.getElementById('tide-next-low-time');
+        const lowH = document.getElementById('tide-next-low-h');
+        const lowCd = document.getElementById('tide-next-low-cd');
+        if (marine.nextLow) {
+          if (low) low.textContent = hhmm(marine.nextLow.time);
+          if (lowH) lowH.textContent = `${marine.nextLow.height.toFixed(2)} m`;
+          if (lowCd) lowCd.setAttribute('data-tide-target', marine.nextLow.time);
+        }
+
+        const chartWrap = document.getElementById('tide-chart-wrap');
+        if (chartWrap) chartWrap.innerHTML = tideChartTag(series, events, ctx);
+
+        const table = document.getElementById('tide-table');
+        if (table) table.innerHTML = tideTableHtml(events, ctx, 3);
+
+        refreshCountdowns();
+      };
+
+      refreshCountdowns();
+      window.setInterval(refreshCountdowns, 60000);
+      void render();
+    }
+  }
+</script>

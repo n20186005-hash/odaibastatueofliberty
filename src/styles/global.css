@@ -504,3 +504,1000 @@ h1, h2, h3, h4, h5, h6 {
 a {
   transition: color 0.2s ease;
 }
+
+/* 锚点定位时避开吸顶导航 */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* ── 天气模块 ───────────────────────────────────────── */
+.wx-wrap {
+  display: grid;
+  gap: 1rem;
+}
+
+/* ① 风险提醒：有预警才出现，无预警时保留一行安心提示 */
+.wx-alerts {
+  display: grid;
+  gap: 0.6rem;
+}
+.wx-alert {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  border-radius: 1rem;
+  padding: 0.9rem 1.15rem;
+  border: 1px solid transparent;
+}
+.wx-alert.is-danger {
+  background: #fdecec;
+  border-color: #f0b9b9;
+  color: #8f2020;
+}
+.wx-alert.is-warn {
+  background: #fdf5e3;
+  border-color: #ecd39b;
+  color: #7a5310;
+}
+[data-theme="dark"] .wx-alert.is-danger {
+  background: rgba(200, 60, 60, 0.16);
+  border-color: rgba(220, 90, 90, 0.4);
+  color: #ffb3b3;
+}
+[data-theme="dark"] .wx-alert.is-warn {
+  background: rgba(210, 160, 40, 0.14);
+  border-color: rgba(220, 180, 80, 0.35);
+  color: #f2d18a;
+}
+.wx-alert-icon {
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+.wx-alert-tag {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.wx-alert-text {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+.wx-clear {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.wx-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 960px) {
+  .wx-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: start;
+  }
+}
+.wx-main,
+.wx-aside {
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+.wx-aside {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  align-content: start;
+}
+.wx-card {
+  border-radius: 1rem;
+  padding: 1.05rem 1.15rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+}
+.wx-card-title {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.wx-current {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+.wx-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+.wx-temp {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+  color: var(--text-primary);
+}
+.wx-unit {
+  font-size: 1.25rem;
+  margin-left: 0.15rem;
+  color: var(--text-muted);
+}
+.wx-desc {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+.wx-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.15rem;
+}
+.wx-chip {
+  font-size: 0.76rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+}
+.wx-chip.is-rain {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--text-primary);
+}
+.wx-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(116px, 1fr));
+  gap: 0.65rem;
+  margin: 1.35rem 0 0;
+}
+.wx-metric {
+  border-radius: 0.9rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+.wx-metric dt {
+  margin: 0 0 0.25rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+.wx-metric dd {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.wx-metric-sub {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.wx-updated {
+  margin: 0.9rem 0 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ② 三类可执行建议 */
+.wx-advice-head {
+  margin: 1.5rem 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.wx-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.85rem;
+}
+.wx-col {
+  border-radius: 1rem;
+  padding: 0.95rem 1.05rem;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid var(--border-color);
+}
+.wx-col-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.wx-col-list {
+  margin: 0;
+  padding-left: 1.05rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.wx-col-list li + li {
+  margin-top: 0.3rem;
+}
+.wx-pack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.wx-pack-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.7rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+/* ③ 逐小时条带 */
+.wx-hourly {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(78px, 1fr));
+  gap: 0.45rem;
+}
+.wx-hour {
+  display: grid;
+  justify-items: center;
+  gap: 0.15rem;
+  padding: 0.5rem 0.35rem;
+  border-radius: 0.75rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+.wx-hour-time {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.wx-hour-icon {
+  font-size: 1.05rem;
+}
+.wx-hour-temp {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.wx-hour-rain {
+  font-size: 0.68rem;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ④ 海边实况 / 空气 */
+.wx-rows {
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+.wx-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+}
+.wx-row dt {
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+.wx-row dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.wx-tide {
+  margin: 0.9rem 0 0;
+}
+.wx-tide svg {
+  display: block;
+  width: 100%;
+  height: 64px;
+}
+.wx-tide-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.wx-tide-dot.is-high {
+  fill: #d4843d;
+}
+.wx-tide-dot.is-low {
+  fill: var(--text-muted);
+}
+.wx-tide figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+/* ⑤ 7 日预报 */
+.wx-daily {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+.wx-day {
+  display: grid;
+  grid-template-columns: 4.4rem 1.5rem minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: 0.45rem 0.55rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.75rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+.wx-day-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+.wx-day-icon {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.wx-day-cond {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wx-day-rain {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+.wx-day-temp {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.wx-day-temp b {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.wx-day-tip {
+  white-space: nowrap;
+  font-size: 0.68rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+}
+.wx-note {
+  margin: 1rem 0 0;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .wx-main {
+    padding: 1.25rem;
+  }
+  .wx-day {
+    grid-template-columns: 4rem 1.4rem auto auto;
+  }
+  .wx-day-cond,
+  .wx-day-tip {
+    display: none;
+  }
+}
+
+/* ── 周边联动：免费景点 / 推荐体验 / 需购票体验 ─────── */
+.rec-grid {
+  display: grid;
+  gap: 2rem;
+}
+.rec-group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.rec-group-note {
+  margin: 0 0 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.rec-group.is-paid {
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+}
+
+@media (min-width: 768px) {
+  .rec-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .rec-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+/* ── 首屏之下：门票 / 入场速答 ─────────────────────── */
+.entry-head {
+  max-width: 46rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+.entry-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.entry-title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.entry-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+.entry-grid {
+  display: grid;
+  gap: 1rem;
+}
+.entry-card {
+  border-radius: 1.1rem;
+  padding: 1.15rem 1.2rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+.entry-card-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+.entry-card-q {
+  margin: 0.6rem 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.entry-card-a {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+.entry-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.25rem;
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: 1.1rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+}
+.entry-badge {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 0.85rem;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+}
+.entry-badge b {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+.entry-badge span {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+.entry-paid {
+  flex: 1 1 16rem;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.entry-paid a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.entry-paid a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .entry-title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 700px) {
+  .entry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1080px) {
+  .entry-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ── 潮汐板块 ─────────────────────────────────────── */
+.tide-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.tide-wrap {
+  display: grid;
+  gap: 1.25rem;
+}
+.tide-top,
+.tide-bottom {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 960px) {
+  .tide-top {
+    grid-template-columns: 0.78fr 1.22fr;
+    align-items: stretch;
+  }
+  .tide-bottom {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: start;
+  }
+}
+.tide-card {
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+.tide-card-title {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ① 当前潮位与下一次满潮／干潮 */
+.tide-status {
+  display: flex;
+  flex-direction: column;
+}
+.tide-status-label {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.tide-status-value {
+  margin: 0.6rem 0 0;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.tide-unit {
+  font-size: 1.25rem;
+  margin-left: 0.2rem;
+  color: var(--text-muted);
+}
+.tide-trend {
+  margin: 0.75rem 0 0;
+  align-self: flex-start;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+}
+.tide-trend.is-rising {
+  color: #b45309;
+  background: color-mix(in srgb, #d4843d 20%, transparent);
+}
+.tide-trend.is-falling {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+.tide-trend.is-steady {
+  color: var(--text-secondary);
+  background: var(--tag-bg);
+}
+.tide-next {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+.tide-next-item {
+  border-radius: 1rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+}
+.tide-next-head {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.tide-next-item.is-high .tide-next-icon { color: #d4843d; }
+.tide-next-item.is-low .tide-next-icon { color: var(--accent); }
+.tide-next-body {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+.tide-next-body b {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.tide-next-body span {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.tide-next-cd {
+  margin: 0.3rem 0 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ② 潮位曲线 */
+.tide-chart {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.tide-chart-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+.tide-chart-scroll {
+  flex: 1;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+}
+.tide-chart-scroll svg {
+  display: block;
+  width: 100%;
+  min-width: 560px;
+  height: auto;
+}
+.tide-grid {
+  stroke: var(--border-color);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+.tide-grid.is-v {
+  stroke-dasharray: 2 5;
+  opacity: 0.7;
+}
+.tide-axis {
+  fill: var(--text-muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+.tide-area {
+  fill: color-mix(in srgb, var(--accent) 16%, transparent);
+  stroke: none;
+}
+.tide-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.tide-dot.is-high { fill: #d4843d; }
+.tide-dot.is-low { fill: var(--accent); }
+.tide-mark {
+  font-size: 10px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.tide-mark.is-high { fill: #b45309; }
+.tide-mark.is-low { fill: var(--accent); }
+.tide-chart-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ③ 潮汐时刻表 */
+.tide-day + .tide-day {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+}
+.tide-day-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+.tide-day-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.tide-day-count {
+  font-size: 0.68rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+}
+.tide-day-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+.tide-ev {
+  display: grid;
+  grid-template-columns: 1rem 3.2rem 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.7rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+.tide-ev-icon { font-size: 0.7rem; }
+.tide-ev.is-high .tide-ev-icon { color: #d4843d; }
+.tide-ev.is-low .tide-ev-icon { color: var(--accent); }
+.tide-ev-name {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.tide-ev-time {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.tide-ev-h {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ④ 看潮提示 */
+.tide-tip-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.tide-tip {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid var(--border-color);
+}
+.tide-tip-icon {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+.tide-tip-title {
+  margin: 0 0 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.tide-tip-text {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.tide-note {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  text-align: center;
+}
+.tide-unavailable {
+  text-align: center;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .tide-card { padding: 1.15rem; }
+  .tide-status-value { font-size: 2.4rem; }
+  .tide-ev { grid-template-columns: 1rem 1fr auto; }
+  .tide-ev-name { display: none; }
+}
+
+/* ── 历史年表 ───────────────────────────────────────── */
+.tl-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.tl-list::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 0.7rem;
+  bottom: 0.7rem;
+  width: 2px;
+  background: var(--border-color);
+}
+.tl-item {
+  position: relative;
+  padding-left: 2.6rem;
+  padding-bottom: 1.5rem;
+}
+.tl-item:last-child {
+  padding-bottom: 0;
+}
+.tl-node {
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent);
+}
+.tl-card {
+  border-radius: 1rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+.tl-year {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.tl-title {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.tl-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+@media (max-width: 640px) {
+  .tl-list::before {
+    left: 7px;
+  }
+  .tl-item {
+    padding-left: 2rem;
+  }
+  .tl-node {
+    width: 16px;
+    height: 16px;
+    top: 0.9rem;
+  }
+}
+
+/* ── 背景故事 / 传说 ────────────────────────────────── */
+.lg-card {
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+.lg-summary {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1.05rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+}
+.lg-summary::-webkit-details-marker {
+  display: none;
+}
+.lg-num {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding-top: 0.1rem;
+}
+.lg-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.lg-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.lg-tag {
+  font-size: 0.68rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+}
+.lg-text {
+  margin: 0;
+  padding: 0 1.25rem 1.15rem 3.3rem;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+@media (max-width: 640px) {
+  .lg-text {
+    padding-left: 1.25rem;
+  }
+}

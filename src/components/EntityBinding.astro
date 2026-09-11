@@ -1,0 +1,118 @@
+---
+import { getI18n } from '../i18n/ui';
+import { entity } from '../config/entity';
+
+const { messages } = getI18n(Astro.url);
+const l = messages.location;
+const landmarks = l.landmarks ?? [];
+const hierarchy = l.hierarchy ?? [];
+---
+
+<!-- 实体语义绑定板块：将域名含义与官方全称在语义层面等同起来 -->
+<section id="location" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-5xl mx-auto px-4">
+    <p class="text-xs uppercase tracking-[0.2em] mb-3" style="color: var(--text-muted);">{l.eyebrow}</p>
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-5" style="color: var(--text-primary);">{l.aboutTitle}</h2>
+
+    <!-- 首段等位声明：官方全称 ↔ 域名含义 -->
+    <p class="text-lg leading-relaxed mb-6" style="color: var(--text-secondary);" set:html={l.welcome}></p>
+
+    <!-- 地理面包屑与归属层级：实体 → 城市 → 省/州 → 国家 -->
+    <nav aria-label={l.hierarchyLabel} class="mb-12">
+      <ol class="breadcrumb-list">
+        {hierarchy.map((item, i) => (
+          <li class={i === hierarchy.length - 1 ? 'current' : ''}><span>{item}</span></li>
+        ))}
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-2 gap-8 items-start mb-16">
+      <!-- 主视觉图（实体语义 alt） -->
+      <figure class="rounded-2xl overflow-hidden border" style="border-color: var(--border-color); background: var(--card-bg); box-shadow: var(--card-shadow);">
+        <img
+          src={entity.heroImagePath}
+          alt={l.mainImageAlt}
+          width="1200"
+          height="800"
+          loading="eager"
+          class="w-full h-auto block"
+        />
+        <figcaption class="px-4 py-3 text-xs" style="color: var(--text-muted);">
+          {messages.meta.officialName} · {entity.addressLine}
+        </figcaption>
+      </figure>
+
+      <div>
+        <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-4" style="color: var(--text-primary);">{l.howToTitle}</h2>
+        <p class="text-base sm:text-lg leading-relaxed mb-6" style="color: var(--text-secondary);" set:html={l.howToText}></p>
+
+        <!-- NAP：名称 · 地址（与 Google 地图资料保持一致） -->
+        <div class="rounded-2xl p-6 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+          <h3 class="font-semibold mb-4" style="color: var(--text-primary);">{l.napTitle}</h3>
+          <dl class="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
+            <div>
+              <dt class="text-xs uppercase tracking-wide mb-0.5" style="color: var(--text-muted);">{l.addressLabel}</dt>
+              <dd style="color: var(--text-secondary);">{l.addressValue}</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-wide mb-0.5" style="color: var(--text-muted);">{l.postalLabel}</dt>
+              <dd style="color: var(--text-secondary);">{l.postalValue}</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-wide mb-0.5" style="color: var(--text-muted);">{l.regionLabel}</dt>
+              <dd style="color: var(--text-secondary);">{l.regionValue}</dd>
+            </div>
+            <div>
+              <dt class="text-xs uppercase tracking-wide mb-0.5" style="color: var(--text-muted);">{l.countryLabel}</dt>
+              <dd style="color: var(--text-secondary);">{l.countryValue}</dd>
+            </div>
+            <div class="sm:col-span-2">
+              <dt class="text-xs uppercase tracking-wide mb-0.5" style="color: var(--text-muted);">{l.coordsLabel}</dt>
+              <dd style="color: var(--text-secondary); font-variant-numeric: tabular-nums;">{entity.latitude}, {entity.longitude}</dd>
+            </div>
+          </dl>
+          <a
+            href={entity.mapsShareUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1 mt-4 text-sm font-semibold"
+            style="color: var(--accent);"
+          >
+            📍 {l.mapLinkLabel} ↗
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 周边语义集群 -->
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-4" style="color: var(--text-primary);">{l.landmarksTitle}</h2>
+    <p class="text-base sm:text-lg leading-relaxed mb-8" style="color: var(--text-secondary);" set:html={l.landmarksIntro}></p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {landmarks.map((item, i) => (
+        <article class="rounded-2xl overflow-hidden border h-full flex flex-col" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <img
+            src={entity.imagePaths[(i + 1) % entity.imagePaths.length]}
+            alt={item.alt}
+            loading="lazy"
+            class="w-full h-52 object-cover block"
+          />
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--text-primary);">
+              <a href={item.url} target="_blank" rel="noopener noreferrer" class="hover:opacity-70">{item.name} ↗</a>
+            </h3>
+            <p class="text-base leading-relaxed" style="color: var(--text-secondary);">{item.desc}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <p class="mt-5 text-xs leading-relaxed" style="color: var(--text-muted);" set:html={l.landmarkNote}></p>
+
+    <!-- 权威 .go.jp / .org 外链 -->
+    <div class="mt-10 rounded-2xl p-6 md:p-7 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+      <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary);">{l.officialTitle}</h3>
+      <p class="text-base leading-relaxed" style="color: var(--text-secondary);" set:html={l.officialText}></p>
+    </div>
+  </div>
+</section>

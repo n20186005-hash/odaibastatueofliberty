@@ -1,7 +1,9 @@
 {
   "meta": {
-    "title": "Statue of Liberty Odaiba | Minato City, Tokyo, Japan",
-    "description": "The complete guide to the Statue of Liberty in Odaiba, Tokyo: the history of this 1/7-scale replica of New York's Lady Liberty, its symbol of Franco-Japanese friendship, how to get there, visitor reviews and the best photo spots."
+    "title": "Odaiba Statue of Liberty Tickets — Free Entry, 24/7 Guide",
+    "description": "Visiting the Statue of Liberty in Odaiba, Tokyo is 100% FREE — no tickets or booking needed, open 24 hours. Location, directions, best photo spots & history.",
+    "officialName": "Statue of Liberty Odaiba",
+    "shortName": "Statue of Liberty"
   },
   "header": {
     "siteName": "Statue of Liberty Odaiba",
@@ -34,16 +36,52 @@
     "current": "Statue of Liberty Odaiba"
   },
   "stickyNav": {
+    "tickets": "Tickets",
     "overview": "Overview",
+    "weather": "Weather",
+    "tide": "Tides",
     "transport": "Getting Here",
     "history": "History",
+    "amenities": "Facilities",
     "guide": "Guide"
+  },
+  "entryAnswers": {
+    "eyebrow": "Admission & Tickets",
+    "title": "Do you need tickets for the Odaiba Statue of Liberty? No — it's free.",
+    "subtitle": "It is an open-air monument in a public seaside park: no ticket office, no gate, no booking and no closing time.",
+    "freeBadge": "100% FREE",
+    "freeNote": "No tickets · No booking · Open 24/7",
+    "items": [
+      {
+        "icon": "🎟️",
+        "q": "Do I need tickets?",
+        "a": "No. There is no ticket counter and no entrance gate, so there is nothing to buy and nothing to print. Walk straight onto the seaside promenade and look up."
+      },
+      {
+        "icon": "🕒",
+        "q": "What are the opening hours?",
+        "a": "The statue is open 24 hours a day, every day of the year. Early morning and late evening are the quietest; the hour around sunset is the busiest."
+      },
+      {
+        "icon": "📍",
+        "q": "Where exactly is it?",
+        "a": "At the end of the seaside promenade in Odaiba Kaihin Park — about a 5-minute walk from Daiba Station (Exit A) or Odaiba-Kaihinkoen Station."
+      },
+      {
+        "icon": "🌇",
+        "q": "When is the best time to visit?",
+        "a": "Around sunset and just after dark, when the Rainbow Bridge lights up behind the statue — the classic Odaiba photo."
+      }
+    ],
+    "paidLead": "Everything above is free. If you would like to add a paid experience nearby, these are the usual picks:",
+    "paidCta": "See nearby paid experiences",
+    "paidHref": "#recommendations"
   },
   "hero": {
     "title": "Statue of Liberty Odaiba",
     "subtitle": "A 1/7-scale replica of New York's Statue of Liberty, standing quietly on the Odaiba waterfront along Tokyo Bay. It was erected in 1998 during the 'Year of France in Japan' and presented by France as a symbol of friendship between the two nations. With its verdigris-green figure framed by the Rainbow Bridge and Tokyo Bay, it is Odaiba's most recognisable landmark — and a free, always-open civic icon.",
-    "rating": "4.5 (4,894)",
-    "reviewCount": "4,894 reviews",
+    "rating": "4.5 (5,145)",
+    "reviewCount": "5,145 reviews",
     "hours": "Open 24 hours",
     "openMaps": "View on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8",
@@ -242,7 +280,7 @@
     "text": "The Statue of Liberty Odaiba is a public open-air monument within Odaiba Kaihin Park, maintained under the 'Umi-no-Koen' (sea park) system operated by Tokyo Port Authority (Tokyo Port & Harbor Corporation) under the Tokyo Metropolitan Government. As a free, publicly accessible waterfront space, it offers residents and visitors a place to enjoy Tokyo Bay, take photos and relax, and ranks among the most representative landscapes of the Odaiba waterfront subcentre."
   },
   "knowledge": {
-    "title": "History & Symbolism of the Statue",
+    "title": "History & Significance of the Statue of Liberty Odaiba",
     "sections": [
       {
         "id": "history",
@@ -541,6 +579,15 @@
       { "name": "Odaiba waterfront walking tour", "url": "https://www.tokyo-odaiba.net/" },
       { "name": "Tokyo Cruise water bus", "url": "https://www.gotokyo.org/spot/363/" },
       { "name": "Minato City official tourism", "url": "https://www.city.minato.tokyo.jp/" }
+    ],
+    "ticketsTitle": "Experiences That Need a Ticket",
+    "ticketsNote": "The statue itself is free. These nearby experiences are the ones you actually pay for.",
+    "tickets": [
+      { "name": "Tokyo Bay water bus (Asakusa ⇄ Odaiba)", "url": "https://www.suijobus.co.jp/" },
+      { "name": "teamLab Planets TOKYO (Toyosu)", "url": "https://www.teamlab.art/e/planets/" },
+      { "name": "Tokyo Joypolis (Odaiba)", "url": "https://tokyo-joypolis.com/" },
+      { "name": "Miraikan — National Museum of Emerging Science", "url": "https://www.miraikan.jst.go.jp/" },
+      { "name": "Yurikamome 1-day pass", "url": "https://www.yurikamome.co.jp/" }
     ]
   },
   "scienceArt": {
@@ -670,6 +717,397 @@
         "group": "First-time Visitors to Japan",
         "resonance": "Pose with Lady Liberty without flying to New York; right by Tokyo Bay and the Rainbow Bridge, it is a perfect starting point to discover Tokyo's waterfront.",
         "tip": "Take the Yurikamome from Shimbashi — the moment it crosses the Rainbow Bridge is a great preview; then walk from the station."
+      }
+    ]
+  },
+  "location": {
+    "eyebrow": "Location & entity data",
+    "aboutTitle": "About Statue of Liberty Odaiba",
+    "welcome": "Welcome to <strong>Statue of Liberty Odaiba</strong>, widely recognized as the central <strong>Statue of Liberty</strong>. Located in the heart of <strong>Minato City, Tokyo, Japan</strong>, this destination serves as a primary hub for travellers visiting the region.",
+    "hierarchyLabel": "Geographic hierarchy",
+    "hierarchy": ["Statue of Liberty Odaiba", "Minato City", "Tokyo", "Japan"],
+    "howToTitle": "Location & How to Visit the Statue of Liberty in Minato City",
+    "howToText": "The Statue of Liberty Odaiba stands at <strong>1 Chome-4-2 Daiba, Minato City, Tokyo 135-0091, Japan</strong>, at the end of the seaside promenade in Odaiba Kaihin Park. From Shimbashi Station take the Yurikamome about 15 minutes to Daiba Station, then walk roughly 5 minutes; from Tokyo Teleport Station on the Rinkai Line it is about a 10-minute flat walk.",
+    "napTitle": "Name & Address (NAP)",
+    "addressLabel": "Address",
+    "addressValue": "1 Chome-4-2 Daiba, Minato City, Tokyo 135-0091, Japan",
+    "postalLabel": "Postal code",
+    "postalValue": "135-0091",
+    "regionLabel": "Region",
+    "regionValue": "Tokyo",
+    "countryLabel": "Country",
+    "countryValue": "Japan (JP)",
+    "coordsLabel": "Coordinates",
+    "mapLinkLabel": "Check the location on Google Maps",
+    "mainImageAlt": "Statue of Liberty Odaiba — main view in Minato City, Tokyo, Japan",
+    "landmarksTitle": "Landmarks & Attractions Around the Statue of Liberty",
+    "landmarksIntro": "When visiting <strong>Statue of Liberty Odaiba</strong>, visitors can easily explore surrounding historical landmarks and points of interest, including <strong>Rainbow Bridge</strong> and <strong>Fuji Television Headquarters</strong>.",
+    "landmarks": [
+      {
+        "name": "Rainbow Bridge",
+        "alt": "Rainbow Bridge near the Statue of Liberty Odaiba",
+        "desc": "A 798-metre suspension bridge spanning Tokyo Bay. Stand at the waterfront just to the right of the statue to frame the red-and-white bridge together with the verdigris-green figure — Odaiba's signature postcard view.",
+        "url": "https://www.tokyo-odaiba.net/"
+      },
+      {
+        "name": "Fuji Television Headquarters",
+        "alt": "Fuji Television Headquarters near the Statue of Liberty",
+        "desc": "The futuristic broadcaster headquarters designed by architect Kenzo Tange, about a 10-minute walk from the statue. Its 25th-floor observation deck offers a full view of Tokyo Bay and the Odaiba waterfront.",
+        "url": "https://www.gotokyo.org/spot/363/"
+      }
+    ],
+    "landmarkNote": "Landmark details also reference <a href=\"https://www.city.minato.tokyo.jp/\" target=\"_blank\" rel=\"noopener noreferrer\">Minato City Hall</a> and <a href=\"https://www.tokyo-odaiba.net/\" target=\"_blank\" rel=\"noopener noreferrer\">Tokyo Odaiba.net</a>.",
+    "officialTitle": "Official & authoritative sources",
+    "officialText": "For official updates and regional tourism information, visit the <a href=\"https://www.gotokyo.org/spot/363/\" target=\"_blank\" rel=\"noopener noreferrer\">Japan / Tokyo Official Tourism Portal (GO TOKYO)</a>. Park management and opening details come from <a href=\"https://www.tptc.co.jp/park/01_02\" target=\"_blank\" rel=\"noopener noreferrer\">Umi-no-Koen Navi (Tokyo Metropolitan Government)</a>, and municipal information from <a href=\"https://www.city.minato.tokyo.jp/\" target=\"_blank\" rel=\"noopener noreferrer\">Minato City Hall</a>."
+  },
+  "sources": {
+    "title": "Sources & References",
+    "intro": "The content on this page is compiled from primary information published by public bodies, the park operator and official tourism sites.",
+    "updatedLabel": "Last updated",
+    "updatedValue": "September 2026",
+    "items": [
+      { "name": "GO TOKYO — Tokyo Official Tourism Website, 'Statue of Liberty (Odaiba)'", "url": "https://www.gotokyo.org/spot/363/", "note": "Primary source for location, history and visiting information" },
+      { "name": "Umi-no-Koen Navi (Tokyo Port & Harbor Corporation, Odaiba Kaihin Park)", "url": "https://www.tptc.co.jp/park/01_02", "note": "Park operator and opening information" },
+      { "name": "Minato City Hall official website", "url": "https://www.city.minato.tokyo.jp/", "note": "Municipal information (basis of the NAP record)" },
+      { "name": "Yurikamome official line guide, 'Statue of Liberty'", "url": "https://www.yurikamome.co.jp/sightseeing/facility/000650.html", "note": "Access and station information" },
+      { "name": "Tokyo Odaiba.net (official waterfront subcentre website)", "url": "https://www.tokyo-odaiba.net/", "note": "Nearby landmarks and area walking guides" },
+      { "name": "JAPAN TRAVEL (Japan National Tourism Organization, JNTO)", "url": "https://www.japan.travel/", "note": "Regional information for inbound travellers" },
+      { "name": "Google Maps, 'Statue of Liberty'", "url": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8", "note": "Map coordinates, rating and reviews (external)" }
+    ],
+    "note": "This is an independent, non-profit visitor guide and is not affiliated with any public body or operator. If any detail is inaccurate, please refer to the primary sources above."
+  },
+  "imageCredits": {
+    "title": "Image rights",
+    "text": "Image credits: all images displayed on this website remain the property and copyright of their respective photographers.",
+    "note": "Reproduction or redistribution without permission is prohibited. We will act promptly on any request from the rights holder."
+  },
+  "weatherPage": {
+    "title": "Current Weather & 7-Day Forecast",
+    "subtitle": "Conditions around the Statue of Liberty Odaiba — temperature, rain chance and wind — to help you plan clothing, umbrellas and photo timing.",
+    "today": "Today",
+    "currentLabel": "Now",
+    "feelsLike": "Feels like",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "precipitation": "Rain",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "uvIndex": "UV index",
+    "updatedLabel": "Updated",
+    "forecastTitle": "7-day forecast",
+    "highLow": "High / Low",
+    "rainChance": "Chance of rain",
+    "adviceTitle": "Tips for your visit",
+    "hourlyTitle": "Next 12 hours",
+    "marineTitle": "Live seaside conditions",
+    "tideNext": "Next tide",
+    "tideHigh": "High tide",
+    "tideLow": "Low tide",
+    "tideChart": "Tide over 24 hours",
+    "seaTemp": "Sea temperature",
+    "waveHeight": "Wave height",
+    "airQuality": "Air quality",
+    "visibility": "Visibility",
+    "windForceUnit": "Bft",
+    "advice": {
+      "outfitTitle": "What to wear",
+      "planTitle": "How to plan your day",
+      "packTitle": "What to bring",
+      "alertTitle": "Weather alerts",
+      "allClear": "No weather alerts in effect right now",
+      "uvStrong": "UV is fairly strong",
+      "uvVeryStrong": "UV is very strong",
+      "windCalm": "Light wind",
+      "windModerate": "Fairly windy",
+      "windStrong": "Strong wind",
+      "outfitHeat": "Warm — light, breathable clothing works best.",
+      "outfitCold": "Cold — dress warmly.",
+      "outfitLayer": "Big day-to-night temperature swing — keep a layer you can add or remove.",
+      "outfitRain": "Wind and rain — a waterproof outer layer is best.",
+    "outfitRainLight": "Rain expected — water-repellent or quick-drying clothing, and shoes that handle wet ground.",
+      "outfitWind": "Windy — avoid loose skirts or anything that catches the wind.",
+      "outfitMild": "Mild — normal clothing is fine.",
+      "planSunny": "Clear weather — great for outdoor sightseeing, and for sunrise or sunset views.",
+      "planCloudy": "Soft light — ideal for photos, and comfortable for a long walk.",
+      "planDrizzle": "Light drizzle and slippery surfaces — skip open-air activities and watch your step.",
+      "planRainIndoor": "Rain expected — prioritise indoor venues and put seaside or open-air plans on hold.",
+      "planHeavyRain": "Avoid outdoor visits; sightseeing boats and cable cars may stop running.",
+      "planThunder": "Risk of thunderstorms — stay out of the water and do not shelter under trees.",
+      "planFog": "Poor visibility — not a good time for long-distance views of the bay or the bridge.",
+      "planHeat": "High temperatures — keep outdoor time short and avoid the middle of the day.",
+      "planCold": "Cold — keep outdoor time short and warm up regularly.",
+      "planWindModerate": "Rather windy — bay cruises and some open-air rides may be suspended.",
+      "planWindStrong": "Strong wind — sea and outdoor activities are likely to be cancelled; watch for falling objects.",
+      "planTideLow": "Low tide around {time} — a good moment to look closely at the beach and rocks; the ground will be slippery.",
+      "planTideHigh": "High tide around {time} — the rocks and lower beach are covered, so keep away from the water's edge.",
+      "planSeaWarm": "The sea is comfortably warm for paddling.",
+      "planSeaCool": "The sea is a little cool — playing at the water's edge is best.",
+      "planSeaCold": "The sea is cold and not suitable for swimming.",
+      "planWaveHigh": "Waves are high ({wave} m) — stay off the rocks and outside the breakwater.",
+      "packUmbrella": "Folding umbrella",
+      "packRaincoat": "Rain jacket (a long umbrella is awkward in strong wind)",
+      "packSunscreen": "Sunscreen",
+      "packSunglasses": "Sunglasses",
+      "packHat": "Sun hat",
+      "packWater": "Plenty of water",
+      "packJacket": "A light layer",
+      "packCoat": "Warm coat",
+      "packScarf": "Scarf and gloves",
+      "packSecureHat": "A hat that will not blow away",
+      "packMask": "Face mask",
+      "packTowel": "Towel (for after paddling)",
+      "packCamera": "Camera (great light today)",
+      "packTissues": "Tissues / wet wipes",
+      "alertThunder": "Thunderstorms possible — do not shelter under trees, and keep away from the waterfront and exposed high ground.",
+      "alertHeavyRain": "Heavy rain possible — avoid low-lying areas and underpasses where water collects.",
+      "alertWind": "Strong wind possible — keep clear of signs, temporary structures and shoreline rocks.",
+      "alertHeat": "High temperature — drink water often and take heat precautions.",
+      "alertWave": "High waves ({wave} m) — keep away from rocks, breakwaters and the water's edge.",
+      "alertFog": "Low visibility — ferries may be delayed and distant views are not worthwhile.",
+      "alertAir": "Air quality is poor at the moment — sensitive visitors should limit time outdoors.",
+      "alertSnow": "Snow or sleet may freeze on the ground — watch your step.",
+      "rainSoon": "Rain may start around {time}.",
+      "dayRain": "Umbrella",
+      "dayHeavyRain": "Heavy rain",
+      "dayUv": "UV",
+      "dayWind": "Wind",
+      "dayHeat": "Hot",
+      "dayCold": "Cold",
+      "daySnow": "Snow"
+    },
+    "loading": "Loading current weather…",
+    "unavailable": "Weather data is currently unavailable.",
+    "dataNote": "Weather, temperature and rain probability are forecast values and may differ from actual conditions on site.",
+    "conditions": {
+      "clear": "Clear",
+      "partly": "Partly cloudy",
+      "cloudy": "Overcast",
+      "fog": "Fog",
+      "drizzle": "Drizzle",
+      "rain": "Rain",
+      "showers": "Showers",
+      "snow": "Snow",
+      "thunder": "Thunderstorm"
+    }
+  },
+  "tidePage": {
+    "eyebrow": "Tokyo Bay · Tides",
+    "title": "Odaiba Tide Forecast",
+    "subtitle": "The Statue of Liberty stands on a rocky base in Tokyo Bay, where the water rises and falls twice a day. Check the tide before you go to pick the most impressive stretch of water, the best reflections, and the safest hours.",
+    "nowTitle": "Current tide level",
+    "trendRising": "Rising",
+    "trendFalling": "Falling",
+    "trendSteady": "Slack water",
+    "nextHigh": "Next high tide",
+    "nextLow": "Next low tide",
+    "inHours": "in {n} h",
+    "inMinutes": "in {n} min",
+    "inNow": "very soon",
+    "chartTitle": "Tide level for the next 48 hours",
+    "chartNote": "Predicted water level relative to mean sea level (metres). For reference only; actual conditions on site may differ.",
+    "tableTitle": "Tide times",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "high": "High",
+    "low": "Low",
+    "tipsTitle": "Practical tide tips",
+    "tips": {
+      "bestTitle": "Best viewing time",
+      "bestText": "Around one to two hours either side of high tide the water is at its highest, giving the statue its most dramatic setting against Tokyo Bay. At low tide the rocks around the base emerge and add depth to the scene.",
+      "photoTitle": "Photography and light",
+      "photoText": "In calm weather near high tide the surface is smoothest and reflections are complete. Just after sunset, a mid-to-high water level makes it easiest to capture clean water together with the city lights.",
+      "safetyTitle": "Safety notes",
+      "safetyText": "Rocks and breakwaters exposed at low tide are slippery and are quickly covered again as the water rises. Stay on the promenade, do not go below the waterline, and do not climb the sea wall."
+    },
+    "unavailable": "Tide data is currently unavailable.",
+    "disclaimer": "Tides are astronomical predictions; air pressure, wind and local terrain can shift actual conditions. Please leave some margin in your plans."
+  },
+  "amenities": {
+    "eyebrow": "Practical visitor information",
+    "title": "Restrooms, Parking, Dining & Where to Stay",
+    "subtitle": "A summary of what kinds of facilities exist around the statue. Assuming most visitors arrive by public transport, we describe the walkable area by category.",
+    "neutralNote": "This section lists facility types only. We do not recommend any specific shop or brand. Prices, opening hours and availability change — please check each facility's official information before you visit.",
+    "items": [
+      {
+        "icon": "🚻",
+        "title": "Restrooms",
+        "summary": "Public restrooms are available around the statue, all free to use, including accessible facilities.",
+        "points": [
+          "Several public restrooms inside Odaiba Kaihin Park",
+          "Accessible (barrier-free) restrooms available",
+          "Restrooms in nearby commercial buildings can also be used",
+          "Some facilities close late at night"
+        ],
+        "distance": "1–5 min walk from the statue"
+      },
+      {
+        "icon": "🅿️",
+        "title": "Parking",
+        "summary": "There is no dedicated car park directly at the statue; visitors use paid parking nearby.",
+        "points": [
+          "Mainly paid car parks at nearby commercial facilities and the park",
+          "Fills up early on weekends, holidays and in peak season",
+          "Capacity and rates vary by facility",
+          "On-street and illegal parking is subject to enforcement"
+        ],
+        "distance": "5–15 min walk"
+      },
+      {
+        "icon": "🍽️",
+        "title": "Dining (restaurants & cafés)",
+        "summary": "Within walking distance you will find restaurant floors in shopping complexes, food courts, cafés and fast food.",
+        "points": [
+          "Cafés and restaurants with bay views",
+          "Food courts (good for families and groups)",
+          "Bakeries, sweets and light meals",
+          "Picnics in the park are fine — take your rubbish with you"
+        ],
+        "distance": "3–15 min walk"
+      },
+      {
+        "icon": "🏨",
+        "title": "Accommodation",
+        "summary": "The waterfront subcentre has urban hotels that sell their bay views, and staying in central Tokyo is another option.",
+        "points": [
+          "Urban hotels with bay-view rooms",
+          "Business hotels and capsule types",
+          "Larger rooms for families and couples",
+          "Commuting by train from Shimbashi, Shiodome or Tokyo Station is also easy"
+        ],
+        "distance": "Walkable to 15 min by train"
+      },
+      {
+        "icon": "🛒",
+        "title": "Convenience stores, supermarkets & souvenirs",
+        "summary": "Drinks, snacks and daily necessities can be picked up at convenience stores and shopping facilities within walking distance.",
+        "points": [
+          "Convenience stores (open 24 hours)",
+          "Supermarkets and drugstores",
+          "100-yen shops and general goods",
+          "Souvenirs and character merchandise"
+        ],
+        "distance": "3–10 min walk"
+      },
+      {
+        "icon": "⛽",
+        "title": "Fuel & EV charging",
+        "summary": "If you come by car or rental car, fuel and charging facilities are available in the waterfront area.",
+        "points": [
+          "Standard petrol stations along the main roads",
+          "EV chargers in the car parks of commercial buildings",
+          "Some chargers require a booking or an app",
+          "Availability is limited — refuel or charge before the return trip"
+        ],
+        "distance": "5–15 min by car"
+      },
+      {
+        "icon": "♿",
+        "title": "Accessibility & travelling with children",
+        "summary": "The seaside promenade is flat and easy to navigate with a stroller or wheelchair.",
+        "points": [
+          "Accessible restrooms with ostomate facilities",
+          "Mostly ramps with very few steps along the promenade",
+          "Nursing rooms are available in nearby commercial buildings",
+          "Stroller rental availability varies by facility"
+        ],
+        "distance": "Step-free access to the statue"
+      }
+    ],
+    "planningTitle": "Before you go — checklist",
+    "planningPoints": [
+      "Check the chance of rain in the forecast — waterfront weather changes quickly",
+      "Comfortable walking shoes (stone paving and wooden decking)",
+      "Both cash and card (small shops may be cash only)",
+      "A power bank (photography drains your battery)",
+      "Summer: hat, sunscreen, drinks. Winter: a windproof layer",
+      "A small rubbish bag (bins in the park are limited)",
+      "A rechargeable transport IC card (Yurikamome and Rinkai Line)"
+    ],
+    "disclaimer": "The facility types listed here reflect general conditions within walking distance and are not recommendations of specific businesses. Opening hours, prices and services may change."
+  },
+  "timeline": {
+    "eyebrow": "History & chronology",
+    "title": "Timeline: The Statue of Liberty in Odaiba",
+    "subtitle": "From the creation of the original in New York to the permanent installation on Tokyo Bay — the story in chronological order.",
+    "items": [
+      {
+        "year": "1886",
+        "title": "The original is unveiled in New York",
+        "text": "The original Statue of Liberty, a gift from France marking the centenary of American independence, was installed on Liberty Island in New York Harbour. Its thin copper skin supported by an internal iron framework was designed by Gustave Eiffel, later the engineer of the Eiffel Tower."
+      },
+      {
+        "year": "1998",
+        "title": "The 'Year of France' brings the replica to Odaiba",
+        "text": "As part of the 'Year of France in Japan', marking 150 years of Franco-Japanese exchange, France presented a replica that was installed on the seaside promenade of Odaiba Kaihin Park. It was originally intended as a temporary exhibit for the duration of the event."
+      },
+      {
+        "year": "1999",
+        "title": "Removal postponed",
+        "text": "The statue was due to be taken down when the event ended, but in response to visitors and local voices who wanted it kept, the installation was extended."
+      },
+      {
+        "year": "2000",
+        "title": "Permanent installation confirmed",
+        "text": "It became an officially permanent monument and settled into its role as one of the defining landmarks of the Tokyo waterfront."
+      },
+      {
+        "year": "2010s",
+        "title": "A classic Tokyo Bay photo spot",
+        "text": "Framing the statue together with the Rainbow Bridge became widely known, and the view began appearing in travel guides and local publicity."
+      },
+      {
+        "year": "Today",
+        "title": "A free, 24-hour public space",
+        "text": "As part of the park it is open to anyone, and it offers a different face at every hour — the quiet water at dawn, blue sky at midday and illumination at night."
+      }
+    ],
+    "note": "This timeline is compiled from information published by public bodies, the operator and official tourism sites. Please refer to primary sources for exact dates."
+  },
+  "legends": {
+    "eyebrow": "Background & anecdotes",
+    "title": "Six stories that change how you see the statue",
+    "subtitle": "The Statue of Liberty is more than a large figure — it is a monument full of meaning. Here we look at how it was made, the symbolism hidden in its details, and how it came to stay in Odaiba.",
+    "imageAlt": "Detail of the Statue of Liberty Odaiba, Minato City, Tokyo",
+    "imageCaption": "Step closer and look up: the rays of the crown and the chain at her feet are details most people miss from a distance.",
+    "factTitle": "Key facts",
+    "facts": [
+      { "label": "Common name", "value": "Statue of Liberty Odaiba" },
+      { "label": "Height", "value": "approx. 12.25 m including the pedestal" },
+      { "label": "Scale", "value": "approx. 1/7 of the original" },
+      { "label": "Installed", "value": "1998 (Year of France in Japan)" },
+      { "label": "Made", "value": "A replica produced in France based on Bartholdi's original" },
+      { "label": "Visiting", "value": "Free, 24 hours (inside the park)" }
+    ],
+    "items": [
+      {
+        "title": "Why 1/7 scale?",
+        "tag": "Fact",
+        "text": "The original figure is about 46 m tall and reaches roughly 93 m including its pedestal. The Odaiba statue is about 12.25 m including the pedestal — approximately one seventh of the original. The ratio is said to have been chosen to suit transport, installation and the scale of the park."
+      },
+      {
+        "title": "The engineer behind the skin: Eiffel",
+        "tag": "Background",
+        "text": "The internal iron framework of the original was designed by Gustave Eiffel, later the engineer of the Eiffel Tower. That light structure — a thin copper skin carried by an internal skeleton — is what makes it possible to raise a statue this large in a windy harbour. The Odaiba replica follows the same principle."
+      },
+      {
+        "title": "What the chain at her feet means",
+        "tag": "Symbolism",
+        "text": "A broken chain lies at the statue's feet. It is understood to represent liberation from slavery, and it is the most direct message built into the name 'Liberty'. It is also one of the details most visitors miss when looking up from the front."
+      },
+      {
+        "title": "The date inscribed on the tablet",
+        "tag": "Anecdote",
+        "text": "The tablet held in her left arm is inscribed 'JULY IV MDCCLXXVI' — Roman numerals for 4 July 1776, the date of the American Declaration of Independence. The reading of 'JULY IV' as 'the fourth of July' is one of the most repeated pieces of trivia about the statue."
+      },
+      {
+        "title": "The seven rays of the crown",
+        "tag": "Symbolism",
+        "text": "The seven spikes radiating from the crown are said to represent the seven seas and seven continents, or the spread of liberty's light across the world. The statue standing in Japan carries the very same crown."
+      },
+      {
+        "title": "Meant to be temporary — but it stayed",
+        "tag": "Story",
+        "text": "The Odaiba statue was originally an exhibit for a single event, the 'Year of France'. When its removal was announced, so many people wanted it kept that it remained on the Tokyo waterfront — a story that says a lot about how the city took it to heart."
       }
     ]
   }

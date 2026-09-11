@@ -1,21 +1,34 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { galleryImage } from '../config/entity';
+import { getWeather, timePart } from '../lib/weather';
 const { messages } = getI18n(Astro.url);
 const h = messages.hero;
 const facts = h.quickFacts ?? [];
 const live = h.liveInfo ?? {};
+
+// 服务端（构建阶段）缓存的天气数据，用于首屏实况徽章；前端脚本会再刷新为最新值
+const weather = await getWeather();
+const heroBg = galleryImage(1);
+const today = weather?.daily?.[0] ?? null;
+
 const liveItems = [
-  live.weather && live.weatherValue
-    ? { icon: '🌤️', label: live.weather, value: live.weatherValue }
+  weather
+    ? {
+        icon: '🌤️',
+        label: live.weather,
+        id: 'hero-wx-temp',
+        value: `${weather.current.temperature} °C`,
+      }
     : null,
-  live.sunset && live.sunsetValue
-    ? { icon: '🌅', label: live.sunset, value: live.sunsetValue }
+  today
+    ? { icon: '🌅', label: live.sunset, id: 'hero-wx-sunset', value: timePart(today.sunset) }
     : null,
-].filter(Boolean);
+].filter(Boolean) as Array<{ icon: string; label: string; id: string; value: string }>;
 ---
 
 <section id="overview" class="relative min-h-[84vh] sm:min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
-  <div class="absolute inset-0" style={`background-image: linear-gradient(rgba(15,32,21,0.55), rgba(15,32,21,0.62)), url('/gallery/statue-of-liberty-1.jpg'); background-size: cover; background-position: center;`}></div>
+  <div class="absolute inset-0" style={`background-image: linear-gradient(rgba(15,32,21,0.55), rgba(15,32,21,0.62)), url('${heroBg}'); background-size: cover; background-position: center;`}></div>
   <div class="relative z-10 px-4 sm:px-6 py-16 sm:py-20 max-w-4xl w-full animate-fade-in-up">
     <span class="inline-flex max-w-full flex-wrap items-center justify-center gap-1 px-3 py-1 mb-5 rounded-full text-xs sm:text-sm font-medium" style="background: rgba(255,255,255,0.15); color: #fff; backdrop-filter: blur(4px);">
       ⭐ {h.rating} · {h.reviewCount}
@@ -43,7 +56,7 @@ const liveItems = [
     {liveItems.length > 0 && (
       <div class="flex flex-wrap items-center justify-center gap-2 mb-7">
         {liveItems.map((item) => (
-          <span class="live-pill">{item.icon} {item.label}：<span class="live-placeholder">{item.value}</span></span>
+          <span class="live-pill">{item.icon} {item.label}：<span class="live-placeholder" id={item.id}>{item.value}</span></span>
         ))}
       </div>
     )}

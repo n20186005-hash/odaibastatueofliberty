@@ -1,0 +1,398 @@
+{
+  "meta": {
+    "title": "Statua della Libertà Odaiba Biglietti — Ingresso gratuito, aperto 24/7",
+    "description": "Visitare la Statua della Libertà a Odaiba, Tokyo, è gratuito al 100% — nessun biglietto o prenotazione, aperta 24 ore su 24. Posizione, come arrivare, migliori punti foto e storia.",
+    "officialName": "Statua della Libertà Odaiba",
+    "shortName": "Statua della Libertà"
+  },
+  "header": {
+    "siteName": "Statua della Libertà Odaiba",
+    "home": "Home",
+    "visit": "Visita",
+    "transport": "Come arrivare",
+    "history": "Storia",
+    "gallery": "Galleria",
+    "reviews": "Recensioni",
+    "faq": "FAQ",
+    "map": "Mappa",
+    "backToHome": "Torna alla home"
+  },
+  "common": {
+    "changeLanguage": "Cambia lingua",
+    "toggleTheme": "Cambia tema"
+  },
+  "nonprofitBanner": {
+    "text": "Questa è una guida indipendente e senza scopo di lucro, realizzata da viaggiatori appassionati, con l'obiettivo di offrirti i consigli più obiettivi per visitare la Statua della Libertà Odaiba."
+  },
+  "mission": {
+    "title": "La nostra missione",
+    "text": "Perché ogni viaggio in Giappone finisca senza rimpianti, abbiamo raccolto le informazioni ufficiali sparse — per offrirti la visita più chiara possibile."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "tokyoAttractions": "Attrazioni di Tokyo",
+    "minato": "Minato City",
+    "odaibaPark": "Odaiba Kaihin Park",
+    "current": "Statua della Libertà Odaiba"
+  },
+  "stickyNav": {
+    "tickets": "Biglietti",
+    "overview": "Panoramica",
+    "weather": "Meteo",
+    "tide": "Marea",
+    "transport": "Come arrivare",
+    "history": "Storia",
+    "amenities": "Servizi",
+    "guide": "Guida"
+  },
+  "entryAnswers": {
+    "eyebrow": "Ingresso e biglietti",
+    "title": "Serve un biglietto per la Statua della Libertà Odaiba? No — l'ingresso è gratuito.",
+    "subtitle": "È un monumento all'aperto in un parco pubblico sul lungomare: nessuna biglietteria, nessun cancello, nessuna prenotazione e nessun orario di chiusura.",
+    "freeBadge": "100% GRATUITO",
+    "freeNote": "Nessun biglietto · Nessuna prenotazione · Aperto 24/7",
+    "items": [
+      {
+        "icon": "🎟️",
+        "q": "Serve un biglietto?",
+        "a": "No. Non ci sono biglietterie né cancelli d'ingresso, quindi non c'è nulla da comprare o da stampare. Basta percorrere il lungomare e alzare lo sguardo."
+      },
+      {
+        "icon": "🕒",
+        "q": "Quali sono gli orari di apertura?",
+        "a": "La statua è accessibile 24 ore su 24, tutti i giorni dell'anno. Le ore più tranquille sono la prima mattina e la tarda serata; il momento più affollato è intorno al tramonto."
+      },
+      {
+        "icon": "📍",
+        "q": "Dov'è esattamente?",
+        "a": "Alla fine del lungomare dell'Odaiba Kaihin Park — circa 5 minuti a piedi dalla stazione Daiba (uscita A) o dalla stazione Odaiba-Kaihinkoen."
+      },
+      {
+        "icon": "🌇",
+        "q": "Qual è il momento migliore per visitarla?",
+        "a": "Intorno al tramonto e subito dopo il calare del buio, quando il Rainbow Bridge si illumina dietro la statua — la foto classica di Odaiba."
+      }
+    ],
+    "paidLead": "Tutto quanto sopra è gratuito. Se vuoi aggiungere un'esperienza a pagamento nelle vicinanze, di solito si scelgono queste:",
+    "paidCta": "Vedi le esperienze a pagamento nelle vicinanze",
+    "paidHref": "#recommendations"
+  },
+  "hero": {
+    "title": "Statua della Libertà Odaiba",
+    "subtitle": "Una riproduzione in scala 1:7 della Statua della Libertà di New York, che si erge silenziosa sul lungomare di Odaiba lungo la Baia di Tokyo. Fu collocata nel 1998 durante l'Anno della Francia in Giappone e donata dalla Francia come simbolo di amicizia tra i due Paesi. Con la sua figura verde-verderame incorniciata dal Rainbow Bridge e dalla Baia di Tokyo, è il simbolo più riconoscibile di Odaiba — e un'icona civica gratuita e sempre accessibile.",
+    "rating": "4,5 (5.145)",
+    "reviewCount": "5.145 recensioni",
+    "hours": "Aperto 24 ore su 24",
+    "openMaps": "Visualizza su Google Maps",
+    "tags": [
+      "Riproduzione in scala 1:7",
+      "Ingresso gratuito",
+      "Odaiba · Baia di Tokyo"
+    ],
+    "routeCta": {
+      "label": "Pianifica il percorso",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Storia della statua",
+      "href": "#history"
+    },
+    "quickFacts": [
+      {
+        "icon": "🎟️",
+        "label": "Ingresso gratuito",
+        "value": "Nessun biglietto necessario"
+      },
+      {
+        "icon": "🕒",
+        "label": "Aperto 24 ore",
+        "value": "Giorno e notte"
+      },
+      {
+        "icon": "📍",
+        "label": "Odaiba Seaside Park",
+        "value": "Fine del lungomare"
+      }
+    ],
+    "navCta": {
+      "label": "📍 Indicazioni",
+      "href": "#transport"
+    },
+    "photoCta": {
+      "label": "📸 Punti foto migliori",
+      "href": "#gallery"
+    },
+    "liveInfo": {
+      "weather": "Meteo attuale",
+      "sunset": "Tramonto di oggi"
+    }
+  },
+  "intro": {
+    "title": "Scopri la Statua della Libertà Odaiba",
+    "description": "La Statua della Libertà Odaiba si trova sul lungomare di Odaiba lungo la Baia di Tokyo ed è una riproduzione in scala 1:7 dell'originale di New York. Fu installata nel 1998 durante l'Anno della Francia in Giappone come esposizione temporanea per il 150° anniversario delle relazioni franco-giapponesi, e riscosse un tale successo da diventare permanente nel 2000. Alta circa 12 metri e rifinita nello stesso verde-verderame dell'originale, guarda verso la Baia di Tokyo e il Rainbow Bridge — uno dei simboli di Odaiba e il primo scorcio che molti visitatori vedono dal battello o dalla linea Yurikamome.",
+    "visitGuide": {
+      "title": "Guida per il visitatore",
+      "eyebrow": "Pianificazione pratica"
+    },
+    "alsoKnownAs": {
+      "title": "Punti salienti"
+    }
+  },
+  "transportSection": {
+    "title": "Come arrivare · Raggiungere la Statua della Libertà Odaiba",
+    "subtitle": "In aereo, treno, trasporto pubblico, auto, taxi, bicicletta o battello — ogni opzione è descritta qui sotto, con parcheggi e domande frequenti.",
+    "overviewTitle": "Una volta arrivati a Tokyo",
+    "arrivalTitle": "Da sapere prima di partire",
+    "arrivalItems": [
+      "La statua si trova sul lungomare pianeggiante dell'Odaiba Kaihin Park, a 5–10 minuti a piedi dalle stazioni Daiba o Tokyo Teleport.",
+      "Non esiste un parcheggio dedicato alla statua; usa i parcheggi a pagamento dei centri commerciali vicini come Aqua City, DECKS o DiverCity.",
+      "Nei fine settimana e nei giorni festivi c'è molta affluenza, soprattutto al crepuscolo e per la vista notturna — meglio scegliere orari non di punta."
+    ],
+    "driverFaqTitle": "Domande frequenti sull'arrivo",
+    "driverFaq": [
+      {
+        "q": "Davvero non serve un biglietto?",
+        "a": "Esatto. La statua è un monumento all'aperto in un parco pubblico: non ci sono biglietterie, cancelli né orari di chiusura. Solo i servizi dei centri commerciali vicini sono a pagamento e separati."
+      },
+      {
+        "q": "Ci sono parcheggi e quanto costano?",
+        "a": "Proprio accanto alla statua non ci sono parcheggi. Aqua City, DECKS Tokyo Beach e DiverCity Tokyo Plaza hanno parcheggi a pagamento a pochi minuti a piedi, di solito con tariffa oraria. Nei fine settimana e nei festivi si riempiono in fretta — arriva presto o preferisci il trasporto pubblico."
+      },
+      {
+        "q": "Possono avvicinarsi sedie a rotelle e passeggini?",
+        "a": "Sì. Il lungomare è completamente pianeggiante e senza gradini, quindi sedie a rotelle, passeggini e ausili per il cammino si muovono facilmente; lungo il percorso ci sono rampe e servizi accessibili."
+      },
+      {
+        "q": "Ci sono bagni o punti ristoro nelle vicinanze?",
+        "a": "Alla statua non ci sono bagni, ma Aqua City, DECKS e DiverCity sono a pochi minuti a piedi con bagni pubblici, caffè, ristoranti e minimarket."
+      },
+      {
+        "q": "Quanto dura una visita?",
+        "a": "In genere da 30 minuti a un'ora: arrivare, scattare foto, percorrere il lungomare e magari riposarsi su una panchina. Prevedi più tempo se visiti anche Aqua City o DiverCity (Unicorn Gundam)."
+      },
+      {
+        "q": "Consigli il trasporto pubblico?",
+        "a": "Decisamente. La stazione Daiba (Yurikamome) è a circa 5 minuti a piedi, Tokyo Teleport (Rinkai Line) a circa 10 minuti pianeggianti. Indirizzo: 1 Chome-4-2 Daiba, Minato City, Tokyo."
+      }
+    ],
+    "localTipsTitle": "Consigli per la visita",
+    "localTips": [
+      "La luce è più morbida al crepuscolo, quando la statua e il Rainbow Bridge si accendono su un cielo dorato.",
+      "La statua è accessibile 24 ore su 24; anche l'Odaiba illuminata di notte è perfetta per una passeggiata serale.",
+      "Combina la visita con Aqua City e DiverCity (Unicorn Gundam); i centri commerciali offrono bagni e ristorazione."
+    ],
+    "mapsCta": "Vedi mappa e percorso",
+    "bestTime": {
+      "title": "Momento migliore per arrivare",
+      "text": "Anche se è accessibile 24 ore su 24, consigliamo di arrivare circa un'ora prima del tramonto: in una sola visita catturi tre viste — luce diurna, ora d'oro e luci notturne."
+    }
+  },
+  "officialManagement": {
+    "title": "La statua"
+  },
+  "knowledge": {
+    "title": "Storia e significato della Statua della Libertà Odaiba"
+  },
+  "gallery": {
+    "title": "Galleria fotografica",
+    "subtitle": "Dalla vista frontale e l'inquadratura con il Rainbow Bridge al riflesso nella Baia di Tokyo e alle luci del crepuscolo — esplora la bellezza visiva della Statua della Libertà Odaiba."
+  },
+  "reviews": {
+    "title": "Recensioni dei visitatori",
+    "declaration": "I commenti dei visitatori sono disponibili su Google Maps (link esterno).",
+    "featuredTitle": "Voci dei visitatori"
+  },
+  "mapSection": {
+    "title": "Come arrivare qui",
+    "subtitle": "1 Chome-4-2 Daiba, Minato City, Tokyo 135-0091, Giappone",
+    "openMaps": "Apri in Google Maps"
+  },
+  "footer": {
+    "siteName": "Statua della Libertà Odaiba",
+    "rights": "© 2026 Statua della Libertà Odaiba — Guida indipendente senza scopo di lucro. Tutti i diritti riservati.",
+    "legalLinksTitle": "Privacy e condizioni",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di servizio",
+    "cookies": "Impostazioni cookie",
+    "officialResourcesTitle": "Fonti e riferimenti ufficiali",
+    "mapsLabel": "Google Maps →",
+    "disclaimer": "Questo è un progetto informativo indipendente e senza scopo di lucro. Non siamo affiliati ad alcun ente pubblico o istituzione ufficiale."
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Informazioni pratiche su servizi, storia della statua e pianificazione della visita alla Statua della Libertà Odaiba.",
+    "amenities": {
+      "title": "Servizi nelle vicinanze",
+      "items": [
+        {
+          "icon": "🅿️",
+          "label": "Parcheggio",
+          "value": "Parcheggi a pagamento nei centri commerciali vicini"
+        },
+        {
+          "icon": "🚻",
+          "label": "Bagni",
+          "value": "In Aqua City, DECKS e nei centri commerciali"
+        },
+        {
+          "icon": "🔌",
+          "label": "Carburante / EV",
+          "value": "Colonnine di ricarica nei parcheggi della zona"
+        },
+        {
+          "icon": "♿",
+          "label": "Accessibilità",
+          "value": "Lungomare pianeggiante e senza gradini"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Trasporti e servizi",
+        "items": [
+          {
+            "q": "Ci sono parcheggi nelle vicinanze? Quanto costano?",
+            "a": "La statua non ha un parcheggio dedicato, ma le strutture commerciali vicine — Aqua City, DECKS Tokyo Beach, DiverCity Tokyo Plaza — dispongono di parcheggi a pagamento a pochi minuti a piedi. Le tariffe sono di solito orarie; si riempiono rapidamente nei fine settimana, nei festivi e per la vista notturna, quindi arriva presto o preferisci il trasporto pubblico."
+          },
+          {
+            "q": "Possono avvicinarsi sedie a rotelle o passeggini?",
+            "a": "Sì. La statua si trova nell'Odaiba Kaihin Park su un lungomare aperto, completamente pianeggiante e senza gradini, quindi sedie a rotelle, passeggini e ausili per il cammino si muovono agevolmente; lungo il percorso ci sono rampe e bagni accessibili."
+          },
+          {
+            "q": "Ci sono bagni o punti ristoro nelle vicinanze?",
+            "a": "Alla statua non ci sono bagni autonomi, ma Aqua City, DECKS e DiverCity sono a pochi minuti a piedi, con bagni pubblici, caffè, ristoranti e minimarket — quindi trovare cibo e servizi è molto comodo."
+          }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "Storia e natura",
+        "items": [
+          {
+            "q": "A cosa serve questa statua e perché si trova a Tokyo?",
+            "a": "È una riproduzione in scala 1:7 della Statua della Libertà di New York, eretta nel 1998 durante l'Anno della Francia in Giappone per il 150° anniversario delle relazioni franco-giapponesi, a simbolo dell'amicizia tra Francia e Giappone. Inizialmente esposizione temporanea, è diventata permanente nel 2000."
+          },
+          {
+            "q": "Che rapporto ha con quella di New York?",
+            "a": "La versione di Odaiba riproduce fedelmente proporzioni e forma dell'originale di New York, ricreandone anche la patina verde-verderame. L'originale di New York fu creato da Bartholdi con una struttura interna in acciaio di Gustave Eiffel e inaugurato nel 1886 come dono francese agli Stati Uniti — la riproduzione di Odaiba ne continua il legame internazionale."
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Pianificazione e biglietti",
+        "items": [
+          {
+            "q": "C'è un biglietto d'ingresso?",
+            "a": "No. La Statua della Libertà Odaiba è un monumento all'aperto in un parco pubblico sul mare — gratuita e accessibile a qualsiasi ora, senza biglietteria né cancelli (i servizi dei centri commerciali vicini sono separati)."
+          },
+          {
+            "q": "Quanto dura una visita?",
+            "a": "Una visita tipica dura da 30 minuti a un'ora: arrivare, scattare foto, percorrere il lungomare e magari riposarsi su una panchina. Prevedi più tempo se visiti anche Aqua City o DiverCity (Unicorn Gundam)."
+          },
+          {
+            "q": "Posso andare con il maltempo?",
+            "a": "Sì — è uno spazio pubblico all'aperto, visitabile con qualsiasi tempo. Tuttavia sul mare c'è vento e in estate l'ombra è scarsa, quindi porta acqua e protezione solare; in inverno e dopo la pioggia si sente più freddo e i percorsi possono essere scivolosi — vestiti contro vento e freddo."
+          }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "Cosa vedere nelle vicinanze",
+        "items": [
+          {
+            "q": "Cosa consigli nelle vicinanze dopo la visita?",
+            "a": "La statua è proprio accanto al Rainbow Bridge e al lungomare della Baia di Tokyo, a distanza pedonale da Aqua City, DECKS Tokyo Beach, DiverCity Tokyo Plaza (Unicorn Gundam) e dall'edificio Fuji Television. Poco più lontano ci sono l'Odaiba Kaihin Park, il Tokyo Big Sight e la linea del battello per Asakusa."
+          }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Scopri di più a Odaiba",
+    "attractionsTitle": "Attrazioni nelle vicinanze",
+    "toursTitle": "Esperienze consigliate",
+    "ticketsTitle": "Esperienze che richiedono un biglietto",
+    "ticketsNote": "La statua in sé è gratuita. Queste esperienze vicine sono quelle per cui si paga davvero.",
+    "tickets": [
+      {
+        "name": "Battello nella Baia di Tokyo (Asakusa ⇄ Odaiba)",
+        "url": "https://www.suijobus.co.jp/"
+      },
+      {
+        "name": "teamLab Planets TOKYO (Toyosu)",
+        "url": "https://www.teamlab.art/e/planets/"
+      },
+      {
+        "name": "Tokyo Joypolis (Odaiba)",
+        "url": "https://tokyo-joypolis.com/"
+      },
+      {
+        "name": "Miraikan — Museo nazionale delle scienze emergenti",
+        "url": "https://www.miraikan.jst.go.jp/"
+      },
+      {
+        "name": "Abbonamento giornaliero Yurikamome",
+        "url": "https://www.yurikamome.co.jp/"
+      }
+    ]
+  },
+  "scienceArt": {
+    "title": "Design e simbolismo: libertà, illuminismo ed estetica francese",
+    "subtitle": "La Statua della Libertà Odaiba è più di una riproduzione — è un simbolo pubblico ricco di significato politico, ingegno tecnico e linguaggio artistico."
+  },
+  "outdoorMuseum": {
+    "title": "Guida fotografica: i migliori scatti della Statua della Libertà Odaiba",
+    "subtitle": "Essendo un landmark molto fotogenico, alcuni punti di vista e orari ben scelti aumentano molto l'utilità e la bellezza delle tue foto."
+  },
+  "education": {
+    "title": "Perché una Statua della Libertà a Odaiba? (Il significato sociale dell'arte pubblica)",
+    "subtitle": "Una statua da New York, nata a Parigi, radicata nella Baia di Tokyo — dietro ci sono più racconti di città, cultura e diplomazia."
+  },
+  "audience": {
+    "title": "Chi trova qui la propria chiave di lettura? (Una guida per ogni visitatore)",
+    "subtitle": "Ogni visitatore può scegliere l'approccio più adatto a sé."
+  },
+  "amenities": {
+    "title": "Bagni, parcheggi, ristorazione e alloggio",
+    "subtitle": "Una panoramica dei tipi di servizi presenti intorno alla statua. Dato che la maggior parte dei visitatori arriva con i mezzi pubblici, descriviamo l'area pedonale per categorie."
+  },
+  "weatherPage": {
+    "title": "Meteo attuale e previsioni a 7 giorni",
+    "subtitle": "Le condizioni intorno alla Statua della Libertà Odaiba — temperatura, probabilità di pioggia e vento — per aiutarti a scegliere abbigliamento, ombrello e momento per le foto."
+  },
+  "tidePage": {
+    "title": "Previsioni delle maree a Odaiba",
+    "subtitle": "La statua poggia su una base rocciosa nella Baia di Tokyo, dove l'acqua sale e scende due volte al giorno. Controlla la marea prima di partire per scegliere il livello d'acqua più suggestivo, i riflessi migliori e le ore più sicure."
+  },
+  "timeline": {
+    "title": "Cronologia: la Statua della Libertà a Odaiba",
+    "subtitle": "Dalla creazione dell'originale a New York all'installazione permanente nella Baia di Tokyo — la storia in ordine cronologico."
+  },
+  "legends": {
+    "title": "Sei storie che cambiano il modo di vedere la statua",
+    "subtitle": "La Statua della Libertà è più di una grande figura — è un monumento pieno di significato. Vediamo come è nata, il simbolismo nascosto nei dettagli e come è rimasta a Odaiba."
+  },
+  "sources": {
+    "title": "Fonti e riferimenti",
+    "intro": "I contenuti di questa pagina sono tratti da informazioni primarie pubblicate da enti pubblici, dal gestore del parco e da siti turistici ufficiali."
+  },
+  "imageCredits": {
+    "title": "Diritti sulle immagini"
+  },
+  "location": {
+    "eyebrow": "Posizione e dati dell'entità",
+    "aboutTitle": "Informazioni sulla Statua della Libertà Odaiba",
+    "welcome": "Benvenuto alla <strong>Statua della Libertà Odaiba</strong>, ampiamente riconosciuta come la <strong>Statua della Libertà</strong> centrale. Si trova nel cuore di <strong>Minato City, Tokyo, Giappone</strong> ed è un punto di riferimento per i viaggiatori della zona.",
+    "howToTitle": "Posizione e visita della Statua della Libertà a Minato City",
+    "howToText": "La Statua della Libertà Odaiba si trova in <strong>1 Chome-4-2 Daiba, Minato City, Tokyo 135-0091, Giappone</strong>, alla fine del lungomare dell'Odaiba Kaihin Park. Dalla stazione di Shimbashi la linea Yurikamome impiega circa 15 minuti fino alla stazione Daiba, da cui si cammina circa 5 minuti; dalla stazione Tokyo Teleport (Rinkai Line) sono circa 10 minuti pianeggianti a piedi.",
+    "landmarksTitle": "Punti di riferimento e attrazioni intorno alla Statua della Libertà",
+    "addressLabel": "Indirizzo",
+    "postalLabel": "Codice postale",
+    "regionLabel": "Regione",
+    "countryLabel": "Paese",
+    "coordsLabel": "Coordinate",
+    "mapLinkLabel": "Controlla la posizione su Google Maps"
+  }
+}

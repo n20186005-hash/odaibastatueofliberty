@@ -1,0 +1,47 @@
+{
+  "id": "/?source=pwa",
+  "name": "Statue of Liberty Odaiba — Visitor Guide",
+  "short_name": "Lady Liberty",
+  "description": "Comprehensive visitor guide to the Statue of Liberty Odaiba in Minato City, Tokyo, Japan — location, map, access, history and travel tips.",
+  "start_url": "/ja/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "portrait-primary",
+  "background_color": "#faf8f4",
+  "theme_color": "#3a7a8d",
+  "lang": "ja",
+  "dir": "ltr",
+  "categories": ["travel", "navigation", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Location & map",
+      "short_name": "Map",
+      "url": "/ja/#map"
+    },
+    {
+      "name": "Getting there",
+      "short_name": "Access",
+      "url": "/ja/#transport"
+    },
+    {
+      "name": "FAQ",
+      "short_name": "FAQ",
+      "url": "/ja/#faq"
+    }
+  ]
+}

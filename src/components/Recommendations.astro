@@ -1,35 +1,53 @@
 ---
+/**
+ * 周边联动模块
+ * ------------------------------------------------------------------
+ * 免费景点本身没有票务转化，因此这里把「免费景点 / 推荐体验 / 需购票体验」
+ * 分开呈现：先强化「雕像免费」的认知，再把有付费意愿的访客导向周边
+ * 真正需要买票的项目（水上巴士、teamLab、Joypolis、未来馆、一日券），
+ * 既增加内容深度，也承接顶部速答模块的 #recommendations 内链。
+ */
 import { getI18n } from '../i18n/ui';
+
 const { messages } = getI18n(Astro.url);
 const rec = messages.recommendations;
+const tickets = rec.tickets ?? [];
+
+const groups = [
+  { icon: '📌', title: rec.attractionsTitle, note: '', items: rec.attractions ?? [], paid: false },
+  { icon: '🧭', title: rec.toursTitle, note: '', items: rec.tours ?? [], paid: false },
+  ...(tickets.length
+    ? [{ icon: '🎟️', title: rec.ticketsTitle, note: rec.ticketsNote, items: tickets, paid: true }]
+    : []),
+];
 ---
 
-<section class="section-padding" style="background: var(--bg-primary);">
+<section id="recommendations" class="section-padding" style="background: var(--bg-primary);">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-10 text-center" style="color: var(--text-primary);">{rec.title}</h2>
 
-    <div class="grid md:grid-cols-2 gap-10">
-      <div>
-        <h3 class="font-semibold mb-5 flex items-center gap-2" style="color: var(--accent);">📌 {rec.attractionsTitle}</h3>
-        <div class="space-y-3">
-          {rec.attractions.map((a) => (
-            <a href={a.url} target="_blank" rel="noopener noreferrer" class="block rounded-xl p-4 border hover:shadow-md transition" style="background: var(--card-bg); border-color: var(--border-color); color: var(--text-primary);">
-              {a.name} <span style="color: var(--accent);">↗</span>
-            </a>
-          ))}
+    <div class="rec-grid">
+      {groups.map((g) => (
+        <div class={g.paid ? 'rec-group is-paid' : 'rec-group'}>
+          <h3 class="rec-group-title">
+            <span aria-hidden="true">{g.icon}</span> {g.title}
+          </h3>
+          {g.note && <p class="rec-group-note">{g.note}</p>}
+          <div class="space-y-3">
+            {g.items.map((a: { name: string; url: string }) => (
+              <a
+                href={a.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block rounded-xl p-4 border hover:shadow-md transition"
+                style="background: var(--card-bg); border-color: var(--border-color); color: var(--text-primary);"
+              >
+                {a.name} <span style="color: var(--accent);">↗</span>
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-
-      <div>
-        <h3 class="font-semibold mb-5 flex items-center gap-2" style="color: var(--accent);">🎟️ {rec.toursTitle}</h3>
-        <div class="space-y-3">
-          {rec.tours.map((a) => (
-            <a href={a.url} target="_blank" rel="noopener noreferrer" class="block rounded-xl p-4 border hover:shadow-md transition" style="background: var(--card-bg); border-color: var(--border-color); color: var(--text-primary);">
-              {a.name} <span style="color: var(--accent);">↗</span>
-            </a>
-          ))}
-        </div>
-      </div>
+      ))}
     </div>
   </div>
 </section>

@@ -1,0 +1,570 @@
+---
+/**
+ * 实时天气与多日预报
+ * ------------------------------------------------------------------
+ * 面向普通游客：不堆气象术语，直接给出「出门要不要带伞、穿什么、怎么安排、
+ * 海边安不安全」这类可执行结论；不满足条件的建议直接不显示。
+ */
+import { getI18n } from '../i18n/ui';
+import { entity } from '../config/entity';
+import { getWeather, iconFromCategory, intlLocale, timePart, dayLabel } from '../lib/weather';
+import { buildAdvice, dayHighlight } from '../lib/weatherAdvice';
+
+const { lang, messages } = getI18n(Astro.url);
+const w = messages.weatherPage;
+const A = w.advice;
+const locale = intlLocale(lang);
+
+// 服务端（构建阶段）获取并缓存天气；失败时降级为客户端拉取
+const weather = await getWeather();
+
+const current = weather?.current ?? null;
+const hourly = weather?.hourly ?? [];
+const daily = weather?.daily ?? [];
+const marine = weather?.marine ?? null;
+const air = weather?.air ?? null;
+const today = daily[0] ?? null;
+
+// 规则引擎：把气象数据翻译成游客可执行的建议
+const advice = weather
+  ? buildAdvice({ current: weather.current, hourly, daily, marine, air, t: A })
+  : null;
+
+const fmtClock = (iso: string) => {
+  try {
+    return new Intl.DateTimeFormat(locale, {
+      timeZone: 'Asia/Tokyo',
+      hour: '2-digit',
+      minute: '2-digit',
+    }).format(new Date(iso));
+  } catch {
+    return '--:--';
+  }
+};
+
+const visText = (m: number | null) =>
+  m === null ? '--' : m >= 1000 ? `${(m / 1000).toFixed(1)} km` : `${Math.round(m)} m`;
+
+const hours = hourly.slice(0, 12);
+
+const days = daily.map((d, i) => ({
+  ...d,
+  label: i === 0 ? w.today : dayLabel(d.date, locale, i),
+  tip: dayHighlight(d, A),
+}));
+
+/* 潮位曲线：把未来 24 小时潮位画成一条折线，并标出高低潮位置 */
+const CHART_W = 320;
+const CHART_H = 64;
+const series = (marine?.seaLevelSeries ?? []).slice(0, 25);
+let tidePath = '';
+let tideHighX: number | null = null;
+let tideLowX: number | null = null;
+if (series.length > 1) {
+  const heights = series.map((s) => s.height);
+  const min = Math.min(...heights);
+  const max = Math.max(...heights);
+  const span = max - min || 1;
+  const pts = series.map((s, i) => ({
+    x: (i / (series.length - 1)) * CHART_W,
+    y: CHART_H - 6 - ((s.height - min) / span) * (CHART_H - 12),
+  }));
+  tidePath = pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
+  const idxOf = (time: string) => series.findIndex((s) => s.time === time);
+  const hi = marine?.nextHigh ? idxOf(marine.nextHigh.time) : -1;
+  const lo = marine?.nextLow ? idxOf(marine.nextLow.time) : -1;
+  if (hi >= 0) tideHighX = pts[hi].x;
+  if (lo >= 0) tideLowX = pts[lo].x;
+}
+
+// 传给前端脚本的本地化配置（仅界面文案，不含任何数据来源信息）
+const wxConfig = {
+  latitude: entity.latitude,
+  longitude: entity.longitude,
+  locale,
+  todayLabel: w.today,
+  currentLabel: w.currentLabel,
+  labels: {
+    feelsLike: w.feelsLike,
+    humidity: w.humidity,
+    wind: w.wind,
+    precipitation: w.precipitation,
+    sunrise: w.sunrise,
+    sunset: w.sunset,
+    uvIndex: w.uvIndex,
+    visibility: w.visibility,
+    rainChance: w.rainChance,
+    updatedLabel: w.updatedLabel,
+    unavailable: w.unavailable,
+    windForceUnit: w.windForceUnit,
+    seaTemp: w.seaTemp,
+    waveHeight: w.waveHeight,
+    tideHigh: w.tideHigh,
+    tideLow: w.tideLow,
+    airQuality: w.airQuality,
+  },
+  conditions: w.conditions,
+  advice: A,
+};
+---
+
+<section id="weather" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{w.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{w.subtitle}</p>
+    </div>
+
+    <div class="wx-wrap" id="wx-root" data-wx-state={weather ? 'ready' : 'loading'}>
+      <!-- ① 风险提醒：有预警才显示，无预警时给一行安心提示 -->
+      <div class="wx-alerts" id="wx-alerts">
+        {advice && advice.alerts.length > 0
+          ? advice.alerts.map((a) => (
+              <div class={`wx-alert ${a.level === 'danger' ? 'is-danger' : 'is-warn'}`} role="status">
+                <span class="wx-alert-icon" aria-hidden="true">{a.icon}</span>
+                <div>
+                  <span class="wx-alert-tag">{A.alertTitle}</span>
+                  <p class="wx-alert-text">{a.text}</p>
+                </div>
+              </div>
+            ))
+          : <p class="wx-clear">✅ {A.allClear}</p>}
+      </div>
+
+      <div class="wx-grid">
+        <!-- ② 当前实况 + 出行建议 -->
+        <div class="wx-main">
+          <div class="wx-current">
+            <span class="wx-icon" id="wx-icon" aria-hidden="true">
+              {current ? iconFromCategory(current.category, current.isDay) : '🌤️'}
+            </span>
+            <div>
+              <p class="wx-temp">
+                <span id="wx-temp">{current ? current.temperature : '--'}</span><span class="wx-unit">°C</span>
+              </p>
+              <p class="wx-desc" id="wx-desc">
+                {current ? w.conditions[current.category] : w.loading}
+              </p>
+              <p class="wx-desc" id="wx-range">
+                {today ? `${w.today} ${today.tMin}–${today.tMax} °C` : ''}
+              </p>
+            </div>
+          </div>
+
+          <div class="wx-chips" id="wx-chips">
+            {advice?.chips.map((c) => <span class="wx-chip">{c}</span>)}
+            {advice?.rainWindow && <span class="wx-chip is-rain">💧 {advice.rainWindow}</span>}
+          </div>
+
+          <dl class="wx-metrics">
+            <div class="wx-metric">
+              <dt>{w.feelsLike}</dt>
+              <dd><span id="wx-feels">{current ? current.apparent : '--'}</span> °C</dd>
+            </div>
+            <div class="wx-metric">
+              <dt>{w.rainChance}</dt>
+              <dd><span id="wx-prob">{current ? current.precipProb : '--'}</span> %</dd>
+            </div>
+            <div class="wx-metric">
+              <dt>{w.wind}</dt>
+              <dd>
+                <span id="wx-wind">{current ? current.windSpeed.toFixed(1) : '--'}</span> m/s
+                <span class="wx-metric-sub">（<span id="wx-wind-force">{current ? current.windForce : '--'}</span> {w.windForceUnit}）</span>
+              </dd>
+            </div>
+            <div class="wx-metric">
+              <dt>{w.humidity}</dt>
+              <dd><span id="wx-humidity">{current ? current.humidity : '--'}</span> %</dd>
+            </div>
+            <div class="wx-metric">
+              <dt>{w.uvIndex}</dt>
+              <dd><span id="wx-uv">{current ? current.uv.toFixed(1) : '--'}</span></dd>
+            </div>
+            <div class="wx-metric">
+              <dt>{w.visibility}</dt>
+              <dd id="wx-visibility">{current ? visText(current.visibility) : '--'}</dd>
+            </div>
+            <div class="wx-metric">
+              <dt>{w.sunrise}</dt>
+              <dd id="wx-sunrise">{today ? timePart(today.sunrise) : '--:--'}</dd>
+            </div>
+            <div class="wx-metric">
+              <dt>{w.sunset}</dt>
+              <dd id="wx-sunset">{today ? timePart(today.sunset) : '--:--'}</dd>
+            </div>
+          </dl>
+
+          <p class="wx-updated">
+            {w.updatedLabel}: <span id="wx-updated">{weather ? fmtClock(weather.fetchedAt) : '--:--'}</span>
+          </p>
+
+          <!-- ③ 三类可执行建议（不满足条件的条目自动隐藏） -->
+          <div class="wx-advice-head">🧭 {w.adviceTitle}</div>
+          <div class="wx-cols" id="wx-cols">
+            <div class="wx-col">
+              <p class="wx-col-title">👕 {A.outfitTitle}</p>
+              <ul class="wx-col-list">{advice?.outfit.map((t) => <li>{t}</li>)}</ul>
+            </div>
+            <div class="wx-col">
+              <p class="wx-col-title">🗺️ {A.planTitle}</p>
+              <ul class="wx-col-list">{advice?.plan.map((t) => <li>{t}</li>)}</ul>
+            </div>
+            <div class="wx-col">
+              <p class="wx-col-title">🎒 {A.packTitle}</p>
+              <div class="wx-pack">
+                {advice?.pack.map((p) => (
+                  <span class="wx-pack-item"><span aria-hidden="true">{p.icon}</span>{p.label}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ④ 逐小时 / 海边实况 / 7 日预报 -->
+        <div class="wx-aside">
+          <div class="wx-card">
+            <h3 class="wx-card-title">⏱️ {w.hourlyTitle}</h3>
+            <ul class="wx-hourly" id="wx-hourly">
+              {hours.map((h, i) => (
+                <li class="wx-hour">
+                  <span class="wx-hour-time">{i === 0 ? w.currentLabel : timePart(h.time)}</span>
+                  <span class="wx-hour-icon" aria-hidden="true">{iconFromCategory(h.category, h.isDay)}</span>
+                  <span class="wx-hour-temp">{h.temp}°</span>
+                  <span class="wx-hour-rain">💧{h.precipProb}%</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {marine && (
+            <div class="wx-card" id="wx-marine">
+              <h3 class="wx-card-title">🌊 {w.marineTitle}</h3>
+              <dl class="wx-rows">
+                {marine.seaTemp !== null && (
+                  <div class="wx-row">
+                    <dt>{w.seaTemp}</dt>
+                    <dd><span id="wx-sea-temp">{marine.seaTemp.toFixed(1)}</span> °C</dd>
+                  </div>
+                )}
+                {marine.waveHeight !== null && (
+                  <div class="wx-row">
+                    <dt>{w.waveHeight}</dt>
+                    <dd><span id="wx-wave">{marine.waveHeight.toFixed(1)}</span> m</dd>
+                  </div>
+                )}
+                {marine.nextHigh && (
+                  <div class="wx-row">
+                    <dt>▲ {w.tideHigh}</dt>
+                    <dd><span id="wx-tide-high">{timePart(marine.nextHigh.time)}</span> · <span id="wx-tide-high-h">{marine.nextHigh.height.toFixed(2)}</span> m</dd>
+                  </div>
+                )}
+                {marine.nextLow && (
+                  <div class="wx-row">
+                    <dt>▼ {w.tideLow}</dt>
+                    <dd><span id="wx-tide-low">{timePart(marine.nextLow.time)}</span> · <span id="wx-tide-low-h">{marine.nextLow.height.toFixed(2)}</span> m</dd>
+                  </div>
+                )}
+              </dl>
+
+              {tidePath && (
+                <figure class="wx-tide">
+                  <svg viewBox={`0 0 ${CHART_W} ${CHART_H}`} preserveAspectRatio="none" role="img" aria-label={w.tideChart}>
+                    <path class="wx-tide-line" d={tidePath} id="wx-tide-path" />
+                    {tideHighX !== null && <circle class="wx-tide-dot is-high" cx={tideHighX} cy={CHART_H - 4} r="2.5" />}
+                    {tideLowX !== null && <circle class="wx-tide-dot is-low" cx={tideLowX} cy={CHART_H - 4} r="2.5" />}
+                  </svg>
+                  <figcaption>{w.tideChart}</figcaption>
+                </figure>
+              )}
+            </div>
+          )}
+
+          {air && (air.pm25 !== null || air.aqi !== null) && (
+            <div class="wx-card" id="wx-air">
+              <h3 class="wx-card-title">🌬️ {w.airQuality}</h3>
+              <dl class="wx-rows">
+                {air.pm25 !== null && (
+                  <div class="wx-row">
+                    <dt>PM2.5</dt>
+                    <dd><span id="wx-pm25">{Math.round(air.pm25)}</span> µg/m³</dd>
+                  </div>
+                )}
+                {air.aqi !== null && (
+                  <div class="wx-row">
+                    <dt>AQI</dt>
+                    <dd><span id="wx-aqi">{Math.round(air.aqi)}</span></dd>
+                  </div>
+                )}
+              </dl>
+            </div>
+          )}
+
+          <div class="wx-card">
+            <h3 class="wx-card-title">📅 {w.forecastTitle}</h3>
+            <ul class="wx-daily" id="wx-daily">
+              {days.map((d) => (
+                <li class="wx-day">
+                  <span class="wx-day-name">{d.label}</span>
+                  <span class="wx-day-icon" aria-hidden="true">{iconFromCategory(d.category, true)}</span>
+                  <span class="wx-day-cond">{w.conditions[d.category]}</span>
+                  <span class="wx-day-rain">💧 {d.precipProb}%</span>
+                  <span class="wx-day-temp"><b>{d.tMax}°</b> / {d.tMin}°</span>
+                  {d.tip && <span class="wx-day-tip">{d.tip.icon} {d.tip.label}</span>}
+                </li>
+              ))}
+            </ul>
+            <p class="wx-note">{w.dataNote}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script id="wx-config" type="application/json" is:inline set:html={JSON.stringify(wxConfig)}></script>
+
+<script>
+  /* 渐进增强：首屏由服务端渲染，页面加载后再刷新为最新实况（复用同一套建议规则） */
+  import {
+    categoryFromCode,
+    iconFromCategory,
+    beaufortFromMs,
+    weatherEndpoints,
+    normalizeWeather,
+  } from '../lib/weather';
+  import { buildAdvice, dayHighlight } from '../lib/weatherAdvice';
+
+  type Cfg = {
+    latitude: number;
+    longitude: number;
+    locale: string;
+    todayLabel: string;
+    currentLabel: string;
+    labels: Record<string, string>;
+    conditions: Record<string, string>;
+    advice: any;
+  };
+
+  const cfgEl = document.getElementById('wx-config');
+  const root = document.getElementById('wx-root');
+
+  if (cfgEl && root) {
+    let cfg: Cfg;
+    try {
+      cfg = JSON.parse(cfgEl.textContent || '{}');
+    } catch {
+      cfg = null as any;
+    }
+
+    const esc = (s: unknown) =>
+      String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
+
+    const hhmm = (iso: string) => {
+      const m = String(iso || '').match(/T(\d{2}:\d{2})/);
+      return m ? m[1] : '--:--';
+    };
+
+    const nowClock = () => {
+      try {
+        return new Intl.DateTimeFormat(cfg.locale, {
+          timeZone: 'Asia/Tokyo',
+          hour: '2-digit',
+          minute: '2-digit',
+        }).format(new Date());
+      } catch {
+        return '--:--';
+      }
+    };
+
+    const dayName = (date: string, i: number) => {
+      if (i === 0) return cfg.todayLabel;
+      const dt = new Date(`${date}T12:00:00+09:00`);
+      if (Number.isNaN(dt.getTime())) return date.slice(5);
+      const wd = new Intl.DateTimeFormat(cfg.locale, { weekday: 'short' }).format(dt);
+      const md = new Intl.DateTimeFormat(cfg.locale, { month: 'numeric', day: 'numeric' }).format(dt);
+      return `${md} ${wd}`;
+    };
+
+    const visText = (m: number | null) =>
+      m === null ? '--' : m >= 1000 ? `${(m / 1000).toFixed(1)} km` : `${Math.round(m)} m`;
+
+    const setText = (id: string, value: string | number) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = String(value);
+    };
+
+    const setHtml = (id: string, html: string) => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = html;
+    };
+
+    function render(wx: any) {
+      const L = cfg.labels;
+      const A = cfg.advice;
+      const c = wx.current;
+      const adv = buildAdvice({
+        current: c,
+        hourly: wx.hourly,
+        daily: wx.daily,
+        marine: wx.marine,
+        air: wx.air,
+        t: A,
+      });
+      const cond = (k: string) => esc((cfg.conditions || {})[k] || '');
+
+      /* 实况 */
+      setText('wx-temp', c.temperature);
+      setText('wx-desc', (cfg.conditions || {})[c.category] || '');
+      setText('wx-feels', c.apparent);
+      setText('wx-prob', c.precipProb);
+      setText('wx-wind', c.windSpeed.toFixed(1));
+      setText('wx-wind-force', c.windForce);
+      setText('wx-humidity', c.humidity);
+      setText('wx-uv', c.uv.toFixed(1));
+      setText('wx-visibility', visText(c.visibility));
+      setText('wx-updated', nowClock());
+      const icon = document.getElementById('wx-icon');
+      if (icon) icon.textContent = iconFromCategory(c.category, c.isDay);
+
+      /* 首屏 Hero 徽章 */
+      setText('hero-wx-temp', `${c.temperature} °C`);
+      if (wx.daily[0]) setText('hero-wx-sunset', hhmm(wx.daily[0].sunset));
+
+      /* 风险提醒 */
+      setHtml(
+        'wx-alerts',
+        adv.alerts.length
+          ? adv.alerts
+              .map(
+                (a: any) =>
+                  `<div class="wx-alert ${a.level === 'danger' ? 'is-danger' : 'is-warn'}" role="status">` +
+                  `<span class="wx-alert-icon" aria-hidden="true">${a.icon}</span>` +
+                  `<div><span class="wx-alert-tag">${esc(A.alertTitle)}</span>` +
+                  `<p class="wx-alert-text">${esc(a.text)}</p></div></div>`,
+              )
+              .join('')
+          : `<p class="wx-clear">✅ ${esc(A.allClear)}</p>`,
+      );
+
+      /* 概览标签 */
+      setHtml(
+        'wx-chips',
+        adv.chips.map((x: string) => `<span class="wx-chip">${esc(x)}</span>`).join('') +
+          (adv.rainWindow ? `<span class="wx-chip is-rain">💧 ${esc(adv.rainWindow)}</span>` : ''),
+      );
+
+      /* 三类建议 */
+      const pack = adv.pack
+        .map(
+          (p: any) =>
+            `<span class="wx-pack-item"><span aria-hidden="true">${p.icon}</span>${esc(p.label)}</span>`,
+        )
+        .join('');
+      setHtml(
+        'wx-cols',
+        `<div class="wx-col"><p class="wx-col-title">👕 ${esc(A.outfitTitle)}</p><ul class="wx-col-list">` +
+          adv.outfit.map((x: string) => `<li>${esc(x)}</li>`).join('') +
+          `</ul></div>` +
+          `<div class="wx-col"><p class="wx-col-title">🗺️ ${esc(A.planTitle)}</p><ul class="wx-col-list">` +
+          adv.plan.map((x: string) => `<li>${esc(x)}</li>`).join('') +
+          `</ul></div>` +
+          `<div class="wx-col"><p class="wx-col-title">🎒 ${esc(A.packTitle)}</p><div class="wx-pack">${pack}</div></div>`,
+      );
+
+      /* 逐小时 */
+      setHtml(
+        'wx-hourly',
+        (wx.hourly || [])
+          .slice(0, 12)
+          .map(
+            (h: any, i: number) =>
+              `<li class="wx-hour"><span class="wx-hour-time">${
+                i === 0 ? esc(cfg.currentLabel) : hhmm(h.time)
+              }</span><span class="wx-hour-icon" aria-hidden="true">${iconFromCategory(
+                h.category,
+                h.isDay,
+              )}</span><span class="wx-hour-temp">${h.temp}°</span><span class="wx-hour-rain">💧${h.precipProb}%</span></li>`,
+          )
+          .join(''),
+      );
+
+      /* 7 日预报 */
+      setHtml(
+        'wx-daily',
+        (wx.daily || [])
+          .map((d: any, i: number) => {
+            const tip = dayHighlight(d, A);
+            return (
+              `<li class="wx-day"><span class="wx-day-name">${esc(dayName(d.date, i))}</span>` +
+              `<span class="wx-day-icon" aria-hidden="true">${iconFromCategory(d.category, true)}</span>` +
+              `<span class="wx-day-cond">${cond(d.category)}</span>` +
+              `<span class="wx-day-rain">💧 ${d.precipProb}%</span>` +
+              `<span class="wx-day-temp"><b>${d.tMax}°</b> / ${d.tMin}°</span>` +
+              (tip ? `<span class="wx-day-tip">${tip.icon} ${esc(tip.label)}</span>` : '') +
+              `</li>`
+            );
+          })
+          .join(''),
+      );
+
+      /* 海边实况 */
+      const m = wx.marine;
+      if (m && document.getElementById('wx-marine')) {
+        if (m.seaTemp !== null) setText('wx-sea-temp', m.seaTemp.toFixed(1));
+        if (m.waveHeight !== null) setText('wx-wave', m.waveHeight.toFixed(1));
+        if (m.nextHigh) {
+          setText('wx-tide-high', hhmm(m.nextHigh.time));
+          setText('wx-tide-high-h', m.nextHigh.height.toFixed(2));
+        }
+        if (m.nextLow) {
+          setText('wx-tide-low', hhmm(m.nextLow.time));
+          setText('wx-tide-low-h', m.nextLow.height.toFixed(2));
+        }
+        const path = document.getElementById('wx-tide-path');
+        const series = (m.seaLevelSeries || []).slice(0, 25);
+        if (path && series.length > 1) {
+          const W = 320;
+          const H = 64;
+          const hs = series.map((s: any) => s.height);
+          const min = Math.min(...hs);
+          const max = Math.max(...hs);
+          const span = max - min || 1;
+          path.setAttribute(
+            'd',
+            series
+              .map((s: any, i: number) => {
+                const x = (i / (series.length - 1)) * W;
+                const y = H - 6 - ((s.height - min) / span) * (H - 12);
+                return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)} ${y.toFixed(1)}`;
+              })
+              .join(' '),
+          );
+        }
+      }
+
+      /* 空气 */
+      if (wx.air) {
+        if (wx.air.pm25 !== null) setText('wx-pm25', Math.round(wx.air.pm25));
+        if (wx.air.aqi !== null) setText('wx-aqi', Math.round(wx.air.aqi));
+      }
+
+      root.setAttribute('data-wx-state', 'ready');
+    }
+
+    const getJson = (url: string) =>
+      fetch(url, { headers: { accept: 'application/json' } })
+        .then((r) => (r.ok ? r.json() : null))
+        .catch(() => null);
+
+    if (cfg) {
+      const ep = weatherEndpoints();
+      Promise.all([getJson(ep.forecast), getJson(ep.marine), getJson(ep.air)])
+        .then(([fc, marineRaw, airRaw]) => {
+          const wx = normalizeWeather(fc, marineRaw, airRaw);
+          if (wx) render(wx);
+          else root.setAttribute('data-wx-state', 'error');
+        })
+        .catch(() => root.setAttribute('data-wx-state', 'error'));
+    }
+  }
+</script>

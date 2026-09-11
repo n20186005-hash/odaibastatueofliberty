@@ -1,0 +1,398 @@
+{
+  "meta": {
+    "title": "Vrijheidsbeeld Odaiba Tickets — Gratis toegang, 24/7 open",
+    "description": "Een bezoek aan het Vrijheidsbeeld in Odaiba, Tokio is 100% gratis — geen tickets, geen reservering, 24 uur per dag open. Locatie, route, beste fotoplekken en geschiedenis.",
+    "officialName": "Vrijheidsbeeld Odaiba",
+    "shortName": "Vrijheidsbeeld"
+  },
+  "header": {
+    "siteName": "Vrijheidsbeeld Odaiba",
+    "home": "Home",
+    "visit": "Bezoek",
+    "transport": "Route",
+    "history": "Geschiedenis",
+    "gallery": "Galerij",
+    "reviews": "Beoordelingen",
+    "faq": "FAQ",
+    "map": "Kaart",
+    "backToHome": "Terug naar home"
+  },
+  "common": {
+    "changeLanguage": "Taal wijzigen",
+    "toggleTheme": "Thema wisselen"
+  },
+  "nonprofitBanner": {
+    "text": "Dit is een onafhankelijke, non-profit reisgids samengesteld door enthousiaste reizigers, met als doel u het meest objectieve advies te geven voor een bezoek aan het Vrijheidsbeeld Odaiba."
+  },
+  "mission": {
+    "title": "Onze missie",
+    "text": "Zodat elke reis naar Japan zonder spijt eindigt, hebben wij de verspreide officiële informatie verzameld — om u het helderst mogelijke bezoek te kunnen bieden."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "tokyoAttractions": "Attracties Tokio",
+    "minato": "Minato City",
+    "odaibaPark": "Odaiba Kaihin Park",
+    "current": "Vrijheidsbeeld Odaiba"
+  },
+  "stickyNav": {
+    "tickets": "Tickets",
+    "overview": "Overzicht",
+    "weather": "Weer",
+    "tide": "Getij",
+    "transport": "Route",
+    "history": "Geschiedenis",
+    "amenities": "Voorzieningen",
+    "guide": "Gids"
+  },
+  "entryAnswers": {
+    "eyebrow": "Toegang & tickets",
+    "title": "Heb je tickets nodig voor het Vrijheidsbeeld Odaiba? Nee — de toegang is gratis.",
+    "subtitle": "Het is een monument in de open lucht in een openbaar kustpark: geen loket, geen poortje, geen reservering en geen sluitingstijd.",
+    "freeBadge": "100% GRATIS",
+    "freeNote": "Geen tickets · Geen reservering · 24/7 open",
+    "items": [
+      {
+        "icon": "🎟️",
+        "q": "Heb ik tickets nodig?",
+        "a": "Nee. Er is geen ticketloket en geen toegangspoort, dus er valt niets te kopen en niets te printen. Loop gewoon de kustpromenade op en kijk omhoog."
+      },
+      {
+        "icon": "🕒",
+        "q": "Wat zijn de openingstijden?",
+        "a": "Het beeld is 24 uur per dag toegankelijk, elke dag van het jaar. Vroeg in de ochtend en laat op de avond is het het rustigst; rond zonsondergang is het het drukst."
+      },
+      {
+        "icon": "📍",
+        "q": "Waar staat het precies?",
+        "a": "Aan het einde van de kustpromenade in Odaiba Kaihin Park — ongeveer 5 minuten lopen van station Daiba (uitgang A) of station Odaiba-Kaihinkoen."
+      },
+      {
+        "icon": "🌇",
+        "q": "Wat is het beste moment om te gaan?",
+        "a": "Rond zonsondergang en kort na het invallen van de duisternis, wanneer de Rainbow Bridge achter het beeld wordt verlicht — de klassieke Odaiba-foto."
+      }
+    ],
+    "paidLead": "Alles hierboven is gratis. Wil je in de buurt een betaalde ervaring toevoegen, dan zijn dit de gebruikelijke opties:",
+    "paidCta": "Bekijk betaalde ervaringen in de buurt",
+    "paidHref": "#recommendations"
+  },
+  "hero": {
+    "title": "Vrijheidsbeeld Odaiba",
+    "subtitle": "Een replica op schaal 1:7 van het Vrijheidsbeeld in New York, rustig aan de kade van Odaiba aan de Baai van Tokio. Het werd in 1998 opgericht tijdens het 'Jaar van Frankrijk in Japan' en door Frankrijk geschonken als symbool van vriendschap tussen beide landen. Met zijn groen uitgeslagen silhouet tegen de Rainbow Bridge en de Baai van Tokio is het het bekendste herkenningspunt van Odaiba — en een gratis, altijd toegankelijk monument.",
+    "rating": "4,5 (5.145)",
+    "reviewCount": "5.145 beoordelingen",
+    "hours": "24 uur per dag open",
+    "openMaps": "Bekijk op Google Maps",
+    "tags": [
+      "Replica schaal 1:7",
+      "Gratis toegang",
+      "Odaiba · Baai van Tokio"
+    ],
+    "routeCta": {
+      "label": "Route plannen",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Geschiedenis",
+      "href": "#history"
+    },
+    "quickFacts": [
+      {
+        "icon": "🎟️",
+        "label": "Gratis toegang",
+        "value": "Geen ticket nodig"
+      },
+      {
+        "icon": "🕒",
+        "label": "24 uur open",
+        "value": "Dag en nacht"
+      },
+      {
+        "icon": "📍",
+        "label": "Odaiba Seaside Park",
+        "value": "Einde van de promenade"
+      }
+    ],
+    "navCta": {
+      "label": "📍 Route bekijken",
+      "href": "#transport"
+    },
+    "photoCta": {
+      "label": "📸 Beste fotoplekken",
+      "href": "#gallery"
+    },
+    "liveInfo": {
+      "weather": "Actueel weer",
+      "sunset": "Zonsondergang vandaag"
+    }
+  },
+  "intro": {
+    "title": "Ontdek het Vrijheidsbeeld Odaiba",
+    "description": "Het Vrijheidsbeeld Odaiba staat aan de kade van Odaiba aan de Baai van Tokio als replica op schaal 1:7 van het origineel in New York. Het werd in 1998 geplaatst tijdens het 'Jaar van Frankrijk in Japan' als tijdelijke tentoonstelling bij het 150-jarig bestaan van de Frans-Japanse betrekkingen, en was zo populair dat het in 2000 permanent werd. Met ongeveer 12 meter hoogte en dezelfde groen uitgeslagen afwerking als het origineel kijkt het uit op de Baai van Tokio en de Rainbow Bridge — een van de kenmerkende landmarks van Odaiba en voor veel bezoekers het eerste dat ze zien vanaf de waterbus of de Yurikamome.",
+    "visitGuide": {
+      "title": "Bezoekersgids",
+      "eyebrow": "Praktische planning"
+    },
+    "alsoKnownAs": {
+      "title": "Hoogtepunten"
+    }
+  },
+  "transportSection": {
+    "title": "Route & oriëntatie · Hoe bereik je het Vrijheidsbeeld Odaiba",
+    "subtitle": "Of je nu komt met het vliegtuig, de trein, het openbaar vervoer, de auto, taxi, fiets of waterbus — elke optie staat hieronder uitgewerkt, inclusief parkeren en veelgestelde vragen.",
+    "overviewTitle": "Als je eenmaal in Tokio bent",
+    "arrivalTitle": "Weet dit voordat je vertrekt",
+    "arrivalItems": [
+      "Het beeld staat op de vlakke kustpromenade van Odaiba Kaihin Park, 5–10 minuten lopen van station Daiba of Tokyo Teleport.",
+      "Er is geen eigen parkeergelegenheid bij het beeld; gebruik de betaalde parkeergarages van nabijgelegen winkelcentra zoals Aqua City, DECKS of DiverCity.",
+      "In het weekend en op feestdagen is het druk, vooral in de schemering en voor het nachtzicht — kies liever rustige tijden."
+    ],
+    "driverFaqTitle": "Veelgestelde vragen over de route",
+    "driverFaq": [
+      {
+        "q": "Heb je echt geen ticket nodig?",
+        "a": "Klopt. Het beeld is een monument in de open lucht in een openbaar park — er is geen loket, geen poort en geen sluitingstijd. Alleen de voorzieningen van de nabijgelegen winkelcentra zijn betaald en apart."
+      },
+      {
+        "q": "Is er parkeergelegenheid en wat kost het?",
+        "a": "Direct bij het beeld is geen parkeergelegenheid. Aqua City, DECKS Tokyo Beach en DiverCity Tokyo Plaza hebben betaalde parkeergarages op enkele minuten lopen, meestal met een uurtarief. In het weekend en op feestdagen lopen ze snel vol — kom vroeg of neem het openbaar vervoer."
+      },
+      {
+        "q": "Kunnen rolstoelen en kinderwagens er dichtbij komen?",
+        "a": "Ja. De promenade is volledig vlak en zonder trappen, dus rolstoelen, kinderwagens en loophulpmiddelen kunnen er gemakkelijk langs. Onderweg zijn er hellingen en toegankelijke toiletten."
+      },
+      {
+        "q": "Zijn er toiletten of eten in de buurt?",
+        "a": "Bij het beeld zelf zijn geen toiletten, maar Aqua City, DECKS en DiverCity liggen op enkele minuten lopen met openbare toiletten, cafés, restaurants en gemakswinkels."
+      },
+      {
+        "q": "Hoe lang duurt een bezoek?",
+        "a": "Meestal 30 tot 60 minuten: aankomen, foto's maken, over de promenade lopen en misschien even op een bankje zitten. Reken meer tijd als je ook Aqua City of DiverCity (Unicorn Gundam) meeneemt."
+      },
+      {
+        "q": "Raad je het openbaar vervoer aan?",
+        "a": "Sterk aanbevolen. Station Daiba (Yurikamome) ligt op ongeveer 5 minuten lopen, Tokyo Teleport (Rinkai Line) op ongeveer 10 vlakke minuten. Adres: 1 Chome-4-2 Daiba, Minato City, Tokio."
+      }
+    ],
+    "localTipsTitle": "Tips voor je bezoek",
+    "localTips": [
+      "Het licht is het zachtst in de schemering, wanneer het beeld en de Rainbow Bridge oplichten tegen een gouden lucht.",
+      "Het beeld is 24 uur per dag toegankelijk; het verlichte Odaiba bij nacht is net zo mooi voor een avondwandeling.",
+      "Combineer het met Aqua City en DiverCity (Unicorn Gundam); de winkelcentra bieden toiletten en eten."
+    ],
+    "mapsCta": "Kaart & route bekijken",
+    "bestTime": {
+      "title": "Beste tijd om aan te komen",
+      "text": "Hoewel het beeld 24 uur per dag toegankelijk is, raden we aan ongeveer een uur voor zonsondergang aan te komen — dan krijg je in één bezoek drie aanzichten: daglicht, golden hour en nachtverlichting."
+    }
+  },
+  "officialManagement": {
+    "title": "Over het beeld"
+  },
+  "knowledge": {
+    "title": "Geschiedenis en betekenis van het Vrijheidsbeeld Odaiba"
+  },
+  "gallery": {
+    "title": "Fotogalerij",
+    "subtitle": "Van het vooraanzicht en de omlijsting door de Rainbow Bridge tot de weerspiegeling in de Baai van Tokio en de avondverlichting — ontdek de visuele schoonheid van het Vrijheidsbeeld Odaiba."
+  },
+  "reviews": {
+    "title": "Beoordelingen van bezoekers",
+    "declaration": "Feedback van bezoekers is beschikbaar op Google Maps (externe link).",
+    "featuredTitle": "Reacties van bezoekers"
+  },
+  "mapSection": {
+    "title": "Zo kom je hier",
+    "subtitle": "1 Chome-4-2 Daiba, Minato City, Tokio 135-0091, Japan",
+    "openMaps": "Openen in Google Maps"
+  },
+  "footer": {
+    "siteName": "Vrijheidsbeeld Odaiba",
+    "rights": "© 2026 Vrijheidsbeeld Odaiba — Onafhankelijke non-profit bezoekersgids. Alle rechten voorbehouden.",
+    "legalLinksTitle": "Privacy & voorwaarden",
+    "privacy": "Privacybeleid",
+    "terms": "Algemene voorwaarden",
+    "cookies": "Cookie-instellingen",
+    "officialResourcesTitle": "Officiële bronnen & referenties",
+    "mapsLabel": "Google Maps →",
+    "disclaimer": "Dit is een onafhankelijk, non-profit informatieproject voor bezoekers. Wij zijn niet verbonden aan enige overheidsinstantie of officiële instelling."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Praktische informatie over voorzieningen, de geschiedenis van het beeld en het plannen van je bezoek aan het Vrijheidsbeeld Odaiba.",
+    "amenities": {
+      "title": "Voorzieningen in de buurt",
+      "items": [
+        {
+          "icon": "🅿️",
+          "label": "Parkeren",
+          "value": "Betaalde garages bij nabije winkelcentra"
+        },
+        {
+          "icon": "🚻",
+          "label": "Toiletten",
+          "value": "In Aqua City, DECKS & winkelcentra"
+        },
+        {
+          "icon": "🔌",
+          "label": "Brandstof / EV",
+          "value": "Laadpunten bij parkeerplaatsen in de buurt"
+        },
+        {
+          "icon": "♿",
+          "label": "Toegankelijkheid",
+          "value": "Vlakke promenade zonder trappen"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Route & voorzieningen",
+        "items": [
+          {
+            "q": "Is er parkeergelegenheid in de buurt? Wat kost het?",
+            "a": "Het beeld zelf heeft geen eigen parkeergelegenheid, maar nabijgelegen voorzieningen — Aqua City, DECKS Tokyo Beach, DiverCity Tokyo Plaza — hebben betaalde parkeergarages op enkele minuten lopen. De tarieven zijn meestal per uur; in het weekend, op feestdagen en voor nachtzicht lopen ze snel vol, dus kom vroeg of neem het openbaar vervoer."
+          },
+          {
+            "q": "Kunnen rolstoelen of kinderwagens dichtbij komen?",
+            "a": "Ja. Het beeld staat in Odaiba Kaihin Park op een open kustpromenade die volledig vlak is en geen trappen heeft, dus rolstoelen, kinderwagens en loophulpmiddelen gaan er gemakkelijk langs; toegankelijke hellingen en toiletten liggen langs de route."
+          },
+          {
+            "q": "Zijn er toiletten of eten in de buurt?",
+            "a": "Bij het beeld zijn geen aparte toiletten, maar Aqua City, DECKS en DiverCity liggen op enkele minuten lopen, met openbare toiletten, cafés, restaurants en gemakswinkels — eten en voorzieningen zijn dus heel gemakkelijk te vinden."
+          }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "Geschiedenis & natuur",
+        "items": [
+          {
+            "q": "Waarvoor dient dit beeld, en waarom staat het in Tokio?",
+            "a": "Het is een replica op schaal 1:7 van het Vrijheidsbeeld in New York, opgericht in 1998 tijdens het 'Jaar van Frankrijk in Japan' bij het 150-jarig bestaan van de Frans-Japanse betrekkingen, als symbool van vriendschap tussen Frankrijk en Japan. Het was eerst een tijdelijke tentoonstelling en werd in 2000 permanent."
+          },
+          {
+            "q": "Hoe hangt het samen met het beeld in New York?",
+            "a": "De versie in Odaiba geeft de verhoudingen en vorm van het New Yorkse origineel getrouw weer en bootst zelfs de groen uitgeslagen patina na. Het origineel in New York is gemaakt door Bartholdi met een interne stalen constructie van Gustave Eiffel en in 1886 onthuld als Frans geschenk aan de Verenigde Staten — de replica in Odaiba zet die grensoverschrijdende band voort."
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Planning & tickets",
+        "items": [
+          {
+            "q": "Is er een toegangsprijs?",
+            "a": "Nee. Het Vrijheidsbeeld Odaiba is een monument in de open lucht in een openbaar kustpark — gratis en dag en nacht toegankelijk, zonder ticketloket of poort (de voorzieningen van nabije winkelcentra zijn apart)."
+          },
+          {
+            "q": "Hoe lang duurt een bezoek?",
+            "a": "Een gemiddeld bezoek duurt 30 tot 60 minuten: aankomen, foto's maken, over de promenade lopen, misschien even op een bankje zitten. Reken extra tijd als je ook Aqua City of DiverCity (Unicorn Gundam) verkent."
+          },
+          {
+            "q": "Kan ik bij slecht weer gaan?",
+            "a": "Ja — het is een openbare buitenruimte die bij elk weer toegankelijk is. Maar het waait aan de baai en in de zomer is er weinig schaduw, dus neem water en zonnebescherming mee; in de winter en na regen voelt het kouder aan en kunnen paden glad zijn — kleed je op wind en kou."
+          }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "Wat je in de buurt kunt zien",
+        "items": [
+          {
+            "q": "Wat raad je na het bezoek in de buurt aan?",
+            "a": "Het beeld ligt direct bij de Rainbow Bridge en de kade van de Baai van Tokio, op loopafstand van Aqua City, DECKS Tokyo Beach, DiverCity Tokyo Plaza (Unicorn Gundam) en het Fuji Television-gebouw. Iets verder liggen Odaiba Kaihin Park, Tokyo Big Sight en de waterbusroute naar Asakusa."
+          }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Ontdek meer in Odaiba",
+    "attractionsTitle": "Attracties in de buurt",
+    "toursTitle": "Aanbevolen ervaringen",
+    "ticketsTitle": "Ervaringen waarvoor je een ticket nodig hebt",
+    "ticketsNote": "Het beeld zelf is gratis. Deze ervaringen in de buurt zijn degene waarvoor je daadwerkelijk betaalt.",
+    "tickets": [
+      {
+        "name": "Waterbus op de Baai van Tokio (Asakusa ⇄ Odaiba)",
+        "url": "https://www.suijobus.co.jp/"
+      },
+      {
+        "name": "teamLab Planets TOKYO (Toyosu)",
+        "url": "https://www.teamlab.art/e/planets/"
+      },
+      {
+        "name": "Tokyo Joypolis (Odaiba)",
+        "url": "https://tokyo-joypolis.com/"
+      },
+      {
+        "name": "Miraikan — Nationaal museum voor opkomende wetenschap",
+        "url": "https://www.miraikan.jst.go.jp/"
+      },
+      {
+        "name": "Yurikamome dagkaart",
+        "url": "https://www.yurikamome.co.jp/"
+      }
+    ]
+  },
+  "scienceArt": {
+    "title": "Ontwerp & symboliek: vrijheid, verlichting en Franse esthetiek",
+    "subtitle": "Het Vrijheidsbeeld Odaiba is meer dan een replica — het is een publiek symbool vol politieke betekenis, technisch vernuft en beeldtaal."
+  },
+  "outdoorMuseum": {
+    "title": "Foto- en uitzichtgids: de beste opnames van het Vrijheidsbeeld Odaiba",
+    "subtitle": "Als zeer fotogeniek landmark leveren een paar goed gekozen standpunten en tijdstippen veel meer nut en schoonheid op."
+  },
+  "education": {
+    "title": "Waarom een Vrijheidsbeeld in Odaiba? (De maatschappelijke betekenis van publieke kunst)",
+    "subtitle": "Een beeld uit New York, geboren in Parijs, geworteld aan de Baai van Tokio — erachter schuilen meerdere verhalen over stad, cultuur en diplomatie."
+  },
+  "audience": {
+    "title": "Wie vindt hier zijn eigen ingang? (Een gids voor elke bezoeker)",
+    "subtitle": "Elke bezoeker kan de instap kiezen die het beste bij hem of haar past."
+  },
+  "amenities": {
+    "title": "Toiletten, parkeren, eten & overnachten",
+    "subtitle": "Een overzicht van welke soorten voorzieningen er rond het beeld zijn. Omdat de meeste bezoekers met het openbaar vervoer komen, beschrijven we het loopgebied per categorie."
+  },
+  "weatherPage": {
+    "title": "Actueel weer & 7-daagse verwachting",
+    "subtitle": "De omstandigheden rond het Vrijheidsbeeld Odaiba — temperatuur, kans op regen en wind — als hulp bij kleding, paraplu en het beste fotomoment."
+  },
+  "tidePage": {
+    "title": "Getijdenverwachting Odaiba",
+    "subtitle": "Het Vrijheidsbeeld staat op een rotsfundering in de Baai van Tokio, waar het water twee keer per dag stijgt en daalt. Controleer het getij voor je gaat om het meest indrukwekkende water, de mooiste weerspiegelingen en de veiligste uren te kiezen."
+  },
+  "timeline": {
+    "title": "Tijdlijn: het Vrijheidsbeeld in Odaiba",
+    "subtitle": "Van het ontstaan van het origineel in New York tot de permanente plaatsing aan de Baai van Tokio — het verhaal chronologisch."
+  },
+  "legends": {
+    "title": "Zes verhalen die je blik op het beeld veranderen",
+    "subtitle": "Het Vrijheidsbeeld is meer dan een groot figuur — het is een monument vol betekenis. We bekijken hoe het gemaakt is, welke symboliek in de details schuilt en hoe het in Odaiba bleef."
+  },
+  "sources": {
+    "title": "Bronnen & referenties",
+    "intro": "De inhoud van deze pagina is samengesteld uit primaire informatie van overheidsinstanties, de parkbeheerder en officiële toeristische websites."
+  },
+  "imageCredits": {
+    "title": "Beeldrechten"
+  },
+  "location": {
+    "eyebrow": "Locatie & entiteitsgegevens",
+    "aboutTitle": "Over het Vrijheidsbeeld Odaiba",
+    "welcome": "Welkom bij het <strong>Vrijheidsbeeld Odaiba</strong>, algemeen erkend als het centrale <strong>Vrijheidsbeeld</strong>. Het ligt in het hart van <strong>Minato City, Tokio, Japan</strong> en is een belangrijke bestemming voor reizigers in de regio.",
+    "howToTitle": "Locatie en bezoek van het Vrijheidsbeeld in Minato City",
+    "howToText": "Het Vrijheidsbeeld Odaiba staat aan de <strong>1 Chome-4-2 Daiba, Minato City, Tokio 135-0091, Japan</strong>, aan het einde van de kustpromenade in Odaiba Kaihin Park. Vanaf station Shimbashi brengt de Yurikamome je in ongeveer 15 minuten naar station Daiba, daarna is het circa 5 minuten lopen; vanaf station Tokyo Teleport (Rinkai Line) is het ongeveer 10 vlakke minuten lopen.",
+    "landmarksTitle": "Landmarks en attracties rond het Vrijheidsbeeld",
+    "addressLabel": "Adres",
+    "postalLabel": "Postcode",
+    "regionLabel": "Regio",
+    "countryLabel": "Land",
+    "coordsLabel": "Coördinaten",
+    "mapLinkLabel": "Bekijk de locatie op Google Maps"
+  }
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Statue of Liberty Odaiba">
+  <title>Statue of Liberty Odaiba</title>
+  <rect width="512" height="512" fill="#3a7a8d"/>
+  <g transform="translate(256 256) scale(0.68) translate(-256 -256)">
+    <g fill="#f5f0e8">
+      <g transform="translate(256 148)">
+        <rect x="-6" y="-98" width="12" height="48" rx="6"/>
+        <rect x="-6" y="-98" width="12" height="48" rx="6" transform="rotate(-30)"/>
+        <rect x="-6" y="-98" width="12" height="48" rx="6" transform="rotate(-60)"/>
+        <rect x="-6" y="-98" width="12" height="48" rx="6" transform="rotate(30)"/>
+        <rect x="-6" y="-98" width="12" height="48" rx="6" transform="rotate(60)"/>
+      </g>
+      <circle cx="256" cy="148" r="44"/>
+      <path d="M300 236l46-72 14 10-46 72z"/>
+      <path d="M256 196c-50 0-86 34-94 84l-16 96h220l-16-96c-8-50-44-84-94-84z"/>
+    </g>
+    <path d="M360 124c14 16 20 26 20 36a20 20 0 1 1-40 0c0-10 6-20 20-36z" fill="#f0b429"/>
+    <rect x="152" y="372" width="208" height="26" rx="8" fill="#e8dfd1"/>
+    <rect x="178" y="398" width="156" height="72" rx="10" fill="#e8dfd1"/>
+  </g>
+</svg>

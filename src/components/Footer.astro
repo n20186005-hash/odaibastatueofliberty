@@ -1,8 +1,10 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { entity } from '../config/entity';
 const { lang, messages } = getI18n(Astro.url);
 const f = messages.footer;
 const links = f.officialLinksList;
+const ic = messages.imageCredits;
 ---
 
 <footer class="section-padding" style="background: var(--bg-tertiary); border-top: 1px solid var(--border-color);">
@@ -15,6 +17,11 @@ const links = f.officialLinksList;
       <div>
         <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--text-primary);" set:html={f.siteName}></h3>
         <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{f.rights}</p>
+        <!-- 页脚清晰展示景点官方全称与地址（NAP 一致性） -->
+        <address class="mt-4 not-italic text-xs leading-relaxed" style="color: var(--text-muted);">
+          <span class="block font-semibold" style="color: var(--text-primary);">{entity.fullName}</span>
+          {entity.addressLine}
+        </address>
       </div>
 
       <div>
@@ -45,7 +52,13 @@ const links = f.officialLinksList;
       </div>
     </div>
 
+    <!-- 图片产权声明 -->
     <div class="mt-10 pt-6 border-t text-xs" style="border-color: var(--border-color); color: var(--text-muted);">
+      <p class="leading-relaxed mb-1"><span class="font-semibold" style="color: var(--text-primary);">{ic.title}</span> — {ic.text}</p>
+      <p class="leading-relaxed">{ic.note}</p>
+    </div>
+
+    <div class="mt-6 pt-6 border-t text-xs" style="border-color: var(--border-color); color: var(--text-muted);">
       <p class="leading-relaxed" set:html={f.disclaimer}></p>
     </div>
   </div>

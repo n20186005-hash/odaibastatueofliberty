@@ -1,0 +1,33 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const s = messages.sources;
+const items = s.items ?? [];
+---
+
+<!-- 资料来源板块：增强 E-E-A-T 的专业性与可信度 -->
+<section id="sources" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{s.title}</h2>
+    <p class="text-center text-base sm:text-lg leading-relaxed mb-3" style="color: var(--text-secondary);">{s.intro}</p>
+    <p class="text-center text-xs mb-10" style="color: var(--text-muted);">{s.updatedLabel}: {s.updatedValue}</p>
+
+    <ol class="space-y-3 text-sm">
+      {items.map((item, i) => (
+        <li class="rounded-xl p-4 border flex gap-4" style="background: var(--card-bg); border-color: var(--border-color);">
+          <span class="shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold" style="background: var(--accent); color: #fff;" aria-hidden="true">
+            {i + 1}
+          </span>
+          <div>
+            <cite class="not-italic font-medium" style="color: var(--text-primary);">
+              <a href={item.url} target="_blank" rel="noopener noreferrer" class="hover:opacity-70" style="color: var(--accent);">{item.name} ↗</a>
+            </cite>
+            <p class="mt-1 text-xs leading-relaxed" style="color: var(--text-muted);">{item.note}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+
+    <p class="mt-8 text-xs leading-relaxed text-center" style="color: var(--text-muted);">{s.note}</p>
+  </div>
+</section>

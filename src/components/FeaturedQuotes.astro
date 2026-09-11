@@ -1,9 +1,10 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { galleryImage } from '../config/entity';
 const { messages } = getI18n(Astro.url);
 const reviews = messages.reviews;
 const featured = reviews.featured ?? [];
-const bg = '/gallery/statue-of-liberty-1.jpg';
+const bg = galleryImage(1);
 ---
 
 {featured.length > 0 && (

@@ -3,8 +3,17 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import NoticeBanner from '../components/NoticeBanner.astro';
 import Footer from '../components/Footer.astro';
-import { getLangFromUrl, buildAlternates, htmlLangAttr, getI18n } from '../i18n/ui';
+import {
+  getLangFromUrl,
+  buildAlternates,
+  htmlLangAttr,
+  getI18n,
+  languagesList,
+  alternateEntityNames,
+  isSummaryLocale,
+} from '../i18n/ui';
 import { ogLocale } from '../config';
+import { entity, absoluteUrl } from '../config/entity';
 
 interface Props {
   title: string;
@@ -14,62 +23,136 @@ interface Props {
 
 const { title, description, path = '' } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
-const htmlLang = htmlLangAttr(lang);
+
+/**
+ * de / nl / it 为「概要本地化」语种：只本地化首页，
+ * 法务等子页面仍是英文正文。这类页面如实声明 lang="en" 并置为 noindex，
+ * 避免英文正文挂在德语/荷兰语/意大利语路径下被当作重复内容收录。
+ */
+const englishFallbackPage = isSummaryLocale(lang) && path !== '';
+const htmlLang = englishFallbackPage ? 'en' : htmlLangAttr(lang);
+const robotsContent = englishFallbackPage
+  ? 'noindex, follow'
+  : 'index, follow, max-image-preview:large';
+
 const alts = buildAlternates(path);
 const canonical = alts[lang] ?? alts.zh;
 const { messages } = getI18n(Astro.url);
 
-const jsonLd = {
+const isHome = path === '';
+const heroImage = absoluteUrl(entity.heroImagePath);
+const imageUrls = entity.imagePaths.map((p) => absoluteUrl(p));
+
+// ── 1. 结构化数据：TouristAttraction（含 @id / image / sameAs） ──
+const attractionLd = {
   '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
-  name: messages.meta.title,
+  '@id': `${entity.siteUrl}/#attraction`,
+  name: messages.meta.officialName,
+  alternateName: [
+    ...new Set([
+      // 各语言版本的名称，便于跨语种实体归并
+      ...alternateEntityNames(),
+      entity.fullName,
+      entity.shortName,
+      'Statue of Liberty Odaiba',
+      'Statue of Liberty',
+      '自由の女神像',
+    ]),
+  ],
   description: messages.meta.description,
   url: canonical,
-  image: 'https://odaibastatueofliberty.com/gallery/statue-of-liberty-1.jpg',
+  image: imageUrls,
+  isAccessibleForFree: true,
+  publicAccess: true,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '1 Chome-4-2 Daiba, Minato City',
-    addressLocality: 'Tokyo',
-    addressRegion: 'Tokyo',
-    postalCode: '135-0091',
-    addressCountry: 'JP',
+    streetAddress: `${entity.streetAddress}`,
+    addressLocality: entity.city,
+    addressRegion: entity.stateProvince,
+    postalCode: entity.postalCode,
+    addressCountry: entity.countryCode,
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 35.6196,
-    longitude: 139.7756,
+    latitude: entity.latitude,
+    longitude: entity.longitude,
   },
-    openingHours: '24/7',
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '00:00',
-        closes: '23:59',
-      },
-    ],
-    isAccessibleForFree: true,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.5',
-      reviewCount: '4894',
+  hasMap: entity.mapsShareUrl,
+  openingHours: 'Mo-Su 00:00-23:59',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: entity.openingHoursOpens,
+      closes: entity.openingHoursCloses,
     },
-    sameAs: ['https://maps.app.goo.gl/XypCJLEZwme5RSjc8'],
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: entity.ratingValue,
+    reviewCount: entity.reviewCount,
   },
-  breadcrumbLd = (() => {
-    const bc = messages.breadcrumb;
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: bc.home, item: `https://odaibastatueofliberty.com/${lang}` },
-        { '@type': 'ListItem', position: 2, name: bc.tokyoAttractions },
-        { '@type': 'ListItem', position: 3, name: bc.minato },
-        { '@type': 'ListItem', position: 4, name: bc.odaibaPark },
-        { '@type': 'ListItem', position: 5, name: bc.current, item: canonical },
-      ],
-    };
-  })();
+  touristType: entity.touristTypes,
+  sameAs: [
+    entity.mapsShareUrl,
+    entity.govtTourismUrl,
+    entity.officialParkUrl,
+    entity.cityGovUrl,
+    entity.odaibaOfficialUrl,
+    entity.jntoUrl,
+  ],
+};
+
+// ── 2. 结构化数据：WebSite（与 @id 实体节点互相锚定） ──
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${entity.siteUrl}/#website`,
+  name: messages.meta.officialName,
+  url: entity.siteUrl,
+  inLanguage: htmlLang,
+  about: { '@id': `${entity.siteUrl}/#attraction` },
+};
+
+// ── 3. 结构化数据：FAQPage（获取 Featured Snippet / AI 概览卡片） ──
+const faqEntries = [
+  // 门票 / 入场速答优先，直接对应 "tickets" 类搜索意图
+  ...((messages.entryAnswers?.items ?? []) as Array<{ q: string; a: string }>),
+  ...((messages.faq?.categories ?? []) as Array<{ items?: Array<{ q: string; a: string }> }>).flatMap(
+    (cat) => cat.items ?? [],
+  ),
+  ...((messages.transportSection?.driverFaq ?? []) as Array<{ q: string; a: string }>),
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${canonical}#faq`,
+  inLanguage: htmlLang,
+  mainEntity: faqEntries.map((qa) => ({
+    '@type': 'Question',
+    name: qa.q,
+    acceptedAnswer: { '@type': 'Answer', text: qa.a },
+  })),
+};
+
+// ── 4. 结构化数据：BreadcrumbList ──
+const bc = messages.breadcrumb;
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': `${canonical}#breadcrumb`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: bc.home, item: `${entity.siteUrl}/${lang}` },
+    { '@type': 'ListItem', position: 2, name: bc.tokyoAttractions },
+    { '@type': 'ListItem', position: 3, name: bc.minato },
+    { '@type': 'ListItem', position: 4, name: bc.odaibaPark },
+    { '@type': 'ListItem', position: 5, name: bc.current, item: canonical },
+  ],
+};
+
+const otherLocales = languagesList.filter((l) => l !== lang);
 ---
 
 <!doctype html>
@@ -78,7 +161,7 @@ const jsonLd = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) — GA4: G-HXM22WWPKP -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HXM22WWPKP"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
@@ -90,24 +173,53 @@ const jsonLd = {
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content={robotsContent} />
+
+    <!-- Canonical 规范网址 + hreflang -->
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="zh" href={alts.zh} />
-    <link rel="alternate" hreflang="en" href={alts.en} />
-    <link rel="alternate" hreflang="ja" href={alts.ja} />
-    <link rel="alternate" hreflang="ko" href={alts.ko} />
+    {languagesList.map((l) => (
+      <link rel="alternate" hreflang={l} href={alts[l]} />
+    ))}
     <link rel="alternate" hreflang="x-default" href={alts.xDefault} />
 
+    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={messages.meta.officialName} />
     <meta property="og:locale" content={ogLocale[lang] ?? lang} />
+    {otherLocales.map((l) => (
+      <meta property="og:locale:alternate" content={ogLocale[l] ?? l} />
+    ))}
+    <meta property="og:image" content={heroImage} />
+    <meta property="og:image:alt" content={messages.location.mainImageAlt} />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={heroImage} />
+    <meta name="twitter:image:alt" content={messages.location.mainImageAlt} />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#3a7a8d" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content={messages.meta.officialName} />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
+    <link rel="apple-touch-icon" href="/icons/icon.svg" />
 
     <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXX" />
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
 
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(attractionLd)}></script>
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(websiteLd)}></script>
+    {isHome && faqEntries.length > 0 && (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)}></script>
+    )}
     <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)}></script>
 
     <script is:inline>
@@ -130,5 +242,14 @@ const jsonLd = {
       <slot />
     </main>
     <Footer />
+
+    <!-- PWA：注册 Service Worker -->
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+      }
+    </script>
   </body>
 </html>

@@ -1,11 +1,13 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { galleryImage, galleryCount } from '../config/entity';
 const { messages } = getI18n(Astro.url);
 const g = messages.gallery;
-const totalImages = 20;
+const totalImages = galleryCount;
+// 命名规范：odaiba-statue-of-liberty-N.jpg（原图 1600px）+ -800.jpg（缩略图）
 const images = Array.from({ length: totalImages }, (_, i) => {
-  const n = String(i + 1);
-  return `/gallery/statue-of-liberty-${n}.jpg`;
+  const n = i + 1;
+  return { full: galleryImage(n), thumb: galleryImage(n, 800) };
 });
 const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
 ---
@@ -16,9 +18,16 @@ const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
     <p class="text-center text-lg mb-10" style="color: var(--text-secondary);">{g.subtitle}</p>
 
     <div class="gallery-grid" id="gallery-grid">
-      {images.map((src, index) => (
-        <button type="button" class="gallery-item" data-index={index} aria-label={photoAlts[index] ?? g.photoAlt}>
-          <img src={src} alt={photoAlts[index] ?? g.photoAlt} loading="lazy" />
+      {images.map((img, index) => (
+        <button type="button" class="gallery-item" data-index={index} data-full={img.full} aria-label={photoAlts[index] ?? g.photoAlt}>
+          <img
+            src={img.thumb}
+            srcset={`${img.thumb} 800w, ${img.full} 1600w`}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 560px"
+            alt={photoAlts[index] ?? g.photoAlt}
+            loading="lazy"
+            decoding="async"
+          />
         </button>
       ))}
     </div>
@@ -55,7 +64,8 @@ const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
     function show(i) {
       current = (i + items.length) % items.length;
       var el = items[current];
-      var src = el.querySelector('img').getAttribute('src');
+      // 灯箱使用原图（1600px），网格使用 -800 缩略图
+      var src = el.getAttribute('data-full') || el.querySelector('img').getAttribute('src');
       var alt = el.querySelector('img').getAttribute('alt');
       img.setAttribute('src', src);
       img.setAttribute('alt', alt);

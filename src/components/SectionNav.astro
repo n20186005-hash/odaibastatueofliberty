@@ -3,9 +3,13 @@ import { getI18n } from '../i18n/ui';
 const { lang, messages } = getI18n(Astro.url);
 const n = messages.stickyNav;
 const items = [
+  { label: n.tickets, href: '#entry' },
   { label: n.overview, href: '#overview' },
-  { label: n.transport, href: '#transport' },
+  { label: n.weather, href: '#weather' },
+  { label: n.tide, href: '#tide' },
   { label: n.history, href: '#history' },
+  { label: n.transport, href: '#transport' },
+  { label: n.amenities, href: '#amenities' },
   { label: n.guide, href: '#visit' },
 ];
 ---

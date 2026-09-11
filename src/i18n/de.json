@@ -1,0 +1,398 @@
+{
+  "meta": {
+    "title": "Freiheitsstatue Odaiba Tickets — Eintritt frei, 24 Std. geöffnet",
+    "description": "Der Besuch der Freiheitsstatue in Odaiba, Tokio, ist 100 % kostenlos — keine Tickets, keine Buchung, rund um die Uhr geöffnet. Lage, Anfahrt, beste Fotospots und Geschichte.",
+    "officialName": "Freiheitsstatue Odaiba",
+    "shortName": "Freiheitsstatue"
+  },
+  "header": {
+    "siteName": "Freiheitsstatue Odaiba",
+    "home": "Start",
+    "visit": "Besuch",
+    "transport": "Anfahrt",
+    "history": "Geschichte",
+    "gallery": "Galerie",
+    "reviews": "Bewertungen",
+    "faq": "FAQ",
+    "map": "Karte",
+    "backToHome": "Zurück zur Startseite"
+  },
+  "common": {
+    "changeLanguage": "Sprache wechseln",
+    "toggleTheme": "Design wechseln"
+  },
+  "nonprofitBanner": {
+    "text": "Dies ist ein unabhängiger, gemeinnütziger Reiseführer, zusammengestellt von begeisterten Reisenden, mit dem Ziel, Ihnen die objektivsten Hinweise für den Besuch der Freiheitsstatue Odaiba zu geben."
+  },
+  "mission": {
+    "title": "Unsere Mission",
+    "text": "Damit jede Japanreise ohne Bedauern endet, haben wir die verstreuten offiziellen Angaben zusammengetragen — um Ihnen den klarstmöglichen Besuch zu ermöglichen."
+  },
+  "breadcrumb": {
+    "home": "Startseite",
+    "tokyoAttractions": "Sehenswürdigkeiten Tokio",
+    "minato": "Minato City",
+    "odaibaPark": "Odaiba Kaihin Park",
+    "current": "Freiheitsstatue Odaiba"
+  },
+  "stickyNav": {
+    "tickets": "Tickets",
+    "overview": "Überblick",
+    "weather": "Wetter",
+    "tide": "Gezeiten",
+    "transport": "Anfahrt",
+    "history": "Geschichte",
+    "amenities": "Einrichtungen",
+    "guide": "Ratgeber"
+  },
+  "entryAnswers": {
+    "eyebrow": "Eintritt & Tickets",
+    "title": "Braucht man Tickets für die Freiheitsstatue Odaiba? Nein — der Eintritt ist frei.",
+    "subtitle": "Sie ist ein Denkmal im Freien in einem öffentlichen Uferpark: kein Kassenhäuschen, kein Drehkreuz, keine Reservierung und keine Schließzeit.",
+    "freeBadge": "100 % KOSTENLOS",
+    "freeNote": "Keine Tickets · Keine Buchung · Rund um die Uhr geöffnet",
+    "items": [
+      {
+        "icon": "🎟️",
+        "q": "Brauche ich Tickets?",
+        "a": "Nein. Es gibt weder einen Ticketschalter noch ein Eingangstor — Sie müssen also nichts kaufen und nichts ausdrucken. Gehen Sie einfach auf die Uferpromenade und schauen Sie nach oben."
+      },
+      {
+        "icon": "🕒",
+        "q": "Wie sind die Öffnungszeiten?",
+        "a": "Die Statue ist 24 Stunden am Tag geöffnet, an jedem Tag des Jahres. Am ruhigsten ist es früh morgens und spät abends; am vollsten rund um den Sonnenuntergang."
+      },
+      {
+        "icon": "📍",
+        "q": "Wo genau steht sie?",
+        "a": "Am Ende der Uferpromenade im Odaiba Kaihin Park — etwa 5 Gehminuten vom Bahnhof Daiba (Ausgang A) oder vom Bahnhof Odaiba-Kaihinkoen."
+      },
+      {
+        "icon": "🌇",
+        "q": "Wann ist die beste Besuchszeit?",
+        "a": "Rund um den Sonnenuntergang und kurz nach Einbruch der Dunkelheit, wenn die Rainbow Bridge hinter der Statue beleuchtet wird — das klassische Odaiba-Foto."
+      }
+    ],
+    "paidLead": "Alles oben ist kostenlos. Wenn Sie in der Nähe ein kostenpflichtiges Erlebnis ergänzen möchten, sind das die üblichen Optionen:",
+    "paidCta": "Kostenpflichtige Erlebnisse in der Nähe ansehen",
+    "paidHref": "#recommendations"
+  },
+  "hero": {
+    "title": "Freiheitsstatue Odaiba",
+    "subtitle": "Eine Nachbildung der New Yorker Freiheitsstatue im Maßstab 1:7, die still an der Uferpromenade von Odaiba an der Bucht von Tokio steht. Sie wurde 1998 zum 'Jahr Frankreichs in Japan' errichtet und von Frankreich als Zeichen der Freundschaft zwischen beiden Nationen übergeben. Mit ihrer grünspanfarbenen Silhouette vor der Rainbow Bridge und der Bucht von Tokio ist sie Odaibas bekanntestes Wahrzeichen — und ein kostenloses, immer zugängliches Bauwerk.",
+    "rating": "4,5 (5.145)",
+    "reviewCount": "5.145 Bewertungen",
+    "hours": "Rund um die Uhr geöffnet",
+    "openMaps": "Auf Google Maps ansehen",
+    "tags": [
+      "Nachbildung 1:7",
+      "Eintritt frei",
+      "Odaiba · Bucht von Tokio"
+    ],
+    "routeCta": {
+      "label": "Route planen",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Geschichte der Statue",
+      "href": "#history"
+    },
+    "quickFacts": [
+      {
+        "icon": "🎟️",
+        "label": "Eintritt frei",
+        "value": "Kein Ticket nötig"
+      },
+      {
+        "icon": "🕒",
+        "label": "24 Std. geöffnet",
+        "value": "Tag und Nacht"
+      },
+      {
+        "icon": "📍",
+        "label": "Odaiba Seaside Park",
+        "value": "Ende der Promenade"
+      }
+    ],
+    "navCta": {
+      "label": "📍 Route anzeigen",
+      "href": "#transport"
+    },
+    "photoCta": {
+      "label": "📸 Beste Fotospots",
+      "href": "#gallery"
+    },
+    "liveInfo": {
+      "weather": "Aktuelles Wetter",
+      "sunset": "Sonnenuntergang heute"
+    }
+  },
+  "intro": {
+    "title": "Die Freiheitsstatue Odaiba entdecken",
+    "description": "Die Freiheitsstatue Odaiba steht an der Uferpromenade von Odaiba an der Bucht von Tokio als Nachbildung im Maßstab 1:7 des Originals in New York. Sie wurde 1998 zum 'Jahr Frankreichs in Japan' als temporäre Ausstellung anlässlich des 150. Jahrestags der französisch-japanischen Beziehungen aufgestellt und war so beliebt, dass sie im Jahr 2000 dauerhaft blieb. Mit rund 12 Metern Höhe und demselben Grünspan-Finish wie das New Yorker Original blickt sie auf die Bucht von Tokio und die Rainbow Bridge — eines der Wahrzeichen Odaibas und für viele Besucher der erste Anblick vom Wasserbus oder der Yurikamome aus.",
+    "visitGuide": {
+      "title": "Besucher-Ratgeber",
+      "eyebrow": "Praktische Planung"
+    },
+    "alsoKnownAs": {
+      "title": "Höhepunkte"
+    }
+  },
+  "transportSection": {
+    "title": "Anfahrt & Orientierung · So erreichen Sie die Freiheitsstatue Odaiba",
+    "subtitle": "Ob per Flugzeug, Bahn, Nahverkehr, Auto, Taxi, Fahrrad oder Wasserbus — jede Option wird unten erläutert, inklusive Parken und häufiger Fragen.",
+    "overviewTitle": "Wenn Sie in Tokio angekommen sind",
+    "arrivalTitle": "Das sollten Sie vor dem Aufbruch wissen",
+    "arrivalItems": [
+      "Die Statue steht auf der ebenen Uferpromenade des Odaiba Kaihin Park, 5–10 Gehminuten vom Bahnhof Daiba oder Tokyo Teleport entfernt.",
+      "Es gibt keine eigenen Parkplätze an der Statue; nutzen Sie die kostenpflichtigen Parkhäuser nahe gelegener Einkaufszentren wie Aqua City, DECKS oder DiverCity.",
+      "An Wochenenden und Feiertagen wird es voll, besonders in der Abenddämmerung und bei Nachtbeleuchtung — weichen Sie auf Randzeiten aus."
+    ],
+    "driverFaqTitle": "Häufige Fragen zur Anreise",
+    "driverFaq": [
+      {
+        "q": "Braucht man wirklich kein Ticket?",
+        "a": "Richtig. Die Statue ist ein Denkmal im Freien in einem öffentlichen Park — es gibt keinen Ticketschalter, kein Tor und keine Öffnungszeiten. Nur die Einrichtungen der umliegenden Einkaufszentren sind kostenpflichtig und separat."
+      },
+      {
+        "q": "Gibt es Parkplätze, und was kosten sie?",
+        "a": "Direkt an der Statue gibt es keine Parkplätze. Aqua City, DECKS Tokyo Beach und DiverCity Tokyo Plaza bieten kostenpflichtige Parkhäuser in wenigen Gehminuten, meist mit Stundenpreis. An Wochenenden und Feiertagen füllen sie sich schnell — kommen Sie früh oder nutzen Sie den Nahverkehr."
+      },
+      {
+        "q": "Kommen Rollstühle und Kinderwagen nah heran?",
+        "a": "Ja. Die Promenade ist vollständig eben und stufenlos, sodass Rollstühle, Kinderwagen und Gehhilfen problemlos fahren. Rampen und barrierefreie Toiletten befinden sich entlang des Weges."
+      },
+      {
+        "q": "Gibt es Toiletten oder Essen in der Nähe?",
+        "a": "An der Statue selbst gibt es keine Toiletten, aber Aqua City, DECKS und DiverCity liegen wenige Gehminuten entfernt und bieten öffentliche Toiletten, Cafés, Restaurants und Convenience-Stores."
+      },
+      {
+        "q": "Wie lange dauert ein Besuch?",
+        "a": "In der Regel 30 bis 60 Minuten: ankommen, fotografieren, die Promenade entlanggehen, vielleicht auf einer Bank ausruhen. Planen Sie mehr Zeit ein, wenn Sie Aqua City oder DiverCity (Unicorn Gundam) mitnehmen."
+      },
+      {
+        "q": "Empfehlen Sie den Nahverkehr?",
+        "a": "Ja, ausdrücklich. Der Bahnhof Daiba (Yurikamome) liegt etwa 5 Gehminuten entfernt, Tokyo Teleport (Rinkai Line) etwa 10 ebene Gehminuten. Adresse: 1 Chome-4-2 Daiba, Minato City, Tokio."
+      }
+    ],
+    "localTipsTitle": "Tipps für Ihren Besuch",
+    "localTips": [
+      "Das Licht ist in der Abenddämmerung am weichsten, wenn Freiheitsstatue und Rainbow Bridge vor goldenem Himmel leuchten.",
+      "Die Statue ist rund um die Uhr zugänglich; das beleuchtete Odaiba bei Nacht lohnt ebenso für einen Abendspaziergang.",
+      "Kombinieren Sie den Besuch mit Aqua City und DiverCity (Unicorn Gundam); die Einkaufszentren bieten Toiletten und Gastronomie."
+    ],
+    "mapsCta": "Karte & Route ansehen",
+    "bestTime": {
+      "title": "Beste Ankunftszeit",
+      "text": "Obwohl die Statue rund um die Uhr zugänglich ist, empfehlen wir die Ankunft etwa eine Stunde vor Sonnenuntergang — so bekommen Sie in einem Besuch drei Ansichten: Tageslicht, goldene Stunde und Nachtbeleuchtung."
+    }
+  },
+  "officialManagement": {
+    "title": "Über die Statue"
+  },
+  "knowledge": {
+    "title": "Geschichte und Bedeutung der Freiheitsstatue Odaiba"
+  },
+  "gallery": {
+    "title": "Fotogalerie",
+    "subtitle": "Von der Frontansicht und dem Rahmen der Rainbow Bridge bis zur Spiegelung in der Bucht von Tokio und der Abendbeleuchtung — entdecken Sie die visuelle Schönheit der Freiheitsstatue Odaiba."
+  },
+  "reviews": {
+    "title": "Besucherbewertungen",
+    "declaration": "Besucherfeedback ist auf Google Maps verfügbar (externer Link).",
+    "featuredTitle": "Besucherstimmen"
+  },
+  "mapSection": {
+    "title": "So kommen Sie hierher",
+    "subtitle": "1 Chome-4-2 Daiba, Minato City, Tokio 135-0091, Japan",
+    "openMaps": "In Google Maps öffnen"
+  },
+  "footer": {
+    "siteName": "Freiheitsstatue Odaiba",
+    "rights": "© 2026 Freiheitsstatue Odaiba — Unabhängiger, gemeinnütziger Besucherguide. Alle Rechte vorbehalten.",
+    "legalLinksTitle": "Datenschutz & Rechtliches",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookie-Einstellungen",
+    "officialResourcesTitle": "Offizielle Quellen & Referenzen",
+    "mapsLabel": "Google Maps →",
+    "disclaimer": "Dies ist ein unabhängiges, gemeinnütziges Besucherinformationsprojekt. Wir stehen in keiner Verbindung zu Behörden oder offiziellen Institutionen."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Praktische Informationen zu Einrichtungen, zur Geschichte der Statue und zur Planung Ihres Besuchs der Freiheitsstatue Odaiba.",
+    "amenities": {
+      "title": "Einrichtungen in der Nähe",
+      "items": [
+        {
+          "icon": "🅿️",
+          "label": "Parken",
+          "value": "Kostenpflichtige Parkhäuser in nahen Einkaufszentren"
+        },
+        {
+          "icon": "🚻",
+          "label": "Toiletten",
+          "value": "In Aqua City, DECKS & Einkaufszentren"
+        },
+        {
+          "icon": "🔌",
+          "label": "Tanken / E-Auto",
+          "value": "Ladesäulen an umliegenden Parkplätzen"
+        },
+        {
+          "icon": "♿",
+          "label": "Barrierefreiheit",
+          "value": "Ebene, stufenlose Promenade"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Anfahrt & Einrichtungen",
+        "items": [
+          {
+            "q": "Gibt es Parkplätze in der Nähe? Was kosten sie?",
+            "a": "Die Statue selbst hat keine eigenen Parkplätze, aber die nahen Einkaufszentren — Aqua City, DECKS Tokyo Beach, DiverCity Tokyo Plaza — bieten kostenpflichtige Parkhäuser in wenigen Gehminuten. Die Tarife sind üblicherweise stundenbasiert; an Wochenenden, Feiertagen und für Nachtansichten füllen sie sich schnell, daher früh kommen oder den Nahverkehr bevorzugen."
+          },
+          {
+            "q": "Kommen Rollstühle oder Kinderwagen nah heran?",
+            "a": "Ja. Die Statue steht im Odaiba Kaihin Park auf einer offenen Uferpromenade, die vollständig eben und stufenlos ist, sodass Rollstühle, Kinderwagen und Gehhilfen leicht vorankommen; barrierefreie Rampen und Toiletten befinden sich entlang des Weges."
+          },
+          {
+            "q": "Gibt es Toiletten oder Essen in der Nähe?",
+            "a": "An der Statue gibt es keine eigenen Toiletten, aber Aqua City, DECKS und DiverCity sind wenige Gehminuten entfernt, mit öffentlichen Toiletten, Cafés, Restaurants und Convenience-Stores — Verpflegung und Einrichtungen sind also sehr bequem erreichbar."
+          }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "Geschichte & Natur",
+        "items": [
+          {
+            "q": "Wozu dient diese Statue, und warum steht sie in Tokio?",
+            "a": "Sie ist eine Nachbildung im Maßstab 1:7 der New Yorker Freiheitsstatue, errichtet 1998 zum 'Jahr Frankreichs in Japan' anlässlich des 150. Jahrestags der französisch-japanischen Beziehungen und als Symbol der Freundschaft zwischen Frankreich und Japan. Ursprünglich eine temporäre Ausstellung, wurde sie im Jahr 2000 dauerhaft."
+          },
+          {
+            "q": "Wie hängt sie mit der Statue in New York zusammen?",
+            "a": "Die Odaiba-Version gibt die Proportionen und Form des New Yorker Originals detailgetreu wieder und bildet sogar dessen Grünspan-Patina nach. Das New Yorker Original wurde von Bartholdi mit einem inneren Stahlgerüst von Gustave Eiffel geschaffen und 1886 als französisches Geschenk an die USA eingeweiht — die Nachbildung in Odaiba führt diese grenzüberschreitende Verbindung fort."
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Planung & Tickets",
+        "items": [
+          {
+            "q": "Gibt es einen Eintrittspreis?",
+            "a": "Nein. Die Freiheitsstatue Odaiba ist ein Denkmal im Freien in einem öffentlichen Uferpark — kostenlos und rund um die Uhr zugänglich, ohne Ticketschalter oder Tor (die Einrichtungen der nahen Einkaufszentren sind separat)."
+          },
+          {
+            "q": "Wie lange dauert ein Besuch?",
+            "a": "Ein typischer Besuch dauert 30 bis 60 Minuten: ankommen, fotografieren, die Promenade entlanggehen, vielleicht auf einer Bank ausruhen. Planen Sie mehr Zeit ein, wenn Sie auch Aqua City oder DiverCity (Unicorn Gundam) erkunden."
+          },
+          {
+            "q": "Kann ich bei schlechtem Wetter kommen?",
+            "a": "Ja — es ist ein öffentlicher Außenbereich, der bei jedem Wetter zugänglich ist. Allerdings ist es an der Bucht windig und im Sommer nur leicht schattig, also bringen Sie Wasser und Sonnenschutz mit; im Winter und nach Regen fühlt es sich kälter an und die Wege können rutschig sein — kleiden Sie sich wind- und wetterfest."
+          }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "Was es in der Nähe zu sehen gibt",
+        "items": [
+          {
+            "q": "Was empfehlen Sie nach dem Besuch in der Nähe?",
+            "a": "Die Statue liegt direkt an der Rainbow Bridge und der Uferpromenade der Bucht von Tokio, in Gehweite von Aqua City, DECKS Tokyo Beach, DiverCity Tokyo Plaza (Unicorn Gundam) und dem Fuji-TV-Gebäude. Etwas weiter liegen der Odaiba Kaihin Park, Tokyo Big Sight und die Wasserbus-Route nach Asakusa."
+          }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Mehr in Odaiba entdecken",
+    "attractionsTitle": "Sehenswürdigkeiten in der Nähe",
+    "toursTitle": "Empfohlene Erlebnisse",
+    "ticketsTitle": "Erlebnisse, die ein Ticket erfordern",
+    "ticketsNote": "Die Statue selbst ist kostenlos. Diese Erlebnisse in der Nähe sind die, für die Sie tatsächlich zahlen.",
+    "tickets": [
+      {
+        "name": "Wasserbus auf der Bucht von Tokio (Asakusa ⇄ Odaiba)",
+        "url": "https://www.suijobus.co.jp/"
+      },
+      {
+        "name": "teamLab Planets TOKYO (Toyosu)",
+        "url": "https://www.teamlab.art/e/planets/"
+      },
+      {
+        "name": "Tokyo Joypolis (Odaiba)",
+        "url": "https://tokyo-joypolis.com/"
+      },
+      {
+        "name": "Miraikan — Nationalmuseum für Zukunftsforschung",
+        "url": "https://www.miraikan.jst.go.jp/"
+      },
+      {
+        "name": "Yurikamome Tageskarte",
+        "url": "https://www.yurikamome.co.jp/"
+      }
+    ]
+  },
+  "scienceArt": {
+    "title": "Design & Symbolik: Freiheit, Aufklärung und französische Ästhetik",
+    "subtitle": "Die Freiheitsstatue Odaiba ist mehr als eine Nachbildung — sie ist ein öffentliches Symbol voller politischer Bedeutung, ingenieurtechnischem Wissen und künstlerischer Sprache."
+  },
+  "outdoorMuseum": {
+    "title": "Foto- und Aussichtsratgeber: die besten Aufnahmen der Freiheitsstatue Odaiba",
+    "subtitle": "Als sehr fotogenes Wahrzeichen gewinnen Ihre Bilder deutlich an Nutzen und Schönheit, wenn Sie einige Standpunkte und Zeitfenster gezielt einplanen."
+  },
+  "education": {
+    "title": "Warum eine Freiheitsstatue in Odaiba? (Zur gesellschaftlichen Bedeutung öffentlicher Kunst)",
+    "subtitle": "Eine Statue aus New York, geboren in Paris, verwurzelt an der Bucht von Tokio — dahinter stehen mehrere Erzählungen von Stadt, Kultur und Diplomatie."
+  },
+  "audience": {
+    "title": "Wer findet hier seinen Zugang? (Ein Leitfaden für jeden Besucher)",
+    "subtitle": "Jeder Besucher kann den Zugang wählen, der am besten zu ihm passt."
+  },
+  "amenities": {
+    "title": "Toiletten, Parken, Gastronomie & Übernachtung",
+    "subtitle": "Ein Überblick darüber, welche Arten von Einrichtungen es rund um die Statue gibt. Da die meisten Besucher mit öffentlichen Verkehrsmitteln anreisen, beschreiben wir den fußläufigen Bereich nach Kategorien."
+  },
+  "weatherPage": {
+    "title": "Aktuelles Wetter & 7-Tage-Vorhersage",
+    "subtitle": "Die Bedingungen rund um die Freiheitsstatue Odaiba — Temperatur, Regenwahrscheinlichkeit und Wind — als Hilfe für Kleidung, Regenschirm und Fotozeitpunkt."
+  },
+  "tidePage": {
+    "title": "Gezeitenvorhersage Odaiba",
+    "subtitle": "Die Freiheitsstatue steht auf einem Felsfundament in der Bucht von Tokio, wo das Wasser zweimal täglich steigt und fällt. Prüfen Sie die Gezeiten vor dem Besuch, um den eindrucksvollsten Wasserstand, die besten Spiegelungen und die sichersten Zeiten zu wählen."
+  },
+  "timeline": {
+    "title": "Zeitleiste: Die Freiheitsstatue in Odaiba",
+    "subtitle": "Von der Entstehung des Originals in New York bis zur dauerhaften Aufstellung an der Bucht von Tokio — die Geschichte in chronologischer Reihenfolge."
+  },
+  "legends": {
+    "title": "Sechs Geschichten, die Ihren Blick auf die Statue verändern",
+    "subtitle": "Die Freiheitsstatue ist mehr als eine große Figur — sie ist ein Denkmal voller Bedeutung. Wir betrachten, wie sie entstand, welche Symbolik in ihren Details steckt und wie sie in Odaiba heimisch wurde."
+  },
+  "sources": {
+    "title": "Quellen & Referenzen",
+    "intro": "Die Inhalte dieser Seite wurden aus Primärinformationen öffentlicher Stellen, des Parkbetreibers und offizieller Tourismusseiten zusammengestellt."
+  },
+  "imageCredits": {
+    "title": "Bildrechte"
+  },
+  "location": {
+    "eyebrow": "Lage & Objektdaten",
+    "aboutTitle": "Über die Freiheitsstatue Odaiba",
+    "welcome": "Willkommen bei der <strong>Freiheitsstatue Odaiba</strong>, weithin bekannt als zentrale <strong>Freiheitsstatue</strong>. Sie liegt im Herzen von <strong>Minato City, Tokio, Japan</strong> und ist ein zentraler Anlaufpunkt für Reisende in der Region.",
+    "howToTitle": "Lage und Besuch der Freiheitsstatue in Minato City",
+    "howToText": "Die Freiheitsstatue Odaiba steht an der <strong>1 Chome-4-2 Daiba, Minato City, Tokio 135-0091, Japan</strong>, am Ende der Uferpromenade im Odaiba Kaihin Park. Von der Station Shimbashi führt die Yurikamome etwa 15 Minuten zur Station Daiba, von dort sind es rund 5 Gehminuten; von der Station Tokyo Teleport (Rinkai Line) sind es etwa 10 ebene Gehminuten.",
+    "landmarksTitle": "Wahrzeichen und Attraktionen rund um die Freiheitsstatue",
+    "addressLabel": "Adresse",
+    "postalLabel": "Postleitzahl",
+    "regionLabel": "Region",
+    "countryLabel": "Land",
+    "coordsLabel": "Koordinaten",
+    "mapLinkLabel": "Standort auf Google Maps prüfen"
+  }
+}
