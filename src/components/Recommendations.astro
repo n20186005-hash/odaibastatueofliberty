@@ -2,23 +2,18 @@
 /**
  * 周边联动模块
  * ------------------------------------------------------------------
- * 免费景点本身没有票务转化，因此这里把「免费景点 / 推荐体验 / 需购票体验」
- * 分开呈现：先强化「雕像免费」的认知，再把有付费意愿的访客导向周边
- * 真正需要买票的项目（水上巴士、teamLab、Joypolis、未来馆、一日券），
- * 既增加内容深度，也承接顶部速答模块的 #recommendations 内链。
+ * 本站是公益性质的参观信息平台，只呈现「免费、可直接走过去」的目的地。
+ * 因此这里仅保留免费景点与推荐目的地，不再列出任何需要购票的盈利项目，
+ * 避免在「雕像本身免费」的页面上出现引导付费的内容。
  */
 import { getI18n } from '../i18n/ui';
 
 const { messages } = getI18n(Astro.url);
 const rec = messages.recommendations;
-const tickets = rec.tickets ?? [];
 
 const groups = [
-  { icon: '📌', title: rec.attractionsTitle, note: '', items: rec.attractions ?? [], paid: false },
-  { icon: '🧭', title: rec.toursTitle, note: '', items: rec.tours ?? [], paid: false },
-  ...(tickets.length
-    ? [{ icon: '🎟️', title: rec.ticketsTitle, note: rec.ticketsNote, items: tickets, paid: true }]
-    : []),
+  { icon: '📌', title: rec.attractionsTitle, items: rec.attractions ?? [] },
+  { icon: '🧭', title: rec.toursTitle, items: rec.tours ?? [] },
 ];
 ---
 
@@ -28,11 +23,10 @@ const groups = [
 
     <div class="rec-grid">
       {groups.map((g) => (
-        <div class={g.paid ? 'rec-group is-paid' : 'rec-group'}>
+        <div class="rec-group">
           <h3 class="rec-group-title">
             <span aria-hidden="true">{g.icon}</span> {g.title}
           </h3>
-          {g.note && <p class="rec-group-note">{g.note}</p>}
           <div class="space-y-3">
             {g.items.map((a: { name: string; url: string }) => (
               <a

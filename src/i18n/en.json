@@ -53,29 +53,22 @@
     "freeNote": "No tickets · No booking · Open 24/7",
     "items": [
       {
-        "icon": "🎟️",
         "q": "Do I need tickets?",
         "a": "No. There is no ticket counter and no entrance gate, so there is nothing to buy and nothing to print. Walk straight onto the seaside promenade and look up."
       },
       {
-        "icon": "🕒",
         "q": "What are the opening hours?",
         "a": "The statue is open 24 hours a day, every day of the year. Early morning and late evening are the quietest; the hour around sunset is the busiest."
       },
       {
-        "icon": "📍",
         "q": "Where exactly is it?",
         "a": "At the end of the seaside promenade in Odaiba Kaihin Park — about a 5-minute walk from Daiba Station (Exit A) or Odaiba-Kaihinkoen Station."
       },
       {
-        "icon": "🌇",
         "q": "When is the best time to visit?",
         "a": "Around sunset and just after dark, when the Rainbow Bridge lights up behind the statue — the classic Odaiba photo."
       }
-    ],
-    "paidLead": "Everything above is free. If you would like to add a paid experience nearby, these are the usual picks:",
-    "paidCta": "See nearby paid experiences",
-    "paidHref": "#recommendations"
+    ]
   },
   "hero": {
     "title": "Statue of Liberty Odaiba",
@@ -95,9 +88,9 @@
       "href": "#history"
     },
     "quickFacts": [
-      { "icon": "🎟️", "label": "Free entry", "value": "No ticket needed" },
-      { "icon": "🕒", "label": "Open 24 hours", "value": "Day & night" },
-      { "icon": "📍", "label": "Odaiba Seaside Park", "value": "End of promenade" }
+      { "label": "Free entry", "value": "No ticket needed" },
+      { "label": "Open 24 hours", "value": "Day & night" },
+      { "label": "Odaiba Seaside Park", "value": "End of promenade" }
     ],
     "navCta": { "label": "📍 Get Directions", "href": "#transport" },
     "photoCta": { "label": "📸 Best Photo Spots", "href": "#gallery" },
@@ -579,15 +572,6 @@
       { "name": "Odaiba waterfront walking tour", "url": "https://www.tokyo-odaiba.net/" },
       { "name": "Tokyo Cruise water bus", "url": "https://www.gotokyo.org/spot/363/" },
       { "name": "Minato City official tourism", "url": "https://www.city.minato.tokyo.jp/" }
-    ],
-    "ticketsTitle": "Experiences That Need a Ticket",
-    "ticketsNote": "The statue itself is free. These nearby experiences are the ones you actually pay for.",
-    "tickets": [
-      { "name": "Tokyo Bay water bus (Asakusa ⇄ Odaiba)", "url": "https://www.suijobus.co.jp/" },
-      { "name": "teamLab Planets TOKYO (Toyosu)", "url": "https://www.teamlab.art/e/planets/" },
-      { "name": "Tokyo Joypolis (Odaiba)", "url": "https://tokyo-joypolis.com/" },
-      { "name": "Miraikan — National Museum of Emerging Science", "url": "https://www.miraikan.jst.go.jp/" },
-      { "name": "Yurikamome 1-day pass", "url": "https://www.yurikamome.co.jp/" }
     ]
   },
   "scienceArt": {

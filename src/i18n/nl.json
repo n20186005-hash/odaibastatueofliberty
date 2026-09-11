@@ -53,29 +53,22 @@
     "freeNote": "Geen tickets · Geen reservering · 24/7 open",
     "items": [
       {
-        "icon": "🎟️",
         "q": "Heb ik tickets nodig?",
         "a": "Nee. Er is geen ticketloket en geen toegangspoort, dus er valt niets te kopen en niets te printen. Loop gewoon de kustpromenade op en kijk omhoog."
       },
       {
-        "icon": "🕒",
         "q": "Wat zijn de openingstijden?",
         "a": "Het beeld is 24 uur per dag toegankelijk, elke dag van het jaar. Vroeg in de ochtend en laat op de avond is het het rustigst; rond zonsondergang is het het drukst."
       },
       {
-        "icon": "📍",
         "q": "Waar staat het precies?",
         "a": "Aan het einde van de kustpromenade in Odaiba Kaihin Park — ongeveer 5 minuten lopen van station Daiba (uitgang A) of station Odaiba-Kaihinkoen."
       },
       {
-        "icon": "🌇",
         "q": "Wat is het beste moment om te gaan?",
         "a": "Rond zonsondergang en kort na het invallen van de duisternis, wanneer de Rainbow Bridge achter het beeld wordt verlicht — de klassieke Odaiba-foto."
       }
-    ],
-    "paidLead": "Alles hierboven is gratis. Wil je in de buurt een betaalde ervaring toevoegen, dan zijn dit de gebruikelijke opties:",
-    "paidCta": "Bekijk betaalde ervaringen in de buurt",
-    "paidHref": "#recommendations"
+    ]
   },
   "hero": {
     "title": "Vrijheidsbeeld Odaiba",
@@ -99,17 +92,14 @@
     },
     "quickFacts": [
       {
-        "icon": "🎟️",
         "label": "Gratis toegang",
         "value": "Geen ticket nodig"
       },
       {
-        "icon": "🕒",
         "label": "24 uur open",
         "value": "Dag en nacht"
       },
       {
-        "icon": "📍",
         "label": "Odaiba Seaside Park",
         "value": "Einde van de promenade"
       }
@@ -312,31 +302,7 @@
   "recommendations": {
     "title": "Ontdek meer in Odaiba",
     "attractionsTitle": "Attracties in de buurt",
-    "toursTitle": "Aanbevolen ervaringen",
-    "ticketsTitle": "Ervaringen waarvoor je een ticket nodig hebt",
-    "ticketsNote": "Het beeld zelf is gratis. Deze ervaringen in de buurt zijn degene waarvoor je daadwerkelijk betaalt.",
-    "tickets": [
-      {
-        "name": "Waterbus op de Baai van Tokio (Asakusa ⇄ Odaiba)",
-        "url": "https://www.suijobus.co.jp/"
-      },
-      {
-        "name": "teamLab Planets TOKYO (Toyosu)",
-        "url": "https://www.teamlab.art/e/planets/"
-      },
-      {
-        "name": "Tokyo Joypolis (Odaiba)",
-        "url": "https://tokyo-joypolis.com/"
-      },
-      {
-        "name": "Miraikan — Nationaal museum voor opkomende wetenschap",
-        "url": "https://www.miraikan.jst.go.jp/"
-      },
-      {
-        "name": "Yurikamome dagkaart",
-        "url": "https://www.yurikamome.co.jp/"
-      }
-    ]
+    "toursTitle": "Aanbevolen ervaringen"
   },
   "scienceArt": {
     "title": "Ontwerp & symboliek: vrijheid, verlichting en Franse esthetiek",

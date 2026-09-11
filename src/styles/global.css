@@ -284,10 +284,6 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(6px);
   color: #fff;
 }
-.hero-fact-icon {
-  font-size: 1.4rem;
-  line-height: 1;
-}
 .hero-fact-label {
   font-size: 0.8rem;
   opacity: 0.85;
@@ -906,7 +902,7 @@ section[id] {
   }
 }
 
-/* ── 周边联动：免费景点 / 推荐体验 / 需购票体验 ─────── */
+/* ── 周边联动：免费景点 / 推荐目的地 ─────── */
 .rec-grid {
   display: grid;
   gap: 2rem;
@@ -921,28 +917,9 @@ section[id] {
   font-weight: 600;
   color: var(--accent);
 }
-.rec-group-note {
-  margin: 0 0 0.9rem;
-  font-size: 0.82rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-}
-.rec-group.is-paid {
-  padding: 1.25rem;
-  border-radius: 1.25rem;
-  border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
-  background: color-mix(in srgb, var(--accent) 7%, transparent);
-}
-
 @media (min-width: 768px) {
   .rec-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@media (min-width: 1024px) {
-  .rec-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: start;
   }
 }
 
@@ -984,12 +961,8 @@ section[id] {
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
 }
-.entry-card-icon {
-  font-size: 1.35rem;
-  line-height: 1;
-}
 .entry-card-q {
-  margin: 0.6rem 0 0.4rem;
+  margin: 0 0 0.4rem;
   font-family: var(--font-display);
   font-size: 0.98rem;
   font-weight: 700;
@@ -1005,6 +978,7 @@ section[id] {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 0.85rem 1.25rem;
   margin-top: 1.5rem;
   padding: 1.1rem 1.25rem;
@@ -1030,22 +1004,6 @@ section[id] {
   font-size: 0.7rem;
   color: var(--text-secondary);
 }
-.entry-paid {
-  flex: 1 1 16rem;
-  margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-}
-.entry-paid a {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-}
-.entry-paid a:hover {
-  text-decoration: underline;
-}
-
 @media (min-width: 640px) {
   .entry-title {
     font-size: 2rem;

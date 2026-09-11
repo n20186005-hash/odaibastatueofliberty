@@ -4,7 +4,7 @@
  * ------------------------------------------------------------------
  * 承接 "odaiba statue of liberty tickets" 一类已有排名但点击率为 0 的
  * 搜索意图：在页面最靠前的位置直接给出「完全免费、无需门票」的确定答案，
- * 消除「要不要买票」的犹豫，再把有付费意愿的用户顺势导向周边付费体验区。
+ * 消除「要不要买票」的犹豫。本模块只做告知，不导向任何付费项目。
  * 同组问答同时进入 BaseLayout 的 FAQPage 结构化数据。
  */
 import { getI18n } from '../i18n/ui';
@@ -23,9 +23,8 @@ const items = e.items ?? [];
     </div>
 
     <div class="entry-grid">
-      {items.map((it: { icon: string; q: string; a: string }) => (
+      {items.map((it: { q: string; a: string }) => (
         <div class="entry-card">
-          <span class="entry-card-icon" aria-hidden="true">{it.icon}</span>
           <h3 class="entry-card-q">{it.q}</h3>
           <p class="entry-card-a">{it.a}</p>
         </div>
@@ -37,10 +36,6 @@ const items = e.items ?? [];
         <b>{e.freeBadge}</b>
         <span>{e.freeNote}</span>
       </span>
-      <p class="entry-paid">
-        {e.paidLead}
-        <a href={e.paidHref}>{e.paidCta} →</a>
-      </p>
     </div>
   </div>
 </section>

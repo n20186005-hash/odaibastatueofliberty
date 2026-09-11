@@ -53,29 +53,22 @@
     "freeNote": "无需门票 · 无需预约 · 24 小时开放",
     "items": [
       {
-        "icon": "🎟️",
         "q": "需要门票吗？",
         "a": "不需要。这里没有售票窗口也没有入口闸机，不用买票也不用排队，直接走到临海步道就能看。"
       },
       {
-        "icon": "🕒",
         "q": "开放时间是？",
         "a": "全年 24 小时开放。清晨和深夜最清静，日落前后的那一小时人最多。"
       },
       {
-        "icon": "📍",
         "q": "具体位置在哪？",
         "a": "位于台场海滨公园临海步道的尽头，从台场站 A 出口或台场海滨公园站步行约 5 分钟。"
       },
       {
-        "icon": "🌇",
         "q": "什么时候去最好？",
         "a": "日落前后到亮灯之后。此时彩虹大桥在雕像背后亮起，是台场最经典的机位。"
       }
-    ],
-    "paidLead": "以上全部免费。如果你想在附近加点付费体验，通常有这几个选择：",
-    "paidCta": "查看周边付费体验",
-    "paidHref": "#recommendations"
+    ]
   },
   "hero": {
     "title": "东京台场自由女神像",
@@ -95,9 +88,9 @@
       "href": "#history"
     },
     "quickFacts": [
-      { "icon": "🎟️", "label": "免费参观", "value": "无需门票" },
-      { "icon": "🕒", "label": "全天开放", "value": "24 小时" },
-      { "icon": "📍", "label": "台场海滨公园", "value": "临海步道尽头" }
+      { "label": "免费参观", "value": "无需门票" },
+      { "label": "全天开放", "value": "24 小时" },
+      { "label": "台场海滨公园", "value": "临海步道尽头" }
     ],
     "navCta": { "label": "📍 导航前往", "href": "#transport" },
     "photoCta": { "label": "📸 查看最佳机位", "href": "#gallery" },
@@ -579,15 +572,6 @@
       { "name": "台场水岸散步之旅", "url": "https://www.tokyo-odaiba.net/" },
       { "name": "东京都观光汽船（水上巴士）", "url": "https://www.gotokyo.org/spot/363/" },
       { "name": "港区官方观光信息", "url": "https://www.city.minato.tokyo.jp/" }
-    ],
-    "ticketsTitle": "周边需购票的体验",
-    "ticketsNote": "雕像本身免费；真正需要买票的是下面这些周边体验。",
-    "tickets": [
-      { "name": "东京湾水上巴士（浅草 ⇄ 台场）", "url": "https://www.suijobus.co.jp/" },
-      { "name": "teamLab Planets TOKYO（丰洲）", "url": "https://www.teamlab.art/e/planets/" },
-      { "name": "东京 Joypolis 室内乐园（台场）", "url": "https://tokyo-joypolis.com/" },
-      { "name": "日本科学未来馆 Miraikan", "url": "https://www.miraikan.jst.go.jp/" },
-      { "name": "百合海鸥线一日乘车券", "url": "https://www.yurikamome.co.jp/" }
     ]
   },
   "scienceArt": {

@@ -53,29 +53,22 @@
     "freeNote": "티켓 불필요 · 예약 불필요 · 24시간 개방",
     "items": [
       {
-        "icon": "🎟️",
         "q": "티켓이 필요한가요?",
         "a": "아니요. 매표소도 입장 게이트도 없어서 살 것도, 줄 설 것도 없습니다. 바닷가 산책로에서 바로 관람하면 됩니다."
       },
       {
-        "icon": "🕒",
         "q": "개방 시간은?",
         "a": "연중 24시간 개방입니다. 이른 아침과 늦은 밤이 가장 한산하고, 해질 무렵 한 시간이 가장 붐빕니다."
       },
       {
-        "icon": "📍",
         "q": "정확히 어디에 있나요?",
         "a": "오다이바 해변공원 바닷가 산책로 끝입니다. 다이바역 A출구 또는 오다이바 해변공원역에서 도보 약 5분."
       },
       {
-        "icon": "🌇",
         "q": "가장 좋은 시간대는?",
         "a": "해질 무렵부터 점등 후까지입니다. 레인보우 브리지가 배경으로 빛나는 오다이바의 대표 구도가 나옵니다."
       }
-    ],
-    "paidLead": "위 내용은 모두 무료입니다. 주변에서 유료 체험을 더하고 싶다면 보통 이렇게 고릅니다:",
-    "paidCta": "주변 유료 체험 보기",
-    "paidHref": "#recommendations"
+    ]
   },
   "hero": {
     "title": "오다이바 자유의 여신상",
@@ -95,9 +88,9 @@
       "href": "#history"
     },
     "quickFacts": [
-      { "icon": "🎟️", "label": "무료 관람", "value": "입장권 불필요" },
-      { "icon": "🕒", "label": "24시간 관람", "value": "주야 불문" },
-      { "icon": "📍", "label": "오다이바 해변공원", "value": "산책로 끝" }
+      { "label": "무료 관람", "value": "입장권 불필요" },
+      { "label": "24시간 관람", "value": "주야 불문" },
+      { "label": "오다이바 해변공원", "value": "산책로 끝" }
     ],
     "navCta": { "label": "📍 길찾기", "href": "#transport" },
     "photoCta": { "label": "📸 베스트 촬영지", "href": "#gallery" },
@@ -579,15 +572,6 @@
       { "name": "오다이바 수변 산책 투어", "url": "https://www.tokyo-odaiba.net/" },
       { "name": "도쿄 크루즈 수상버스", "url": "https://www.gotokyo.org/spot/363/" },
       { "name": "미나토구 공식 관광 정보", "url": "https://www.city.minato.tokyo.jp/" }
-    ],
-    "ticketsTitle": "티켓이 필요한 주변 체험",
-    "ticketsNote": "여신상 자체는 무료입니다. 티켓이 필요한 것은 아래 주변 체험입니다.",
-    "tickets": [
-      { "name": "도쿄만 수상버스 (아사쿠사 ⇄ 오다이바)", "url": "https://www.suijobus.co.jp/" },
-      { "name": "팀랩 플래닛 도쿄 (도요스)", "url": "https://www.teamlab.art/e/planets/" },
-      { "name": "도쿄 조이폴리스 (오다이바)", "url": "https://tokyo-joypolis.com/" },
-      { "name": "일본과학미래관 미라이칸", "url": "https://www.miraikan.jst.go.jp/" },
-      { "name": "유리카모메 1일 승차권", "url": "https://www.yurikamome.co.jp/" }
     ]
   },
   "scienceArt": {

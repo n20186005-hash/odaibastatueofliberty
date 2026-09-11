@@ -53,29 +53,22 @@
     "freeNote": "Nessun biglietto · Nessuna prenotazione · Aperto 24/7",
     "items": [
       {
-        "icon": "🎟️",
         "q": "Serve un biglietto?",
         "a": "No. Non ci sono biglietterie né cancelli d'ingresso, quindi non c'è nulla da comprare o da stampare. Basta percorrere il lungomare e alzare lo sguardo."
       },
       {
-        "icon": "🕒",
         "q": "Quali sono gli orari di apertura?",
         "a": "La statua è accessibile 24 ore su 24, tutti i giorni dell'anno. Le ore più tranquille sono la prima mattina e la tarda serata; il momento più affollato è intorno al tramonto."
       },
       {
-        "icon": "📍",
         "q": "Dov'è esattamente?",
         "a": "Alla fine del lungomare dell'Odaiba Kaihin Park — circa 5 minuti a piedi dalla stazione Daiba (uscita A) o dalla stazione Odaiba-Kaihinkoen."
       },
       {
-        "icon": "🌇",
         "q": "Qual è il momento migliore per visitarla?",
         "a": "Intorno al tramonto e subito dopo il calare del buio, quando il Rainbow Bridge si illumina dietro la statua — la foto classica di Odaiba."
       }
-    ],
-    "paidLead": "Tutto quanto sopra è gratuito. Se vuoi aggiungere un'esperienza a pagamento nelle vicinanze, di solito si scelgono queste:",
-    "paidCta": "Vedi le esperienze a pagamento nelle vicinanze",
-    "paidHref": "#recommendations"
+    ]
   },
   "hero": {
     "title": "Statua della Libertà Odaiba",
@@ -99,17 +92,14 @@
     },
     "quickFacts": [
       {
-        "icon": "🎟️",
         "label": "Ingresso gratuito",
         "value": "Nessun biglietto necessario"
       },
       {
-        "icon": "🕒",
         "label": "Aperto 24 ore",
         "value": "Giorno e notte"
       },
       {
-        "icon": "📍",
         "label": "Odaiba Seaside Park",
         "value": "Fine del lungomare"
       }
@@ -312,31 +302,7 @@
   "recommendations": {
     "title": "Scopri di più a Odaiba",
     "attractionsTitle": "Attrazioni nelle vicinanze",
-    "toursTitle": "Esperienze consigliate",
-    "ticketsTitle": "Esperienze che richiedono un biglietto",
-    "ticketsNote": "La statua in sé è gratuita. Queste esperienze vicine sono quelle per cui si paga davvero.",
-    "tickets": [
-      {
-        "name": "Battello nella Baia di Tokyo (Asakusa ⇄ Odaiba)",
-        "url": "https://www.suijobus.co.jp/"
-      },
-      {
-        "name": "teamLab Planets TOKYO (Toyosu)",
-        "url": "https://www.teamlab.art/e/planets/"
-      },
-      {
-        "name": "Tokyo Joypolis (Odaiba)",
-        "url": "https://tokyo-joypolis.com/"
-      },
-      {
-        "name": "Miraikan — Museo nazionale delle scienze emergenti",
-        "url": "https://www.miraikan.jst.go.jp/"
-      },
-      {
-        "name": "Abbonamento giornaliero Yurikamome",
-        "url": "https://www.yurikamome.co.jp/"
-      }
-    ]
+    "toursTitle": "Esperienze consigliate"
   },
   "scienceArt": {
     "title": "Design e simbolismo: libertà, illuminismo ed estetica francese",

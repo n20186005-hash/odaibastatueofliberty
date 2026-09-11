@@ -53,29 +53,22 @@
     "freeNote": "Keine Tickets · Keine Buchung · Rund um die Uhr geöffnet",
     "items": [
       {
-        "icon": "🎟️",
         "q": "Brauche ich Tickets?",
         "a": "Nein. Es gibt weder einen Ticketschalter noch ein Eingangstor — Sie müssen also nichts kaufen und nichts ausdrucken. Gehen Sie einfach auf die Uferpromenade und schauen Sie nach oben."
       },
       {
-        "icon": "🕒",
         "q": "Wie sind die Öffnungszeiten?",
         "a": "Die Statue ist 24 Stunden am Tag geöffnet, an jedem Tag des Jahres. Am ruhigsten ist es früh morgens und spät abends; am vollsten rund um den Sonnenuntergang."
       },
       {
-        "icon": "📍",
         "q": "Wo genau steht sie?",
         "a": "Am Ende der Uferpromenade im Odaiba Kaihin Park — etwa 5 Gehminuten vom Bahnhof Daiba (Ausgang A) oder vom Bahnhof Odaiba-Kaihinkoen."
       },
       {
-        "icon": "🌇",
         "q": "Wann ist die beste Besuchszeit?",
         "a": "Rund um den Sonnenuntergang und kurz nach Einbruch der Dunkelheit, wenn die Rainbow Bridge hinter der Statue beleuchtet wird — das klassische Odaiba-Foto."
       }
-    ],
-    "paidLead": "Alles oben ist kostenlos. Wenn Sie in der Nähe ein kostenpflichtiges Erlebnis ergänzen möchten, sind das die üblichen Optionen:",
-    "paidCta": "Kostenpflichtige Erlebnisse in der Nähe ansehen",
-    "paidHref": "#recommendations"
+    ]
   },
   "hero": {
     "title": "Freiheitsstatue Odaiba",
@@ -99,17 +92,14 @@
     },
     "quickFacts": [
       {
-        "icon": "🎟️",
         "label": "Eintritt frei",
         "value": "Kein Ticket nötig"
       },
       {
-        "icon": "🕒",
         "label": "24 Std. geöffnet",
         "value": "Tag und Nacht"
       },
       {
-        "icon": "📍",
         "label": "Odaiba Seaside Park",
         "value": "Ende der Promenade"
       }
@@ -312,31 +302,7 @@
   "recommendations": {
     "title": "Mehr in Odaiba entdecken",
     "attractionsTitle": "Sehenswürdigkeiten in der Nähe",
-    "toursTitle": "Empfohlene Erlebnisse",
-    "ticketsTitle": "Erlebnisse, die ein Ticket erfordern",
-    "ticketsNote": "Die Statue selbst ist kostenlos. Diese Erlebnisse in der Nähe sind die, für die Sie tatsächlich zahlen.",
-    "tickets": [
-      {
-        "name": "Wasserbus auf der Bucht von Tokio (Asakusa ⇄ Odaiba)",
-        "url": "https://www.suijobus.co.jp/"
-      },
-      {
-        "name": "teamLab Planets TOKYO (Toyosu)",
-        "url": "https://www.teamlab.art/e/planets/"
-      },
-      {
-        "name": "Tokyo Joypolis (Odaiba)",
-        "url": "https://tokyo-joypolis.com/"
-      },
-      {
-        "name": "Miraikan — Nationalmuseum für Zukunftsforschung",
-        "url": "https://www.miraikan.jst.go.jp/"
-      },
-      {
-        "name": "Yurikamome Tageskarte",
-        "url": "https://www.yurikamome.co.jp/"
-      }
-    ]
+    "toursTitle": "Empfohlene Erlebnisse"
   },
   "scienceArt": {
     "title": "Design & Symbolik: Freiheit, Aufklärung und französische Ästhetik",

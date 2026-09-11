@@ -53,29 +53,22 @@
     "freeNote": "チケット不要・予約不要・24時間開放",
     "items": [
       {
-        "icon": "🎟️",
         "q": "チケットは必要ですか？",
         "a": "いいえ。券売所も入場ゲートもないため、買うものも並ぶ必要もありません。海側の遊歩道からそのまま見学できます。"
       },
       {
-        "icon": "🕒",
         "q": "開いている時間は？",
         "a": "365日24時間開放されています。早朝と夜遅くが最も空いており、日没前後の1時間が最も混み合います。"
       },
       {
-        "icon": "📍",
         "q": "場所はどこですか？",
         "a": "お台場海浜公園の海側遊歩道の突き当たりです。台場駅A出口、またはお台場海浜公園駅から徒歩約5分。"
       },
       {
-        "icon": "🌇",
         "q": "いちばん良い時間帯は？",
         "a": "日没前後から点灯後にかけて。レインボーブリッジが背景に浮かぶ、定番の構図が撮れます。"
       }
-    ],
-    "paidLead": "ここまではすべて無料です。周辺で有料の体験を足したい場合、定番は次のとおりです：",
-    "paidCta": "周辺の有料体験を見る",
-    "paidHref": "#recommendations"
+    ]
   },
   "hero": {
     "title": "自由の女神像（お台場）",
@@ -95,9 +88,9 @@
       "href": "#history"
     },
     "quickFacts": [
-      { "icon": "🎟️", "label": "入場無料", "value": "チケット不要" },
-      { "icon": "🕒", "label": "24時間見学可", "value": "昼夜を問わず" },
-      { "icon": "📍", "label": "お台場海浜公園", "value": "プロムナードの突端" }
+      { "label": "入場無料", "value": "チケット不要" },
+      { "label": "24時間見学可", "value": "昼夜を問わず" },
+      { "label": "お台場海浜公園", "value": "プロムナードの突端" }
     ],
     "navCta": { "label": "📍 ナビで向かう", "href": "#transport" },
     "photoCta": { "label": "📸 ベスト撮影枠", "href": "#gallery" },
@@ -579,15 +572,6 @@
       { "name": "お台場水際散策ツアー", "url": "https://www.tokyo-odaiba.net/" },
       { "name": "東京都観光汽船（水上バス）", "url": "https://www.gotokyo.org/spot/363/" },
       { "name": "港区公式観光情報", "url": "https://www.city.minato.tokyo.jp/" }
-    ],
-    "ticketsTitle": "チケットが必要な周辺体験",
-    "ticketsNote": "女神像そのものは無料です。チケットが必要なのは、次のような周辺体験です。",
-    "tickets": [
-      { "name": "東京湾クルーズ・水上バス（浅草〜お台場）", "url": "https://www.suijobus.co.jp/" },
-      { "name": "teamLab Planets TOKYO（豊洲）", "url": "https://www.teamlab.art/e/planets/" },
-      { "name": "東京ジョイポリス（お台場）", "url": "https://tokyo-joypolis.com/" },
-      { "name": "日本科学未来館（Miraikan）", "url": "https://www.miraikan.jst.go.jp/" },
-      { "name": "ゆりかもめ一日乗車券", "url": "https://www.yurikamome.co.jp/" }
     ]
   },
   "scienceArt": {
