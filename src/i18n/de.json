@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Freiheitsstatue Odaiba Tickets — Eintritt frei, 24 Std. geöffnet",
-    "description": "Der Besuch der Freiheitsstatue in Odaiba, Tokio, ist 100 % kostenlos — keine Tickets, keine Buchung, rund um die Uhr geöffnet. Lage, Anfahrt, beste Fotospots und Geschichte.",
+    "title": "Freiheitsstatue Tokio (Odaiba) – Eintritt & Anfahrt",
+    "description": "Entdecke die Freiheitsstatue in Odaiba, Tokio: kostenloser Eintritt, Anfahrt, Geschichte und Fotospots mit Blick auf die Rainbow Bridge.",
     "officialName": "Freiheitsstatue Odaiba",
     "shortName": "Freiheitsstatue"
   },
@@ -72,9 +72,9 @@
   },
   "hero": {
     "title": "Freiheitsstatue Odaiba",
-    "subtitle": "Eine Nachbildung der New Yorker Freiheitsstatue im Maßstab 1:7, die still an der Uferpromenade von Odaiba an der Bucht von Tokio steht. Sie wurde 1998 zum 'Jahr Frankreichs in Japan' errichtet und von Frankreich als Zeichen der Freundschaft zwischen beiden Nationen übergeben. Mit ihrer grünspanfarbenen Silhouette vor der Rainbow Bridge und der Bucht von Tokio ist sie Odaibas bekanntestes Wahrzeichen — und ein kostenloses, immer zugängliches Bauwerk.",
-    "rating": "4,5 (5.145)",
-    "reviewCount": "5.145 Bewertungen",
+    "subtitle": "Eine Nachbildung der New Yorker Freiheitsstatue im Maßstab 1:7, die still an der Uferpromenade von Odaiba an der Bucht von Tokio steht. Sie wurde 1998 zum 'Jahr Frankreichs in Japan' als temporäre Ausstellung errichtet und blieb wegen ihrer Beliebtheit ein permanentes Wahrzeichen Odaibas. Mit ihrer grünspanfarbenen Silhouette vor der Rainbow Bridge und der Bucht von Tokio ist sie Odaibas bekanntestes Wahrzeichen — und ein kostenloses, immer zugängliches Bauwerk.",
+    "rating": "4,5 (5.236)",
+    "reviewCount": "5.236 Bewertungen",
     "hours": "Rund um die Uhr geöffnet",
     "openMaps": "Auf Google Maps ansehen",
     "tags": [
@@ -119,7 +119,7 @@
   },
   "intro": {
     "title": "Die Freiheitsstatue Odaiba entdecken",
-    "description": "Die Freiheitsstatue Odaiba steht an der Uferpromenade von Odaiba an der Bucht von Tokio als Nachbildung im Maßstab 1:7 des Originals in New York. Sie wurde 1998 zum 'Jahr Frankreichs in Japan' als temporäre Ausstellung anlässlich des 150. Jahrestags der französisch-japanischen Beziehungen aufgestellt und war so beliebt, dass sie im Jahr 2000 dauerhaft blieb. Mit rund 12 Metern Höhe und demselben Grünspan-Finish wie das New Yorker Original blickt sie auf die Bucht von Tokio und die Rainbow Bridge — eines der Wahrzeichen Odaibas und für viele Besucher der erste Anblick vom Wasserbus oder der Yurikamome aus.",
+    "description": "Die Freiheitsstatue Odaiba steht an der Uferpromenade von Odaiba an der Bucht von Tokio als Nachbildung im Maßstab 1:7 des Originals in New York. Sie wurde 1998 zum 'Jahr Frankreichs in Japan' als temporäre Ausstellung aufgestellt und war so beliebt, dass sie im Jahr 2000 dauerhaft blieb. Mit rund 12 Metern Höhe und demselben Grünspan-Finish wie das New Yorker Original blickt sie auf die Bucht von Tokio und die Rainbow Bridge — eines der Wahrzeichen Odaibas und für viele Besucher der erste Anblick vom Wasserbus oder der Yurikamome aus.",
     "visitGuide": {
       "title": "Besucher-Ratgeber",
       "eyebrow": "Praktische Planung"
@@ -261,7 +261,7 @@
         "items": [
           {
             "q": "Wozu dient diese Statue, und warum steht sie in Tokio?",
-            "a": "Sie ist eine Nachbildung im Maßstab 1:7 der New Yorker Freiheitsstatue, errichtet 1998 zum 'Jahr Frankreichs in Japan' anlässlich des 150. Jahrestags der französisch-japanischen Beziehungen und als Symbol der Freundschaft zwischen Frankreich und Japan. Ursprünglich eine temporäre Ausstellung, wurde sie im Jahr 2000 dauerhaft."
+            "a": "Sie ist eine Nachbildung im Maßstab 1:7 der New Yorker Freiheitsstatue, errichtet 1998 zum 'Jahr Frankreichs in Japan' als temporäre Ausstellung. Wegen ihrer Beliebtheit wurde sie im Jahr 2000 dauerhaft."
           },
           {
             "q": "Wie hängt sie mit der Statue in New York zusammen?",

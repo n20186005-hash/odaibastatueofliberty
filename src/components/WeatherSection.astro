@@ -131,7 +131,7 @@ const wxConfig = {
           : <p class="wx-clear">✅ {A.allClear}</p>}
       </div>
 
-      <div class="wx-grid">
+      <div class="wx-grid" id="wx-grid">
         <!-- ② 当前实况 + 出行建议 -->
         <div class="wx-main">
           <div class="wx-current">
@@ -317,6 +317,7 @@ const wxConfig = {
           </div>
         </div>
       </div>
+      <p class="wx-unavailable" id="wx-unavailable" hidden>{w.unavailable}</p>
     </div>
   </div>
 </section>
@@ -551,6 +552,14 @@ const wxConfig = {
       root.setAttribute('data-wx-state', 'ready');
     }
 
+    const showWeatherError = () => {
+      root.setAttribute('data-wx-state', 'error');
+      const grid = document.getElementById('wx-grid');
+      const notice = document.getElementById('wx-unavailable');
+      if (grid) grid.style.display = 'none';
+      if (notice) notice.hidden = false;
+    };
+
     const getJson = (url: string) =>
       fetch(url, { headers: { accept: 'application/json' } })
         .then((r) => (r.ok ? r.json() : null))
@@ -562,9 +571,9 @@ const wxConfig = {
         .then(([fc, marineRaw, airRaw]) => {
           const wx = normalizeWeather(fc, marineRaw, airRaw);
           if (wx) render(wx);
-          else root.setAttribute('data-wx-state', 'error');
+          else showWeatherError();
         })
-        .catch(() => root.setAttribute('data-wx-state', 'error'));
+        .catch(() => showWeatherError());
     }
   }
 </script>

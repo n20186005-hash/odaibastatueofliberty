@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Odaiba Statue of Liberty Tickets — Free Entry, 24/7 Guide",
-    "description": "Visiting the Statue of Liberty in Odaiba, Tokyo is 100% FREE — no tickets or booking needed, open 24 hours. Location, directions, best photo spots & history.",
+    "title": "Odaiba Statue of Liberty – Free Visit, History & Access",
+    "description": "Explore Tokyo's Statue of Liberty in Odaiba. Free admission, directions from Daiba Station, history, photo spots and Rainbow Bridge views.",
     "officialName": "Statue of Liberty Odaiba",
     "shortName": "Statue of Liberty"
   },
@@ -72,9 +72,9 @@
   },
   "hero": {
     "title": "Statue of Liberty Odaiba",
-    "subtitle": "A 1/7-scale replica of New York's Statue of Liberty, standing quietly on the Odaiba waterfront along Tokyo Bay. It was erected in 1998 during the 'Year of France in Japan' and presented by France as a symbol of friendship between the two nations. With its verdigris-green figure framed by the Rainbow Bridge and Tokyo Bay, it is Odaiba's most recognisable landmark — and a free, always-open civic icon.",
-    "rating": "4.5 (5,145)",
-    "reviewCount": "5,145 reviews",
+    "subtitle": "A 1/7-scale replica of New York's Statue of Liberty, standing quietly on the Odaiba waterfront along Tokyo Bay. It was installed in 1998 during the 'Year of France in Japan' as a temporary exhibit, and proved so popular it remained a permanent Odaiba landmark. With its verdigris-green figure framed by the Rainbow Bridge and Tokyo Bay, it is Odaiba's most recognisable landmark — and a free, always-open civic icon.",
+    "rating": "4.5 (5,236)",
+    "reviewCount": "5,236 reviews",
     "hours": "Open 24 hours",
     "openMaps": "View on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/XypCJLEZwme5RSjc8",
@@ -98,7 +98,7 @@
   },
   "intro": {
     "title": "Discover the Statue of Liberty Odaiba",
-    "description": "The Statue of Liberty Odaiba stands on the Odaiba waterfront along Tokyo Bay as a 1/7-scale replica of the original in New York. It was installed in 1998 during the 'Year of France in Japan' as a temporary exhibit marking the 150th anniversary of Franco-Japanese relations, and proved so popular that it was made permanent in 2000. About 12 metres tall and finished in the same verdigris green as the New York original, it faces Tokyo Bay and the Rainbow Bridge — one of Odaiba's signature landmarks and the first sight many visitors see from the water bus or the Yurikamome train.",
+    "description": "The Statue of Liberty Odaiba stands on the Odaiba waterfront along Tokyo Bay as a 1/7-scale replica of the original in New York. It was installed in 1998 during the 'Year of France in Japan' as a temporary exhibit, and proved so popular that it was made permanent in 2000. About 12 metres tall and finished in the same verdigris green as the New York original, it faces Tokyo Bay and the Rainbow Bridge — one of Odaiba's signature landmarks and the first sight many visitors see from the water bus or the Yurikamome train.",
     "visitGuide": {
       "title": "Visitor Guide",
       "eyebrow": "Practical Planning",
@@ -114,7 +114,7 @@
       "title": "Highlights",
       "items": [
         "An official 1/7-scale replica of New York's Statue of Liberty",
-        "A gift from France marking the 150th anniversary of Franco-Japanese relations in 1998",
+        "A 1/7-scale replica installed in 1998 during the Year of France in Japan",
         "About 12 m tall, verdigris green, framed perfectly by the Rainbow Bridge",
         "In free, 24-hour Odaiba Seaside Park"
       ]
@@ -171,7 +171,7 @@
         "title": "Rinkai Line · Tokyo Teleport Stn",
         "description": "Most direct from Shinjuku, Shibuya and Ikebukuro.",
         "details": [
-          "Take the Rinkai Line (りんかい線) to Tokyo Teleport Station, then walk about 10 minutes.",
+          "Take the Rinkai Line to Tokyo Teleport Station, then walk about 10 minutes.",
           "The Rinkai Line runs through to JR Saikyo Line, so no transfer from Shinjuku or Ikebukuro; from Shibuya, change once at Shinjuku or Osaki.",
           "Tokyo Teleport Station has elevators — easier than the sloping Daiba Station if you have large luggage or children/seniors."
         ],
@@ -278,7 +278,7 @@
       {
         "id": "history",
         "title": "Origins: the Year of France, 1998",
-        "content": "The Statue of Liberty Odaiba was erected in 1998 (Heisei 10) during the 'Année de la France au Japon' (Year of France in Japan) as a temporary exhibit marking the 150th anniversary of Franco-Japanese relations. So beloved by the public and visitors, it was made a permanent fixture in 2000, becoming an inseparable part of the Odaiba waterfront."
+        "content": "The Statue of Liberty Odaiba was installed in 1998 (Heisei 10) during the 'Année de la France au Japon' (Year of France in Japan) as a temporary exhibit. So beloved by the public and visitors, it remained a permanent fixture of the Odaiba waterfront."
       },
       {
         "id": "meaning",
@@ -519,7 +519,7 @@
         "items": [
           {
             "q": "What is this statue for, and why is it in Tokyo?",
-            "a": "It is a 1/7-scale replica of New York's Statue of Liberty, erected in 1998 during the 'Year of France in Japan' to mark the 150th anniversary of Franco-Japanese relations, symbolising friendship between France and Japan. It was a temporary exhibit at first, then made permanent in 2000."
+            "a": "It is a 1/7-scale replica of New York's Statue of Liberty, installed in 1998 during the 'Year of France in Japan' as a temporary exhibit. So popular with visitors, it became a permanent fixture of the Odaiba waterfront."
           },
           {
             "q": "How is it related to the one in New York?",
@@ -662,7 +662,7 @@
     "points": [
       {
         "title": "Making Franco-Japanese friendship tangible",
-        "text": "In 1998, the 'Year of France in Japan' marked 150 years of Franco-Japanese relations, and the Statue of Liberty arrived as a symbol of friendship. It turns abstract diplomatic goodwill into a touchable, photo-friendly public landscape, continuing the tradition of 'France giving statues'."
+        "text": "In 1998, the 'Year of France in Japan' brought the Statue of Liberty replica to Odaiba as a public artwork. It turns cultural exchange into a touchable, photo-friendly public landscape, continuing the ties between Japan and France."
       },
       {
         "title": "Public art & urban renewal",
@@ -1022,7 +1022,7 @@
       {
         "year": "1998",
         "title": "The 'Year of France' brings the replica to Odaiba",
-        "text": "As part of the 'Year of France in Japan', marking 150 years of Franco-Japanese exchange, France presented a replica that was installed on the seaside promenade of Odaiba Kaihin Park. It was originally intended as a temporary exhibit for the duration of the event."
+        "text": "As part of the 'Year of France in Japan', a 1/7-scale replica was installed on the seaside promenade of Odaiba Kaihin Park. It was originally intended as a temporary exhibit for the duration of the event."
       },
       {
         "year": "1999",

@@ -100,7 +100,7 @@ export const entity = {
   openingHoursOpens: '00:00',
   openingHoursCloses: '23:59',
   ratingValue: '4.5',
-  reviewCount: '5145',
+  reviewCount: '5236',
   touristTypes: [
     'Families',
     'Photographers',

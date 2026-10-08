@@ -72,9 +72,9 @@
   },
   "hero": {
     "title": "Statua della Libertà Odaiba",
-    "subtitle": "Una riproduzione in scala 1:7 della Statua della Libertà di New York, che si erge silenziosa sul lungomare di Odaiba lungo la Baia di Tokyo. Fu collocata nel 1998 durante l'Anno della Francia in Giappone e donata dalla Francia come simbolo di amicizia tra i due Paesi. Con la sua figura verde-verderame incorniciata dal Rainbow Bridge e dalla Baia di Tokyo, è il simbolo più riconoscibile di Odaiba — e un'icona civica gratuita e sempre accessibile.",
-    "rating": "4,5 (5.145)",
-    "reviewCount": "5.145 recensioni",
+    "subtitle": "Una riproduzione in scala 1:7 della Statua della Libertà di New York, che si erge silenziosa sul lungomare di Odaiba lungo la Baia di Tokyo. Fu collocata nel 1998 durante l'Anno della Francia in Giappone come esposizione temporanea, e per la sua popolarità rimase un simbolo permanente di Odaiba. Con la sua figura verde-verderame incorniciata dal Rainbow Bridge e dalla Baia di Tokyo, è il simbolo più riconoscibile di Odaiba — e un'icona civica gratuita e sempre accessibile.",
+    "rating": "4,5 (5.236)",
+    "reviewCount": "5.236 recensioni",
     "hours": "Aperto 24 ore su 24",
     "openMaps": "Visualizza su Google Maps",
     "tags": [
@@ -119,7 +119,7 @@
   },
   "intro": {
     "title": "Scopri la Statua della Libertà Odaiba",
-    "description": "La Statua della Libertà Odaiba si trova sul lungomare di Odaiba lungo la Baia di Tokyo ed è una riproduzione in scala 1:7 dell'originale di New York. Fu installata nel 1998 durante l'Anno della Francia in Giappone come esposizione temporanea per il 150° anniversario delle relazioni franco-giapponesi, e riscosse un tale successo da diventare permanente nel 2000. Alta circa 12 metri e rifinita nello stesso verde-verderame dell'originale, guarda verso la Baia di Tokyo e il Rainbow Bridge — uno dei simboli di Odaiba e il primo scorcio che molti visitatori vedono dal battello o dalla linea Yurikamome.",
+    "description": "La Statua della Libertà Odaiba si trova sul lungomare di Odaiba lungo la Baia di Tokyo ed è una riproduzione in scala 1:7 dell'originale di New York. Fu installata nel 1998 durante l'Anno della Francia in Giappone come esposizione temporanea, e riscosse un tale successo da diventare permanente nel 2000. Alta circa 12 metri e rifinita nello stesso verde-verderame dell'originale, guarda verso la Baia di Tokyo e il Rainbow Bridge — uno dei simboli di Odaiba e il primo scorcio che molti visitatori vedono dal battello o dalla linea Yurikamome.",
     "visitGuide": {
       "title": "Guida per il visitatore",
       "eyebrow": "Pianificazione pratica"
@@ -261,7 +261,7 @@
         "items": [
           {
             "q": "A cosa serve questa statua e perché si trova a Tokyo?",
-            "a": "È una riproduzione in scala 1:7 della Statua della Libertà di New York, eretta nel 1998 durante l'Anno della Francia in Giappone per il 150° anniversario delle relazioni franco-giapponesi, a simbolo dell'amicizia tra Francia e Giappone. Inizialmente esposizione temporanea, è diventata permanente nel 2000."
+            "a": "È una riproduzione in scala 1:7 della Statua della Libertà di New York, eretta nel 1998 durante l'Anno della Francia in Giappone come esposizione temporanea. Per la sua popolarità è diventata permanente nel 2000."
           },
           {
             "q": "Che rapporto ha con quella di New York?",
